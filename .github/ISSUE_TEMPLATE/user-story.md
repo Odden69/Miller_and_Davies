@@ -7,7 +7,8 @@ assignees: Odden69
 
 ---
 
-As a **role** I can **capab** so that **rec benef**
+As a **role** I want to be able to **capab** so that I can **rec benef**.
+
 # Tasks
 - [ ] 
 - [ ] 
