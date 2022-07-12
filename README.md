@@ -28,61 +28,7 @@ There are default exercises provided by an admin user, but apart from that all e
 The focus of this app is usability, both on a computer and on a mobile since it is important to be able to use the app at the gym and, for convenience, do the planning on a computer. Hence a fully responsive site is required.¨¨
 
 ### User Stories
-¨¨These are the user stories I planned for the app from the beginning, the ones with an asterisk have been postponed to later updates of the site. The other has been tested against the site and are all fulfilled.  ¨¨
-<details>
-  <summary>Click to see the user stories</summary>
-
-#### Non Authorized Users
-- As a non authorized user I land on an informative page so that I immediately understand what the site is about.
-- As a non authorized user I get the opportunity to either sign up or log in so that I can use the features of the site.
-- As a non authorized user I can find more information about the site so that I can see all its benefits.
-
-#### Authorized Users
-##### General
-- As an authorized user I can easily navigate the site so that I feel comfortable with it and am likely to come back.
-- As an authorized user I can use a help tool so that I can understand how the app works.
-- As an authorized user I can see the username of the current logged in user.
-
-##### Settings
-* Exercises
-    - As an authorized user I can create new exercises so that I can put them together in workouts.
-    - As an authorized user I can edit an existing exercise.
-    - *As an authorized user I can change the status of an existing exercise to inactive.
-    - *As an authorized user I have access to a library of default exercises so that I don’t have to create them all.
-    - *As an authorized user I can tag an exercise so that I can filter exercises later.
-* Tags and Muscle groups
-    - *As an authorized user I can create new tags so that I can reuse them in exercises and workouts later.
-    - As an authorized user I can create new muscle groups so that I reuse them in exercises later.
-
-##### Workouts
-- As an authorized user I can create new workouts and populate them with exercises so that I can reuse them in sessions.
-- As an authorized user I can delete a workout so that it is entirely deleted from the database.
-- *As an authorized user I can use filters to easily find an exercise when I populate a workout.
-- *As an authorized user I can tag a workout so that I can filter workouts later.
-- As an authorized user I can edit a workout so that I can update an existing workout.
-- As an authorized user I can delete an exercise from a workout so that I can control the content of my workouts.
-- *As an authorized user I can change the status of an existing workout to inactive.
-
-##### Sessions
-- As an authorized user I can view a session from the landing page so that I can easily use the app at the gym.
-- *As an authorized user I can add a new session on today's date from the landing page so that I can easily use the app in the gym.
-- As an authorized user I can add a new session on any date so that I can plan my training.
-- As an authorized user I can choose to populate a session with predefined workouts so that I can reuse the collection of workouts I have made.
-- *As an authorized user I can choose to populate a session with predefined exercises so that I can reuse the collection of exercises I have made.
-- *As an authorized user I can use filters to easily find an exercise when I populate a session.
-- *As an authorized user I can use filters to easily find a workout when I populate a session.
-- *As an authorized user I can turn on notifications so that I get a reminder on the days when I have planned a session.
-- As an authorized user I can find old sessions so that I can look back on my training history.
-- *As an authorized user I can copy an old session to create a new one so that I can easily create a new session similar to an old one.
-- As an authorized user I can edit an existing session.
-- As an authorized user I can delete my sessions so that they are entirely gone from the database.
-- As an authorized user I find a link to my next planned session on the landing page so that I can easily access it in the gym.
-
-#### Admin User
-- As an admin user I can make a library of tags*, muscle groups and exercises so that all authorized users can access them.
-- As an admin user I can create new units so that all users reuse them in exercises and workouts.
-- *As an admin user I can reset a user's password so that a user who lost their password still can access their saved data.  
-</details>
+The user stories for this project can be found in [this document](documentation/user_stories.md).
 
 ## Planning the Project
 ¨¨The planning of this project is done in Github Projects and follows an Agile strategy.
@@ -109,7 +55,7 @@ By brainstorming for ideas, I came up with a number of words and expressions I t
 - seeds for garden
 
 ### Wireframes
-The wireframes for this project can be found on [this document](documentation/wireframes.md)
+The wireframes for this project can be found in [this document](documentation/wireframes.md).
 
 
 ## Features
