@@ -1,0 +1,26 @@
+{% load static %}
+
+<head>
+    {% block meta %}
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    {% endblock %}
+
+    {% block corecss %}
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% endblock %}
+
+    {% block extra_css %}
+    {% endblock %}
+
+    {% block corejs %}
+    {% endblock %}
+
+    {% block extra_js %}
+    {% endblock %}
+
+    <title>Miller & Davies {% block extra_title %}{% endblock %}</title>
+</head>
