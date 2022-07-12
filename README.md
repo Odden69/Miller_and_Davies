@@ -21,11 +21,8 @@ The goal is for the user to set up the app at home on a wide screen and then eas
 
 ## User Experience
 ### Target Audience
-¨¨The target audience for ITrain is people of all ages who regularly workout at a gym and who like to take control over their own training by planning their workouts.
-The app gives the user the opportunity to create and edit exercises and put them together into workouts.
-There are default exercises provided by an admin user, but apart from that all exercises and workouts are private and not shared between users.
-
-The focus of this app is usability, both on a computer and on a mobile since it is important to be able to use the app at the gym and, for convenience, do the planning on a computer. Hence a fully responsive site is required.¨¨
+The target audience for the Miller & Davies site is people of all ages that are interested in gardening and planting seeds. People from rural and suburban areas should be in majority even if urban people might be interested in the selection of seeds suitable for growing indoors.  
+The site fulfills their needs of buying organic vegetable, flower and herb seeds.
 
 ### User Stories
 The user stories for this project can be found in [this document](documentation/user_stories.md).
