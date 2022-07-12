@@ -93,6 +93,20 @@ I soon realized that, since this was the first time I ran a project like this, i
 To illustrate the logic of the database I used [diagrams.net](https://www.diagrams.net/).
 ![Database diagram](documentation/images/database_diagram.png)
 
+### SEO
+By brainstorming for ideas, I came up with a number of words and expressions I thought would be relevant searches for a user looking for a site like this. After searching for them on Google, using “others search for” and “related searches”, and finally Wordtracker, I ended up with these words and phrases to use on the site to improve SEO:
+- organic seeds
+- gardening seeds
+- vegetable seeds
+- flower seeds
+- herb seeds
+- organic vegetable seeds
+- organic flower seeds
+- organic herb seeds
+- organic vegetable seeds online
+- seeds online
+- seeds for vegetables
+- seeds for garden
 
 ### Wireframes
 The wireframes for this project can be found on [this document](documentation/wireframes.md)
