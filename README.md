@@ -89,38 +89,14 @@ The focus of this app is usability, both on a computer and on a mobile since it 
 [Link to the project's Kanban Board](https://github.com/Odden69/ITrain/projects/1).  
 I soon realized that, since this was the first time I ran a project like this, it was very hard to make any close time estimates. Therefore the time aspect has not been very highly prioritized in the planning of this project, instead I focused on the content and on always having a working app after each iteration. This was a big learning outcome and with more experience, I am sure the benefits of the agile planning method will be even more obvious.¨¨
 
-### Wireframes
-¨¨The focus for this application is first and foremost on usability on a mobile device, therefore all the wireframes are made for a mobile device and a large screen wireframe is added just to show the principle for larger screens.  
-Since the wireframes were made before the project started with little, to no, experience of Django, some interface changes had to be made along the line. But the major content of the wireframes has been implemented. I first planned to have help text shown in popups, but I later changed my mind. Therefore the help page is not in the wireframes.¨¨
-
-<details>
-  <summary>Click to see the wireframes</summary>
-
-Wireframes for Unauthorized Users  
-![Unauthorized User](documentation/wireframes/unauthorized_user.png)  
-
-Wireframe for the Landing Page of Authorized Users  
-![Authorized User](documentation/wireframes/authorized_user.png)  
-
-Wireframes for Sessions Pages  
-![Sessions Pages](documentation/wireframes/sessions.png)  
-
-Wireframes for the Workouts Pages  
-![Workouts Pages](documentation/wireframes/workouts.png)  
-
-Wireframes for Exercises Pages  
-![Exercises Pages](documentation/wireframes/exercises.png)  
-
-Wireframes for Muscle Groups and Tags Pages  
-![Muscle Groups and Tags Pages](documentation/wireframes/musclegroups_and_tags.png)   
-
-Wireframe for Landing Page on a Large screen
-![Large Screen Landing Page](documentation/wireframes/large_screen.png) 
-</details>
-
 ### Database Diagram
-¨¨To illustrate the logic of the database I used [diagrams.net](https://www.diagrams.net/). The features that have been postponed are marked with an asterisk in the chart.
-![Database diagram](documentation/database_diagram.png)¨¨
+To illustrate the logic of the database I used [diagrams.net](https://www.diagrams.net/).
+![Database diagram](documentation/images/database_diagram.png)
+
+
+### Wireframes
+The wireframes for this project can be found on [this document](documentation/wireframes.md)
+
 
 ## Features
 ### Existing Features
