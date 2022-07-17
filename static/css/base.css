@@ -1,0 +1,43 @@
+:root {
+    --light-green: #acc185;
+    --medium-green: #304b08;
+    --dark-green: #0b180a;
+  }
+
+  html {
+    height: 100%;
+  }
+
+  .text-black {
+    color: black;
+  }
+
+  i.text-black:hover {
+    /*color: blue!important; */
+    font-size: x-large;
+  }
+
+  .header-top,
+  .footer-bottom {
+    background-color: var(--light-green);
+  }
+
+  .navbar {
+    background-color: var(--medium-green);
+    padding-top: 0;
+    padding-bottom: 0;
+    color: white!important;
+  }
+
+  .navbar .nav-link,
+  .navbar i {
+    color: white!important;
+  }
+
+  .social-icon {
+    width: 20px;
+  }
+  
+
+  
+

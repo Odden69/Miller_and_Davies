@@ -5,23 +5,25 @@
 
 {% include 'includes/head.html' %}
 
-<body>
+<body class="d-flex flex-column h-100">
 
     {% include 'includes/header.html' %}
+    <div style="height: 114px;"></div>
 
     {% include 'includes/messages.html' %}
 
+    <main class="flex-shrink-0">
+        {% include 'includes/hero.html' %}
 
-    {% block page_hero %}
-    {% endblock %}
-  
-    {% block content %}
-    {% endblock %}
-
-    {% include 'includes/footer.html' %}}
+        {% block content %}
+        {% endblock %}
+    </main>
+    
+    {% include 'includes/footer.html' %}
 
     {% block postloadjs %}
-    {% endblock %
+    <link type="text/javascript" href="{% static 'js/base.js' %}">
+    {% endblock %}
 
 </body>
 

@@ -1,5 +1,22 @@
 {% load static %}
 
-<header>
+<header class="mb-4 fixed-top container-fluid">
+    <div class="header-top row py-2 d-flex">
+        <div class="col-12 col-md-4 text-center text-md-start">
+            <a href="/" class="text-dark text-decoration-none">
+                <span class="fs-1 fw-bold">Miller & Davies</span>
+            </a>
+        </div>
+        <div class="col-12 col-md-4 mx-auto  mb-1 my-md-auto">
+            <form>
+                <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+            </form>
+        </div>
+        <div class="col-md-4 d-none d-md-block text-md-end my-md-auto">
+            <a href="/" class="fs-3">
+                {% include 'includes/basket-btn.html' %}
+            </a>
+        </div>
+    </div>
     {% include 'includes/navbar.html' %}
 </header>
