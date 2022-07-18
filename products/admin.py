@@ -1,4 +1,6 @@
 from django.contrib import admin
-from .models import Product
+from .models import Product, Category, Subcategory
 
-admin.site.register(Product)
+adminFields = [Product, Category, Subcategory]
+
+admin.site.register(adminFields)

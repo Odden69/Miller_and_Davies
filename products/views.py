@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from .models import Product
 
 
 def index(request):
@@ -12,4 +13,9 @@ def products(request):
     """
     Returns the products page
     """
-    return render(request, 'products/products.html')
+    products = Product.objects.all()
+
+    context = {
+        'products': products,
+    }
+    return render(request, 'products/products.html', context)

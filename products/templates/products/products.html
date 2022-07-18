@@ -2,5 +2,49 @@
 {% load static %}
 
 {% block content %}
-Hello World
+<div class="container-fluid my-4">
+    <div class="row">
+        <div class="col-2 filter-container">
+            <p>Filter</p>
+        </div>
+        <div class="col-10 product-container">
+            <div class="row">
+                {% for product in products%}
+                <div class="col col-sm-6 col-md-4 col-lg-3">
+                    <div class="card h-100">
+                        <a href="#">
+                            <img class="img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        </a>
+                        <div class="card-body text-center">
+                            <div class="row">
+                                <a href="#" class="text-decoration-none text-black">
+                                    <div class="col">
+                                        <div class="row">
+                                            <h3 class="mb-3">{{ product.name}}</h3>
+                                        </div>
+                                        <div class="row">
+                                            <p class="mb-0">Pkt of {{ product.size}} seeds</p>
+                                        </div>
+                                        <div class="row">
+                                            <h3 class="mb-3">£{{ product.price}}</h3>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <a href="#">
+                                        <button class="small-button">Buy Now</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}

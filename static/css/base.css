@@ -8,6 +8,15 @@
     height: 100%;
   }
 
+  .small-button {
+    height: 30px;
+    width: 90px;
+    background-color: var(--medium-green);
+    border: 2px solid var(--light-green);
+    color: white!important;
+    border-radius: 4px;
+  }
+
   .text-black {
     color: black;
   }

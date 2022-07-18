@@ -3,11 +3,11 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 
 
 def get_sentinel_category():
-    return Category.objects.get_or_create(name='Deleted Category')[0]
+    return Category.objects.get_or_create(name='deleted_category')[0]
 
 
 def get_sentinel_subcategory():
-    return Subcategory.objects.get_or_create(name='Deleted Subcategory')[0]
+    return Subcategory.objects.get_or_create(name='deleted_subcategory')[0]
 
 
 class Category(models.Model):
@@ -28,13 +28,10 @@ class Category(models.Model):
 class Subcategory(models.Model):
 
     class Meta:
-        verbose_name_plural = 'Categories'
+        verbose_name_plural = 'Subcategories'
 
     name = models.CharField(max_length=100)
     friendly_name = models.CharField(max_length=100, null=True, blank=True)
-    # category = models.ForeignKey(Category,
-    #                              on_delete=models.CASCADE,
-    #                              related_name='subcategories')
     category = models.ForeignKey(Category,
                                  on_delete=models.SET(get_sentinel_category),
                                  related_name='subcategories')
@@ -50,6 +47,7 @@ class Product(models.Model):
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
+    image = models.ImageField(null=True, blank=True)
     subcategory = models.ForeignKey(Subcategory,
                                     on_delete=models.SET(
                                         get_sentinel_subcategory))
