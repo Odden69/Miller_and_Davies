@@ -10,6 +10,17 @@ def get_sentinel_subcategory():
     return Subcategory.objects.get_or_create(name='deleted_subcategory')[0]
 
 
+class Season(models.Model):
+    name = models.CharField(max_length=50)
+    friendly_name = models.CharField(max_length=50, null=True, blank=True)
+
+    def __str__(self):
+        return self.name
+
+    def get_friendly_name(self):
+        return self.friendly_name
+
+
 class Category(models.Model):
 
     class Meta:
@@ -51,6 +62,10 @@ class Product(models.Model):
     subcategory = models.ForeignKey(Subcategory,
                                     on_delete=models.SET(
                                         get_sentinel_subcategory))
+    sawing_times = models.ManyToManyField(Season,
+                                          related_name='products_to_saw')
+    harvest_times = models.ManyToManyField(Season,
+                                           related_name='products_to_harvest')
     on_sale = models.BooleanField(default=False, null=True, blank=True)
     discount = models.IntegerField(default=0,
                                    validators=[
