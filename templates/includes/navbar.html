@@ -15,16 +15,19 @@
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
     <ul class="navbar-nav me-auto mx-md-auto mb-2 mb-lg-0">
       <li class="nav-item">
-        <a class="nav-link" href="#">Vegetables</a>
+        <a class="nav-link" href="{% url 'products' %}">All Products</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Flowers</a>
+        <a class="nav-link" href="{% url 'products' %}?category=vegetables">Vegetables</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Herbs</a>
+        <a class="nav-link" href="{% url 'products' %}?category=flowers">Flowers</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Bargains</a>
+        <a class="nav-link" href="{% url 'products' %}?category=herbs">Herbs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'products' %}?bargains">Bargains</a>
       </li>
     </ul>
   </div>
