@@ -12,13 +12,10 @@ def get_sentinel_subcategory():
 
 class Season(models.Model):
     name = models.CharField(max_length=50)
-    friendly_name = models.CharField(max_length=50, null=True, blank=True)
+    friendly_name = models.CharField(max_length=50)
 
     def __str__(self):
         return self.name
-
-    def get_friendly_name(self):
-        return self.friendly_name
 
 
 class Category(models.Model):
@@ -27,13 +24,11 @@ class Category(models.Model):
         verbose_name_plural = 'Categories'
 
     name = models.CharField(max_length=100)
-    friendly_name = models.CharField(max_length=100, null=True, blank=True)
+    friendly_name = models.CharField(max_length=100)
+    image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
         return self.name
-
-    def get_friendly_name(self):
-        return self.friendly_name
 
 
 class Subcategory(models.Model):
@@ -42,16 +37,14 @@ class Subcategory(models.Model):
         verbose_name_plural = 'Subcategories'
 
     name = models.CharField(max_length=100)
-    friendly_name = models.CharField(max_length=100, null=True, blank=True)
+    friendly_name = models.CharField(max_length=100)
     category = models.ForeignKey(Category,
                                  on_delete=models.SET(get_sentinel_category),
                                  related_name='subcategories')
+    image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
         return self.name
-
-    def get_friendly_name(self):
-        return self.friendly_name
 
 
 class Product(models.Model):

@@ -8,13 +8,22 @@
     height: 100%;
   }
 
-  .small-button {
-    height: 30px;
-    width: 90px;
+  .button {
     background-color: var(--medium-green);
     border: 2px solid var(--light-green);
     color: white!important;
     border-radius: 4px;
+    padding: 0 10px;
+    margin: 5px;
+  }
+
+  .small-button {
+    height: 30px;
+  }
+
+  .large-button {
+    font-size: large;
+    height: 40px;
   }
 
   .text-black {
@@ -41,6 +50,21 @@
   .navbar .nav-link,
   .navbar i {
     color: white!important;
+  }
+
+  main {
+    margin-top: 112px;
+  }
+
+  .hero-image {
+    background: no-repeat center center;
+    background-size: cover;
+    height: 425px;
+  }
+
+  .hero-text {
+    background-color: rgba(0, 0, 0, 0.75);
+    min-height: 100px;
   }
 
   .social-icon {

@@ -1,0 +1,46 @@
+<!-- Select Category / Subcategory -->
+<div class="container-fluid my-4">
+    <div class="row">
+        {% if selected_subcategory is None %}
+        {% if selected_category is None %}
+        <div class="col">
+            <a class="text-black" href="{% url 'products' %}">All Products</a>
+        </div>
+        {% else %}
+        <div class="col">
+            <a href="{% url 'products' %}">All Products/</a>
+            <a href="{% url 'products' %}?category={{ selected_category.name }}">{{ selected_category.friendly_name|title }}</a>
+        </div>
+        {% endif %}
+        {% else %}
+        <div class="col">
+            <a href="{% url 'products' %}">All Products/</a>
+            <a href="{% url 'products' %}?category={{ selected_category.name }}">{{ selected_category.friendly_name|title }}/</a>
+            <a href="{% url 'products' %}?category={{ selected_category.name }}&subcategory={{ selected_subcategory.name }}">{{ selected_subcategory.friendly_name|title }}</a>
+        </div>
+        {% endif %}
+    </div>
+    <div class="row">
+        {% if selected_category is None %}
+        <div class="col d-flex justify-content-center">
+            {% for category in categories %}
+            <a href="{% url 'products' %}?category={{ category.name }}">
+                <button class="button large-button">{{ category.friendly_name }}</button>
+            </a>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="col d-flex justify-content-center">
+            {% for subcategory in subcategories %}
+            {% if subcategory.name == 'na' %}
+            {% else %}
+            <a href="{% url 'products' %}?category={{ selected_category.name }}&subcategory={{ subcategory.name }}">
+                <button class="button large-button">{{ subcategory.friendly_name }}</button>
+            </a>
+            {% endif %}
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</div>
+<!-- Select Category / Subcategory -->

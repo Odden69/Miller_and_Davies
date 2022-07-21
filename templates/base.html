@@ -8,13 +8,9 @@
 <body class="d-flex flex-column h-100">
 
     {% include 'includes/header.html' %}
-    <div style="height: 114px;"></div>
-
     {% include 'includes/messages.html' %}
 
     <main class="flex-shrink-0">
-        {% include 'includes/hero.html' %}
-
         {% block content %}
         {% endblock %}
     </main>
