@@ -1,76 +1,85 @@
+/* variables */
 :root {
-    --light-green: #acc185;
-    --medium-green: #304b08;
-    --dark-green: #0b180a;
-  }
+  --light-green: #acc185;
+  --medium-green: #304b08;
+  --dark-green: #0b180a;
+}
 
-  html {
-    height: 100%;
-  }
+/* general */
+html {
+  height: 100%;
+}
 
-  .button {
-    background-color: var(--medium-green);
-    border: 2px solid var(--light-green);
-    color: white!important;
-    border-radius: 4px;
-    padding: 0 10px;
-    margin: 5px;
-  }
+.button {
+  background-color: var(--medium-green);
+  border: 2px solid var(--light-green);
+  color: white !important;
+  border-radius: 4px;
+  padding: 0 10px;
+  margin: 5px;
+}
 
-  .small-button {
-    height: 30px;
-  }
+.small-button {
+  height: 30px;
+}
 
-  .large-button {
-    font-size: large;
-    height: 40px;
-  }
+.large-button {
+  font-size: large;
+  height: 40px;
+}
 
-  .text-black {
-    color: black;
-  }
+.text-black {
+  color: black;
+}
 
-  i.text-black:hover {
-    /*color: blue!important; */
-    font-size: x-large;
-  }
+i.text-black:hover {
+  /*color: blue!important; */
+  font-size: x-large;
+}
 
-  .header-top,
-  .footer-bottom {
-    background-color: var(--light-green);
-  }
+/* header */
+.header-top,
+.footer-bottom {
+  background-color: var(--light-green);
+}
 
-  .navbar {
-    background-color: var(--medium-green);
-    padding-top: 0;
-    padding-bottom: 0;
-    color: white!important;
-  }
+.navbar {
+  background-color: var(--medium-green);
+  padding-top: 0;
+  padding-bottom: 0;
+  color: white !important;
+}
 
-  .navbar .nav-link,
-  .navbar i {
-    color: white!important;
-  }
+.navbar .nav-link,
+.navbar i {
+  color: white !important;
+}
 
-  main {
-    margin-top: 112px;
-  }
+main {
+  margin-top: 112px;
+}
 
-  .hero-image {
-    background: no-repeat center center;
-    background-size: cover;
-    height: 425px;
-  }
+/* hero image */
+.hero-image {
+  background: no-repeat center center;
+  background-size: cover;
+  height: 425px;
+}
 
-  .hero-text {
-    background-color: rgba(0, 0, 0, 0.75);
-    min-height: 100px;
-  }
+.hero-text {
+  background-color: rgba(0, 0, 0, 0.75);
+  min-height: 100px;
+}
 
-  .social-icon {
-    width: 20px;
-  }
-  
+/* footer */
+.social-icon {
+  width: 20px;
+}
 
-  
-
+/* product detail page */
+.detail-container img {
+  width: 80%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+}

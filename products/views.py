@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Product, Category, Subcategory
 
 
@@ -19,6 +19,7 @@ def products(request):
     selected_category = None
     selected_subcategory = None
 
+    # category and subcategory filters
     if request.GET:
         if 'category' in request.GET:
             selected_category_name = request.GET['category']
@@ -43,3 +44,15 @@ def products(request):
 
     }
     return render(request, 'products/products.html', context)
+
+
+def product_detail(request, product_id):
+    """ Returns a detail view of a specific product """
+
+    product = get_object_or_404(Product, pk=product_id)
+
+    context = {
+        'product': product,
+    }
+
+    return render(request, 'products/product_detail.html', context)
