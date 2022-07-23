@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-7+zw+2+f@)nk&niksasb-tl03cdila-)8g#$23d%@r*%1p(u36
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['hj-miller-and-davies.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -81,12 +81,17 @@ WSGI_APPLICATION = 'miller_n_davies.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 # DATABASES = {
 #     'default': dj_database_url.parse('postgres://nfbldicywexhjw:9c70b150ed05e7f5e7b67657e2cc389b8b3e76b364460cc3e9fa3ae6d2207862@ec2-63-32-248-14.eu-west-1.compute.amazonaws.com:5432/d1p9ptj8bs52q1')

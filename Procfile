@@ -1,0 +1,1 @@
+web: gunicorn miller_n_davies.wsgi:application
