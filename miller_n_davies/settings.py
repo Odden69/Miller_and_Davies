@@ -15,6 +15,10 @@ from pathlib import Path
 
 import dj_database_url
 
+if os.path.isfile("env.py"):
+    import env
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -95,10 +99,6 @@ else:
             'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
-
-# DATABASES = {
-#     'default': dj_database_url.parse('postgres://nfbldicywexhjw:9c70b150ed05e7f5e7b67657e2cc389b8b3e76b364460cc3e9fa3ae6d2207862@ec2-63-32-248-14.eu-west-1.compute.amazonaws.com:5432/d1p9ptj8bs52q1')
-# }
 
 
 # Password validation
