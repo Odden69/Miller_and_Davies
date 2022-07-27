@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'profiles',
     'products',
+    'basket',
 
     # other
     'storages',
