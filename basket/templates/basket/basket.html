@@ -3,50 +3,73 @@
 
 {% block content %}
 <!-- Hero image -->
-<div class="hero-image d-flex justify-content-center align-items-center text-center bg-image"
-    style="background-image: url('/media/hand_planting_seeds.jpg');"
-    alt="xxxx">
-  <div class="hero-text mask px-4 d-flex justify-content-center align-items-center">
-    <div class="text-white h-100">
-      <h1>Shopping Basket</h1>
+<div class="basket-hero-image d-flex justify-content-center align-items-center text-center bg-image">
+    <div class="hero-text mask px-4 d-flex justify-content-center align-items-center">
+        <div class="text-white h-100">
+            <h1>Shopping Basket</h1>
+        </div>
     </div>
-  </div>
 </div>
 <!-- Hero image -->
 
-<div class="container my-4">
-    {% if items %}
-    <div class="row border border-secondary">
-        <div class="col-10 item-container">
-            <div class="row">
-                {% for item in items%}
-                <div class="col col-sm-6 col-md-4 col-lg-3 mb-3">
-                    <a href="{% url 'item_detail' item.id %}">
-                        {% if item.image %}
-                        <img class="img-fluid" src="{{ item.image.url }}" alt="{{ item.name }}">
-                        {% else %}
-                        <img class="img-fluid" src="{{ MEDIA_URL }}no-image.jpg" alt="Image coming soon">
-                        {% endif %}
-                    </a>
+<div class="container-md my-4">
+    {% if basket_items %}
+    <div class="row justify-content-center">
+        <div class="col-12 col-xl-10 item-container">
+            {% for item in basket_items%}
+            <div class="row border border-secondary align-items-md-center">
+                <div class="col-5 col-md-2 my-2 basket-prod-image">
+                    {% if item.product.image %}
+                    <img class="img-fluid" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                    {% else %}
+                    <img class="img-fluid" src="{{ MEDIA_URL }}no-image.jpg" alt="Image coming soon">
+                    {% endif %}
                 </div>
-                <div class="col-12">
+                <div class="col-7 col-md-4 mt-2 mt-md-0">
                     <div class="row">
-                        <h3 class="mb-3">{{ item.name }}</h3>
+                        <h3 class="mb-0">{{ item.product.name }}</h3>
                     </div>
                     <div class="row">
-                        <h3 class="mb-3">{{ item.sku }}</h3>
-                    </div>                    
+                        <p class="mb-1">{{ item.product.sku }}</p>
+                    </div>
                     <div class="row">
-                        <p class="mb-0">Pkt of {{ item.size }} seeds</p>
+                        <p class="mb-0">Pkt of {{ item.product.size }} seeds</p>
                     </div>
                 </div>
-                <div class="col-12 align-self-end">
+                <div class="col-6 col-md-3">
+                    <form action="{% url 'adjust_quantity_in_basket' item.product.id %}" class="form" method="POST">
+                        {% csrf_token %}
+                        <div class="row align-items-center">
+                            <div class="col-8 adjust_quantity pe-0">
+                                <input class="form-control qty_input" type="number" name="quantity" step="1"
+                                    value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.product.id }}"
+                                    id="id_qty_{{ item.product.id }}">
+                            </div>
+                            <div class="col-3 ps-0">
+                                <button type="submit" class="refresh-button"><i class="fa-solid fa-rotate fa-lg" aria-hidden="true"></i></button>
+                            </div>
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-6 col-md-3 text-end pe-4">
                     <div class="row">
-                        <p class="mb-0">Unit Price: £{{ item.price }}</p>
+                        <p class="mb-0">Unit Price: £{{ item.product.price }}</p>
+                    </div>
+                    <div class="row">
+                        <p class="mb-0"><strong>Subtotal: £{{ item.product.price }}</strong></p>
                     </div>
                 </div>
-                {% endfor %}
             </div>
+            {% endfor %}
+            <div class="row">
+                <div class="col-12 text-end pe-4 mt-2">
+                    <h6>Basket Total: £{{ total|floatformat:2 }}</h6>
+                    <h6>Delivery Cost: £{{ delivery|floatformat:2 }}</h6>
+                    <h4>Grand Total: £{{ grand_total|floatformat:2 }}</h6>
+                </div>
+            </div>
+
         </div>
     </div>
     {% else %}

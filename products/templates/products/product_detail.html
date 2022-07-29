@@ -25,6 +25,25 @@
                 <div class="col-12">
                     <h3 class="mb-2">£{{ product.price}}</h3>
                 </div>
+                <div class="col-12">
+                    <form action="{% url 'add_to_basket' product.id %}" class="form" method="POST">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-2 select_quantity">
+                                <input class="form-control qty_input"
+                                    type="number" name="quantity" value="1"
+                                    min="1" max="99"
+                                    data-item_id="{{ product.id }}"
+                                    id="id_qty_{{ product.id }}">
+                            </div>
+                            <div class="col-4">
+                                <input class="btn button large-button"
+                                    type="submit" value="Buy Now">
+                            </div>
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        </div>
+                    </form>
+                </div>
                 <div class="col-11">
                     <p class="mb-0">{{ product.description}}</p>
                 </div>

@@ -83,3 +83,24 @@ main {
   aspect-ratio: 1;
   object-fit: contain;
 }
+
+.select_quantity {
+  padding-top: 0.35rem!important;
+}
+
+/* shopping basket */
+.basket-hero-image {
+  background-image: url('/media/seedling.jpg');
+  background-position: bottom right;
+  background-size: cover;
+  height: 200px;
+}
+
+.basket-prod-image {
+  max-width: 150px;
+}
+
+.refresh-button {
+  background: none!important;
+  border: none!important;
+}
