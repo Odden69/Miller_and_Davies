@@ -21,6 +21,7 @@
         {% endif %}
     </div>
     <div class="row">
+        {% if selected_subcategory is None %}
         {% if selected_category is None %}
         <div class="col d-flex justify-content-center">
             {% for category in categories %}
@@ -41,6 +42,10 @@
             {% endfor %}
         </div>
         {% endif %}
+        {% else %}
+        <div class="col d-flex justify-content-center">
+        </div>
+        {% endif %}       
     </div>
 </div>
 <!-- Select Category / Subcategory -->

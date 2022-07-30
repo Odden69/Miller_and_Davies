@@ -26,7 +26,7 @@ html {
 .large-button {
   font-size: large;
   height: 40px;
-  width: 130px;
+  padding: 0 20px;
 }
 
 .text-black {
