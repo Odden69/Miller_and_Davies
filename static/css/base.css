@@ -26,6 +26,7 @@ html {
 .large-button {
   font-size: large;
   height: 40px;
+  width: 130px;
 }
 
 .text-black {
@@ -84,8 +85,38 @@ main {
   object-fit: contain;
 }
 
-.select_quantity {
+/* .select_quantity {
   padding-top: 0.35rem!important;
+} */
+
+.quantity-buttons {
+  position: relative;
+}
+
+.increment-qty {
+  position: absolute!important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -75%);
+}
+
+.decrement-qty {
+  position: absolute!important;
+  top: 30%;
+  left: 50%;
+  transform: translate(-40%, -25%);
+}
+
+.quantity-icon-btn {
+  padding: 0 5px!important;
+}
+
+.quantity-icon-btn:hover {
+  color:var(--light-green);
+}
+
+.quantity-icon-btn:focus {
+  box-shadow: none;
 }
 
 /* shopping basket */
@@ -100,7 +131,13 @@ main {
   max-width: 150px;
 }
 
-.refresh-button {
+.refresh-button,
+.remove-item {
   background: none!important;
   border: none!important;
+}
+
+.refresh-button:hover,
+.remove-item:hover {
+  color:var(--light-green);
 }

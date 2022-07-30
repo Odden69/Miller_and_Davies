@@ -37,6 +37,18 @@ def adjust_quantity_in_basket(request, item_id):
 
     basket[item_id] = quantity
     request.session['basket'] = basket
-    print(basket)
+
+    return redirect(redirect_url)
+
+
+def remove_from_basket(request, item_id):
+    """
+    Remove a selected product from the basket
+    """
+    redirect_url = request.POST.get('redirect_url')
+    basket = request.session.get('basket', {})
+
+    basket.pop(item_id)
+    request.session['basket'] = basket
 
     return redirect(redirect_url)

@@ -37,20 +37,55 @@
                     </div>
                 </div>
                 <div class="col-6 col-md-3">
-                    <form action="{% url 'adjust_quantity_in_basket' item.product.id %}" class="form" method="POST">
-                        {% csrf_token %}
-                        <div class="row align-items-center">
-                            <div class="col-8 adjust_quantity pe-0">
-                                <input class="form-control qty_input" type="number" name="quantity" step="1"
-                                    value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.product.id }}"
-                                    id="id_qty_{{ item.product.id }}">
-                            </div>
-                            <div class="col-3 ps-0">
-                                <button type="submit" class="refresh-button"><i class="fa-solid fa-rotate fa-lg" aria-hidden="true"></i></button>
-                            </div>
-                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                    <div class="row align-items-center">
+                        <div class="col-9">
+                            <form action="{% url 'adjust_quantity_in_basket' item.item_id %}" class="form"
+                                method="POST">
+                                {% csrf_token %}
+                                <div class="row align-items-center">
+                                    <div class="col-8 adjust_quantity pe-0">
+                                        <div class="row input-group align-items-center m-0">
+                                            <div class="col-10 pe-0">
+                                                <input class="form-control qty_input" type="number" name="quantity"
+                                                    value="{{ item.quantity }}" min="1" max="99"
+                                                    data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                                            </div>
+                                            <div class="col-2 input-group-append px-0 quantity-buttons">
+                                                <button class="increment-qty btn quantity-icon-btn"
+                                                    data-item_id="{{ item.item_id }}"
+                                                    id="increment-qty_{{ item.item_id }}">
+                                                    <i class="fa-solid fa-caret-up fa-xl"></i>
+                                                </button>
+                                                <button class="decrement-qty btn quantity-icon-btn"
+                                                    data-item_id="{{ item.item_id }}"
+                                                    id="decrement-qty_{{ item.item_id }}">
+                                                    <i class="fa-solid fa-caret-down fa-xl"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 ps-1">
+                                        <button type="submit" class="refresh-button"><i class="fa-solid fa-rotate fa-xl"
+                                                aria-hidden="true"></i></button>
+                                    </div>
+                                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                </div>
+                            </form>
                         </div>
-                    </form>
+                        <div class="col-3">
+                            <form action="{% url 'remove_from_basket' item.item_id %}" class="form" method="POST">
+                                {% csrf_token %}
+                                <div class="row align-items-center">
+                                    <div class="col-3 justify-item-end">
+                                        <button type="submit" class="remove-item">
+                                            <i class="fa-solid fa-trash-can fa-xl"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            </form>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-6 col-md-3 text-end pe-4">
                     <div class="row">
@@ -80,4 +115,9 @@
     {% endif %}
 </div>
 
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}
