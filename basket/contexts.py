@@ -13,15 +13,20 @@ def basket_contents(request):
 
     for item_id, quantity in basket.items():
         product = get_object_or_404(Product, pk=item_id)
-        total += quantity * product.price
+        subtotal = quantity * product.price
+        total += subtotal
         product_count += quantity
         basket_items.append({
             'item_id': item_id,
             'quantity': quantity,
             'product': product,
+            'subtotal': subtotal,
         })
 
     delivery = Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100) * total
+
+    if delivery < settings.MINIMUM_DELIVERY_COST:
+        delivery = settings.MINIMUM_DELIVERY_COST
 
     grand_total = total + delivery
 

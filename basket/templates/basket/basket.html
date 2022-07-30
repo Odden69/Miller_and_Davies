@@ -92,7 +92,7 @@
                         <p class="mb-0">Unit Price: £{{ item.product.price }}</p>
                     </div>
                     <div class="row">
-                        <p class="mb-0"><strong>Subtotal: £{{ item.product.price }}</strong></p>
+                        <p class="mb-0"><strong>Subtotal: £{{ item.subtotal|floatformat:2 }}</strong></p>
                     </div>
                 </div>
             </div>
