@@ -25,8 +25,9 @@ def basket_contents(request):
 
     delivery = Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100) * total
 
-    if delivery < settings.MINIMUM_DELIVERY_COST:
-        delivery = settings.MINIMUM_DELIVERY_COST
+    if basket_items:
+        if delivery < settings.MINIMUM_DELIVERY_COST:
+            delivery = settings.MINIMUM_DELIVERY_COST
 
     grand_total = total + delivery
 
