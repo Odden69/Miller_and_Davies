@@ -1,13 +1,11 @@
 {% load static %}
-<div class="basket-btn">
-    <button class="btn mb-1">
-        <div class="my-0">
+    <button class="btn basket-btn mb-1 text-reset">
+        <div class="my-0 fs-6">
             {% if grand_total %}
-            <i class="fa-solid fa-basket-shopping"></i>
+            <i class="fa-solid fa-basket-shopping fa-lg me-1"></i>
             ${{ grand_total|floatformat:2 }}
             {% else %}
-            <div>Your Basket is Empty</div>
+            <div class="fs-6">Your Basket is Empty</div>
             {% endif %}
         </div>
     </button>
-</div>
