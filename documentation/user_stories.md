@@ -13,7 +13,6 @@
 | User Story No | As a/an ... | I want to be able to ...| so that I can ... | Tested |
 |:-------------:|:-----------:|:------------------------|:------------------|:------:|
 | 8 | Shopper | search for a product by name, description or subcategory | easily find the specific seed I am looking for | |
-| 9 | Shopper | filter products on categories | easily find the type of seed I am looking for | |
 | 10 | Shopper | sort the available products on name, price or rating | choose the view which suits me the best | |
 | 11 | Shopper | filter products on sowing or harvest months | find seeds that suites my needs | |
 | 12 | Shopper | find seeds suitable for indoor growing | easily rule out seeds not suitable for my needs | |
@@ -40,13 +39,14 @@
 ### Purchasing and Checkout
 | User Story No | As a/an ... | I want to be able to ...| so that I can ... | Tested |
 |:-------------:|:-----------:|:------------------------|:------------------|:------:|
-| 24 | Shopper | easily select a product to add it to the bag | don't have make annoying unnecessary clicks | |
-| 25 | Shopper | view the content of my shopping bag | to ensure I have selected the intended products | |
-| 26 | Shopper | easily increase or decrease the purchased quantity of a product | update or correct my shopping bag | |
+| 24 | Shopper | easily select a product to add it to the basket | don't have make annoying unnecessary clicks | |
+| 25 | Shopper | view the content of my shopping basket | to ensure I have selected the intended products | |
+| 26 | Shopper | easily increase or decrease the purchased quantity of a product | update or correct my shopping basket | |
 | 27 | Shopper | easily enter my payment information | checkout easily | |
 | 28 | Shopper | feel my personal payment information is safe and secure  | don't have to doubt the sites confidentiality | |
 | 29 | Shopper | view an order confirmation after checkout | verify the content of the order | |
 | 30 | Shopper | receive the order confirmation via email | save the order confirmation | |
+| 49 | Shopper | get a confirmation on the actions I take, like removing items from my basket. | be sure my action has gone trough | |
 
 ### Admin and Store Management
 | User Story No | As a/an ... | I want to be able to ...| so that I can ... | Tested |
