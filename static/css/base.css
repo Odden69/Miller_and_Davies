@@ -56,9 +56,33 @@ i.text-black:hover {
   color: white !important;
 }
 
+.navbar .nav-link:hover,
+.navbar i:hover {
+  color:var(--light-green)!important;
+}
+
+.header-top .nav-link:hover,
+.header-top i:hover {
+  color:var(--light-green)!important;
+}
+
 main {
   margin-top: 112px;
 }
+
+.user-dropdown-btn::after {
+  display:none;
+}
+
+.user-dropdown-btn:focus,
+.basket-btn:focus {
+  box-shadow: none;
+}
+
+/* .user-dropdown-btn:hover,
+.basket-btn:hover {
+  color:var(--light-green)!important;
+} */
 
 /* hero image */
 .hero-image {
