@@ -58,20 +58,20 @@ i.text-black:hover {
 
 .navbar .nav-link:hover,
 .navbar i:hover {
-  color:var(--light-green)!important;
+  color: var(--light-green) !important;
 }
 
 .header-top .nav-link:hover,
 .header-top i:hover {
-  color:var(--light-green)!important;
+  color: var(--light-green) !important;
 }
 
 main {
-  margin-top: 112px;
+  margin-top: 107px;
 }
 
 .user-dropdown-btn::after {
-  display:none;
+  display: none;
 }
 
 .user-dropdown-btn:focus,
@@ -118,25 +118,25 @@ main {
 }
 
 .increment-qty {
-  position: absolute!important;
+  position: absolute !important;
   top: 50%;
   left: 50%;
   transform: translate(-40%, -75%);
 }
 
 .decrement-qty {
-  position: absolute!important;
+  position: absolute !important;
   top: 30%;
   left: 50%;
   transform: translate(-40%, -25%);
 }
 
 .quantity-icon-btn {
-  padding: 0 5px!important;
+  padding: 0 5px !important;
 }
 
 .quantity-icon-btn:hover {
-  color:var(--light-green);
+  color: var(--light-green);
 }
 
 .quantity-icon-btn:focus {
@@ -152,16 +152,24 @@ main {
 }
 
 .basket-prod-image {
-  max-width: 150px;
+  max-width: 140px;
 }
 
 .refresh-button,
 .remove-item {
-  background: none!important;
-  border: none!important;
+  background: none !important;
+  border: none !important;
 }
 
 .refresh-button:hover,
 .remove-item:hover {
-  color:var(--light-green);
+  color: var(--light-green);
+}
+
+
+/* media queries */
+@media (max-width: 768px) {
+  main {
+    margin-top: 150px;
+  }
 }
