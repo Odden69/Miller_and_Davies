@@ -4,7 +4,8 @@
 {% block content %}
 <div class="container-fluid detail-container mt-5 mb-4">
     <div class="row">
-        <div class="col-12 col-md-6 image-container d-flex justify-content-center justify-content-md-end align-items-start px-4 my-3 my-md-0">
+        <div
+            class="col-12 col-md-6 image-container d-flex justify-content-center justify-content-md-end align-items-start px-4 my-3 my-md-0">
             {% if product.image %}
             <img class="img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
             {% else %}
@@ -14,7 +15,19 @@
         <div class="col-12 col-md-6 info-container text-center text-md-start px-4">
             <div class="row">
                 <div class="col-12">
-                    <h3 class="mb-0">{{ product.name}}</h3>
+                    <h3 class="mb-0">{{ product.name}}
+                        <form action="{% url 'adjust_favorites' product.id %}" class="form d-inline" method="POST">
+                            {% csrf_token %}
+                            <button class="btn favorite-btn" type="submit">
+                                {% if product.id in request.session.favorites %}
+                                <i class="fa-solid fa-heart fa-lg favorite-icon"></i>
+                                {% else %}
+                                <i class="fa-regular fa-heart fa-lg favorite-icon"></i>
+                                {% endif %}
+                            </button>
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        </form>
+                    </h3>
                 </div>
                 <div class="col-12">
                     <p class="mb-3">{{ product.sku}}</p>
@@ -37,13 +50,13 @@
                                             id="id_qty_{{ product.id }}">
                                     </div>
                                     <div class="col-2 input-group-append px-0 quantity-buttons">
-                                        <button class="increment-qty btn quantity-icon-btn" data-item_id="{{ product.id }}"
-                                            id="increment-qty_{{ product.id }}">
-                                                <i class="fa-solid fa-caret-up fa-xl"></i>
+                                        <button class="increment-qty btn quantity-icon-btn"
+                                            data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                                            <i class="fa-solid fa-caret-up fa-xl"></i>
                                         </button>
-                                        <button class="decrement-qty btn quantity-icon-btn" data-item_id="{{ product.id }}"
-                                            id="decrement-qty_{{ product.id }}">
-                                                <i class="fa-solid fa-caret-down fa-xl"></i>
+                                        <button class="decrement-qty btn quantity-icon-btn"
+                                            data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
+                                            <i class="fa-solid fa-caret-down fa-xl"></i>
                                         </button>
                                     </div>
                                 </div>

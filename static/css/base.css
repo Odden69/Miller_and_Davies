@@ -109,6 +109,22 @@ main {
   object-fit: contain;
 }
 
+.favorite-btn {
+  color: var(--medium-green);
+}
+
+.favorite-btn {
+  padding-left: 1px;
+}
+
+.favorite-btn:hover {
+  color: var(--light-green);
+}
+
+.favorite-btn:focus {
+  box-shadow: none;
+}
+
 /* .select_quantity {
   padding-top: 0.35rem!important;
 } */
@@ -170,6 +186,6 @@ main {
 /* media queries */
 @media (max-width: 768px) {
   main {
-    margin-top: 150px;
+    margin-top: 142px;
   }
 }

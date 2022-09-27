@@ -21,12 +21,24 @@
                             <img class="img-fluid" src="{{ MEDIA_URL }}no-image.jpg" alt="Image coming soon">
                             {% endif %}
                         </a>
-                        <div class="card-body text-center d-flex">
+                        <div class="card-body text-center d-flex justify-content-center">
                             <div class="row">
                                 <div class="col-12">
                                     <a href="{% url 'product_detail' product.id %}" class="text-decoration-none text-black">
                                             <div class="row">
-                                                <h3 class="mb-3">{{ product.name}}</h3>
+                                                <h3 class="mb-3">{{ product.name}}
+                                                    <form action="{% url 'adjust_favorites' product.id %}" class="form d-inline" method="POST">
+                                                        {% csrf_token %}
+                                                        <button class="btn favorite-btn" type="submit">
+                                                            {% if product.id in request.session.favorites %}
+                                                            <i class="fa-solid fa-heart fa favorite-icon"></i>
+                                                            {% else %}
+                                                            <i class="fa-regular fa-heart fa favorite-icon"></i>
+                                                            {% endif %}
+                                                        </button>
+                                                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                                    </form>
+                                                </h3>
                                             </div>
                                             <div class="row">
                                                 <p class="mb-0">Pkt of {{ product.size}} seeds</p>

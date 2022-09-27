@@ -18,6 +18,7 @@ def products(request):
     subcategories = Subcategory.objects.all()
     selected_category = None
     selected_subcategory = None
+    favorites = request.session.get('favorites', [])
 
     # category and subcategory filters
     if request.GET:
@@ -34,6 +35,8 @@ def products(request):
                     name=selected_subcategory_name)
                 products = products.filter(
                     subcategory__name=selected_subcategory_name)
+        if 'favorites' in request.GET:
+            products = products.filter(id__in=favorites)
 
     context = {
         'products': products,

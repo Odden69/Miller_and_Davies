@@ -17,6 +17,7 @@
 | 11 | Shopper | filter products on sowing or harvest months | find seeds that suites my needs | |
 | 12 | Shopper | find seeds suitable for indoor growing | easily rule out seeds not suitable for my needs | |
 | 13 | Shopper | quickly identify products on sale | make some bargains | |
+| 49 | Shopper | add products to my favorites | easily go back to those products | |
 
 ### Product Rating and Newsletters
 | User Story No | As a/an ... | I want to be able to ...| so that I can ... | Tested |
@@ -35,6 +36,7 @@
 | 21 | Site User | receive a confirmation email after registration | verify that my account was successfully registered | |
 | 22 | Site User | add and change my default delivery address on my profile page | easily make another order | |
 | 23 | Site User | see my order history on my profile page | overview my previous orders and confirmations | |
+| 50 | Site User | have my favorites saved | still see them when I come back in a later session | |
 
 ### Purchasing and Checkout
 | User Story No | As a/an ... | I want to be able to ...| so that I can ... | Tested |

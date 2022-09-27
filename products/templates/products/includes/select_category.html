@@ -21,6 +21,7 @@
         {% endif %}
     </div>
     <div class="row">
+        {% if 'favorites' not in request.GET %}
         {% if selected_subcategory is None %}
         {% if selected_category is None %}
         <div class="col d-flex justify-content-center">
@@ -45,7 +46,14 @@
         {% else %}
         <div class="col d-flex justify-content-center">
         </div>
-        {% endif %}       
+        {% endif %}
+        {% else %}
+        <div class="row">
+            <div class="col text-center mb-3">
+                <h2>My Favorites</h3>
+            </div>
+        </div>
+        {% endif %}     
     </div>
 </div>
 <!-- Select Category / Subcategory -->
