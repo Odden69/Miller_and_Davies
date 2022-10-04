@@ -101,12 +101,20 @@ main {
   width: 20px;
 }
 
+/* product page */
+.product-container img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
 /* product detail page */
 .detail-container img {
   width: 80%;
   height: auto;
   aspect-ratio: 1;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .favorite-btn {
