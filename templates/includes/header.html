@@ -8,8 +8,8 @@
             </a>
         </div>
         <div class="col-12 col-md-4 mx-auto  mb-1 my-md-auto">
-            <form>
-                <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+            <form method="GET" action="{% url 'products' %}">
+                <input type="search" name="q" class="form-control" placeholder="Search..." aria-label="Search">
             </form>
         </div>
         <div class="col-md-4 d-none d-md-block text-md-end my-md-auto">

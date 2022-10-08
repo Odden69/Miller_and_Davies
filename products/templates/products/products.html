@@ -10,6 +10,23 @@
             <p>Filter</p>
         </div>
         <div class="col-10 product-container">
+            {% if 'q' in request.GET %}
+            {% if products %}
+            <div class="row">
+                <div class="col">
+                    <p>Your search for <em>"{{ query }}"</em> resulted in:</p>
+                </div>
+                <br>
+            </div>
+            {% else %}
+            <div class="row">
+                <div class="col">
+                    <p>Your search for <em>"{{ query }}"</em> returned no results.</p>
+                </div>
+                <br>
+            </div>
+            {% endif %}
+            {% endif %}
             <div class="row">
                 {% for product in page_obj %}
                 <div class="col col-sm-6 col-md-4 col-lg-3 mb-3">
