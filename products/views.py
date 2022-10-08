@@ -20,12 +20,11 @@ def products(request):
     selected_category = None
     selected_subcategory = None
     favorites = request.session.get('favorites', [])
-    paginator = Paginator(products, 20, orphans=3)
     page_number = 1
-    page_obj = paginator.get_page(page_number)
 
     # category and subcategory filters
     if request.GET:
+        page_number = request.GET.get('page')
         if 'category' in request.GET:
             selected_category_name = request.GET['category']
             selected_category = categories.get(name=selected_category_name)
@@ -41,9 +40,9 @@ def products(request):
                     subcategory__name=selected_subcategory_name)
         if 'favorites' in request.GET:
             products = products.filter(id__in=favorites)
-        paginator = Paginator(products, 20, orphans=3)
-        page_number = request.GET.get('page')
-        page_obj = paginator.get_page(page_number)
+
+    paginator = Paginator(products, 20, orphans=3)
+    page_obj = paginator.get_page(page_number)
 
     context = {
         'products': products,
