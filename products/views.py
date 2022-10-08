@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.core.paginator import Paginator
 from .models import Product, Category, Subcategory
 
 
@@ -19,6 +20,9 @@ def products(request):
     selected_category = None
     selected_subcategory = None
     favorites = request.session.get('favorites', [])
+    paginator = Paginator(products, 20, orphans=3)
+    page_number = 1
+    page_obj = paginator.get_page(page_number)
 
     # category and subcategory filters
     if request.GET:
@@ -37,6 +41,9 @@ def products(request):
                     subcategory__name=selected_subcategory_name)
         if 'favorites' in request.GET:
             products = products.filter(id__in=favorites)
+        paginator = Paginator(products, 20, orphans=3)
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
 
     context = {
         'products': products,
@@ -44,7 +51,7 @@ def products(request):
         'subcategories': subcategories,
         'selected_category': selected_category,
         'selected_subcategory': selected_subcategory,
-
+        'page_obj': page_obj,
     }
     return render(request, 'products/products.html', context)
 

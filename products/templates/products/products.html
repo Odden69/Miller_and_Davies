@@ -11,7 +11,7 @@
         </div>
         <div class="col-10 product-container">
             <div class="row">
-                {% for product in products%}
+                {% for product in page_obj %}
                 <div class="col col-sm-6 col-md-4 col-lg-3 mb-3">
                     <div class="card h-100">
                         <a href="{% url 'product_detail' product.id %}">
@@ -60,6 +60,29 @@
                     </div>
                 </div>
                 {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center ">
+            <!-- pagination code was copied from https://docs.djangoproject.com/en/4.1/topics/pagination/ -->
+            <div class="pagination">
+                <span class="step-links">
+                    {% if page_obj.has_previous %}
+                        <a href="?page=1" class="d-none d-sm-inline">&laquo; first</a>
+                        <a href="?page={{ page_obj.previous_page_number }}">&lt previous</a>
+                    {% endif %}
+                    {% if page_obj.has_other_pages %}
+                    <span class="current">
+                        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+                    </span>
+                    {% endif %}
+            
+                    {% if page_obj.has_next %}
+                        <a href="?page={{ page_obj.next_page_number }}">next &gt</a>
+                        <a href="?page={{ page_obj.paginator.num_pages }}" class="d-none d-sm-inline">last &raquo;</a>
+                    {% endif %}
+                </span>
             </div>
         </div>
     </div>
