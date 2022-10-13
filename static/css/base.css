@@ -37,6 +37,25 @@ i.text-black:hover {
   /*color: blue!important; */
   font-size: x-large;
 }
+/* messages */
+.toast-header {
+  border-bottom: none !important;
+}
+
+.toast-container {
+  position: fixed;
+  top: 72px;
+  right: 15px;
+  z-index: 99999999999;
+}
+
+.custom-toast {
+  overflow: visible;
+}
+
+.toast-capper {
+  height: 2px;
+}
 
 /* header */
 .header-top,
@@ -195,5 +214,16 @@ main {
 @media (max-width: 768px) {
   main {
     margin-top: 142px;
+  }
+}
+
+@media (max-width: 576px) {
+  .toast {
+    width: 260px;
+    font-size: .750rem;
+  }
+
+  .message-container {
+    top: 134px;
   }
 }

@@ -8,6 +8,7 @@
 | 5 | Shopper | view a detailed page of an individual product | find out more information about requirements, sowing time etc | |
 | 6 | Shopper | view different categories of seeds | easily find the kind I am looking for | |
 | 7 | Shopper | see the total of my purchases at all times | have control over my spendings | |
+| 50 | Shopper | see a confirmation message according to my actions | be sure my actions have gone through | |
 
 ### Sorting and Searching
 | User Story No | As a/an ... | I want to be able to ...| so that I can ... | Tested |
@@ -36,7 +37,7 @@
 | 21 | Site User | receive a confirmation email after registration | verify that my account was successfully registered | |
 | 22 | Site User | add and change my default delivery address on my profile page | easily make another order | |
 | 23 | Site User | see my order history on my profile page | overview my previous orders and confirmations | |
-| 50 | Site User | have my favorites saved | still see them when I come back in a later session | |
+| -- | Site User | have my favorites saved | still see them when I come back in a later session | |
 
 ### Purchasing and Checkout
 | User Story No | As a/an ... | I want to be able to ...| so that I can ... | Tested |
@@ -48,7 +49,6 @@
 | 28 | Shopper | feel my personal payment information is safe and secure  | don't have to doubt the sites confidentiality | |
 | 29 | Shopper | view an order confirmation after checkout | verify the content of the order | |
 | 30 | Shopper | receive the order confirmation via email | save the order confirmation | |
-| 49 | Shopper | get a confirmation on the actions I take, like removing items from my basket. | be sure my action has gone trough | |
 
 ### Admin and Store Management
 | User Story No | As a/an ... | I want to be able to ...| so that I can ... | Tested |
