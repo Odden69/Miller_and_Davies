@@ -1,7 +1,10 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.core.paginator import Paginator
 from django.db.models import Q
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from .models import Product, Category, Subcategory
+from .forms import ProductForm
 
 
 def index(request):
@@ -73,3 +76,32 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
+
+@login_required
+def add_product(request):
+    """ Add a product to the store """
+    redirect_url = request.POST.get('redirect_url')
+
+    if not request.user.is_superuser:
+        messages.error(
+            request, 'Sorry, only a store owner can add a product.')
+        return redirect(redirect_url)
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            product = form.save()
+            messages.success(
+                request, f'Successfully added {product.name} to the store!')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(request, 'Failed to add the product. \
+Please ensure the form is valid.')
+    else:
+        form = ProductForm()
+
+    context = {
+        'form': form,
+    }
+
+    return render(request, 'products/add_product.html', context)

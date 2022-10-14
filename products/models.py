@@ -59,7 +59,7 @@ class Product(models.Model):
                                           related_name='products_to_saw')
     harvest_times = models.ManyToManyField(Season,
                                            related_name='products_to_harvest')
-    on_sale = models.BooleanField(default=False, null=True, blank=True)
+    on_sale = models.BooleanField(default=False, null=False, blank=False)
     discount = models.IntegerField(default=0,
                                    validators=[
                                     MaxValueValidator(100),
