@@ -105,3 +105,35 @@ Please ensure the form is valid.')
     }
 
     return render(request, 'products/add_product.html', context)
+
+
+@login_required
+def edit_product(request, product_id):
+    """ Edit a product in the store """
+    redirect_url = request.POST.get('redirect_url')
+    product = get_object_or_404(Product, pk=product_id)
+
+    if not request.user.is_superuser:
+        messages.error(
+            request, 'Sorry, only a store owner can edit a product.')
+        return redirect(redirect_url)
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            messages.success(
+                request, f'Successfully updated {product.name}!')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(request, 'Failed to edit product. \
+Please ensure the form is valid.')
+    else:
+        form = ProductForm(instance=product)
+        messages.info(request, f'You are editing {product.name}.')
+
+    context = {
+        'form': form,
+        'product': product,
+    }
+
+    return render(request, 'products/edit_product.html', context)

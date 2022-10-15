@@ -61,9 +61,16 @@
                                     </div>
                                 </div>
                             </div>
+                            {% if request.user.is_superuser %}
+                            <div class="col-7 col-md-4 ps-0">
+                                <a class="btn button small-button" href="{% url 'edit_product' product.id %}">Edit</a>
+                                <a class="btn red-button small-button" href="#">Delete</a>
+                            </div>
+                            {% else %}
                             <div class="col-7 col-md-4 ps-0">
                                 <input class="btn button large-button" type="submit" value="Buy Now">
                             </div>
+                            {% endif %}
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </form>

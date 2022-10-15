@@ -10,13 +10,22 @@ html {
   height: 100%;
 }
 
-.button {
-  background-color: var(--medium-green);
-  border: 2px solid var(--light-green);
+.button,
+.red-button {
   color: white !important;
   border-radius: 4px;
   padding: 0 10px;
   margin: 5px;
+}
+
+.button {
+  background-color: var(--medium-green);
+  border: 2px solid var(--light-green);
+}
+
+.red-button {
+  background-color:darkred;
+  border: 2px solid indianred;
 }
 
 .small-button {
