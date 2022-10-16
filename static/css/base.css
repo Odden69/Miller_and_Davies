@@ -137,12 +137,40 @@ main {
   object-fit: cover;
 }
 
+.on-sale {
+  position: absolute;
+  background-color: darkred;
+  color: white;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.product-container .on-sale {
+  top: 5%;
+  right: 8%;
+  padding: 4%;
+  height: 10%;
+  width: 25%;
+}
+
+.on-sale-price {
+  color: darkred;
+}
+
 /* product detail page */
 .detail-container img {
   width: 80%;
   height: auto;
   aspect-ratio: 1;
   object-fit: cover;
+}
+
+.detail-container .on-sale {
+  top: 10%;
+  right: 12%;
+  padding: 2%;
+  height: 15%;
+  width: 15%;
 }
 
 .favorite-btn {
@@ -205,6 +233,14 @@ main {
 
 .basket-prod-image {
   max-width: 140px;
+}
+
+.item-container .on-sale {
+  top: 10%;
+  right: 12%;
+  padding: 2%;
+  height: 25%;
+  width: 25%;
 }
 
 .refresh-button,

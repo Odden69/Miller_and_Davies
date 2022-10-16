@@ -4,12 +4,16 @@
 {% block content %}
 <div class="container-fluid detail-container mt-5 mb-4">
     <div class="row">
-        <div
-            class="col-12 col-md-6 image-container d-flex justify-content-center justify-content-md-end align-items-start px-4 my-3 my-md-0">
+        <div class="col-12 col-md-6 image-container d-flex justify-content-center justify-content-md-end align-items-start px-4 my-3 my-md-0 position-relative">
             {% if product.image %}
             <img class="img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
             {% else %}
             <img class="img-fluid" src="{{ MEDIA_URL }}no-image.jpg" alt="Image coming soon">
+            {% endif %}
+            {% if product.on_sale %}
+            <div class="on-sale d-inline-flex align-items-center justify-content-center">
+                -{{ product.discount}}%
+            </div>
             {% endif %}
         </div>
         <div class="col-12 col-md-6 info-container text-center text-md-start px-4">
@@ -36,7 +40,14 @@
                     <p class="mb-1">1 pkt: {{ product.size}} seeds</p>
                 </div>
                 <div class="col-12">
-                    <h3 class="mb-2">£{{ product.price}}</h3>
+                    {% if product.on_sale %}
+                    <span class="mb-2 me-4 h3">
+                        <s>£{{ product.price }}</s>
+                    </span>
+                    <span class="mb-2 h3 on-sale-price">£{{ product.on_sale_price }}</span>
+                    {% else %}
+                    <span class="mb-2 h3">£{{ product.price}}</span>
+                    {% endif %}
                 </div>
                 <div class="col-12">
                     <form action="{% url 'add_to_basket' product.id %}" class="form" method="POST">
@@ -121,4 +132,11 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
+<!-- textfit code copied from: https://www.npmjs.com/package/textfit -->
+<script type="text/javascript" src=
+    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/textFit.js">
+</script>    
+<script type="text/javascript">
+    textFit(document.getElementsByClassName("on-sale"));
+</script>
 {% endblock %}

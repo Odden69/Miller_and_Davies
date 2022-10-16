@@ -32,42 +32,62 @@
                 <div class="col col-sm-6 col-md-4 col-lg-3 mb-3">
                     <div class="card h-100">
                         <a href="{% url 'product_detail' product.id %}">
-                            {% if product.image %}
-                            <img class="img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                            {% else %}
-                            <img class="img-fluid" src="{{ MEDIA_URL }}no-image.jpg" alt="Image coming soon">
-                            {% endif %}
+                            <div>
+                                {% if product.image %}
+                                <img class="img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                {% else %}
+                                <img class="img-fluid" src="{{ MEDIA_URL }}no-image.jpg" alt="Image coming soon">
+                                {% endif %}
+                                {% if product.on_sale %}
+                                <div class="on-sale d-inline-flex align-items-center justify-content-center">
+                                    -{{ product.discount}}%
+                                </div>
+                                {% endif %}
+                            </div>
                         </a>
                         <div class="card-body text-center d-flex justify-content-center">
                             <div class="row">
                                 <div class="col-12">
-                                    <a href="{% url 'product_detail' product.id %}" class="text-decoration-none text-black">
-                                            <div class="row">
-                                                <h3 class="mb-3">{{ product.name}}
-                                                    <form action="{% url 'adjust_favorites' product.id %}" class="form d-inline" method="POST">
-                                                        {% csrf_token %}
-                                                        <button class="btn favorite-btn" type="submit">
-                                                            {% if product.id in request.session.favorites %}
-                                                            <i class="fa-solid fa-heart fa favorite-icon"></i>
-                                                            {% else %}
-                                                            <i class="fa-regular fa-heart fa favorite-icon"></i>
-                                                            {% endif %}
-                                                        </button>
-                                                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                                                    </form>
-                                                </h3>
+                                    <a href="{% url 'product_detail' product.id %}"
+                                        class="text-decoration-none text-black">
+                                        <div class="row">
+                                            <h3 class="mb-3">{{ product.name}}
+                                                <form action="{% url 'adjust_favorites' product.id %}"
+                                                    class="form d-inline" method="POST">
+                                                    {% csrf_token %}
+                                                    <button class="btn favorite-btn" type="submit">
+                                                        {% if product.id in request.session.favorites %}
+                                                        <i class="fa-solid fa-heart fa favorite-icon"></i>
+                                                        {% else %}
+                                                        <i class="fa-regular fa-heart fa favorite-icon"></i>
+                                                        {% endif %}
+                                                    </button>
+                                                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                                </form>
+                                            </h3>
+                                        </div>
+                                        <div class="row">
+                                            <p class="mb-0">Pkt of {{ product.size}} seeds</p>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                {% if product.on_sale %}
+                                                <span class="mb-2 me-2 h3">
+                                                    <s>£{{ product.price }}</s>
+                                                </span>
+                                                <span
+                                                    class="mb-2 h3 on-sale-price">£{{ product.on_sale_price }}</span>
+                                                {% else %}
+                                                <span class="mb-2 h3">£{{ product.price}}</span>
+                                                {% endif %}
                                             </div>
-                                            <div class="row">
-                                                <p class="mb-0">Pkt of {{ product.size}} seeds</p>
-                                            </div>
-                                            <div class="row">
-                                                <h3 class="mb-3">£{{ product.price}}</h3>
-                                            </div>
+                                        </div>
                                     </a>
                                 </div>
                                 <div class="col-12 align-self-end">
                                     <div class="col-12 d-flex justify-content-center">
-                                        <form action="{% url 'add_to_basket' product.id %}" class="form d-inline" method="POST">
+                                        <form action="{% url 'add_to_basket' product.id %}" class="form d-inline"
+                                            method="POST">
                                             {% csrf_token %}
                                             <button class="button small-button" type="submit">Buy Now</button>
                                             <input type="hidden" name="quantity" value="1">
@@ -89,18 +109,18 @@
             <div class="pagination">
                 <span class="step-links">
                     {% if page_obj.has_previous %}
-                        <a href="?page=1" class="d-none d-sm-inline">&laquo; first</a>
-                        <a href="?page={{ page_obj.previous_page_number }}">&lt previous</a>
+                    <a href="?page=1" class="d-none d-sm-inline">&laquo; first</a>
+                    <a href="?page={{ page_obj.previous_page_number }}">&lt previous</a>
                     {% endif %}
                     {% if page_obj.has_other_pages %}
                     <span class="current">
                         Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
                     </span>
                     {% endif %}
-            
+
                     {% if page_obj.has_next %}
-                        <a href="?page={{ page_obj.next_page_number }}">next &gt</a>
-                        <a href="?page={{ page_obj.paginator.num_pages }}" class="d-none d-sm-inline">last &raquo;</a>
+                    <a href="?page={{ page_obj.next_page_number }}">next &gt</a>
+                    <a href="?page={{ page_obj.paginator.num_pages }}" class="d-none d-sm-inline">last &raquo;</a>
                     {% endif %}
                 </span>
             </div>
@@ -108,4 +128,15 @@
     </div>
 </div>
 
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<!-- textfit code copied from: https://www.npmjs.com/package/textfit -->
+<script type="text/javascript" src=
+    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/textFit.js">
+</script>    
+<script type="text/javascript">
+    textFit(document.getElementsByClassName("on-sale"));
+</script>
 {% endblock %}

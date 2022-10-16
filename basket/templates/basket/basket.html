@@ -18,11 +18,16 @@
         <div class="col-12 col-xl-10 item-container">
             {% for item in basket_items%}
             <div class="row border border-secondary align-items-md-center">
-                <div class="col-5 col-md-2 my-2 basket-prod-image">
+                <div class="col-5 col-md-2 my-2 basket-prod-image position-relative">
                     {% if item.product.image %}
                     <img class="img-fluid" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                     {% else %}
                     <img class="img-fluid" src="{{ MEDIA_URL }}no-image.jpg" alt="Image coming soon">
+                    {% endif %}
+                    {% if item.product.on_sale %}
+                    <div class="on-sale d-inline-flex align-items-center justify-content-center">
+                        -{{ item.product.discount}}%
+                    </div>
                     {% endif %}
                 </div>
                 <div class="col-7 col-md-4 mt-2 mt-md-0">
@@ -89,7 +94,17 @@
                 </div>
                 <div class="col-6 col-md-3 text-end pe-4">
                     <div class="row">
-                        <p class="mb-0">Unit Price: £{{ item.product.price }}</p>
+                        <div class="col">
+                            {% if item.product.on_sale %}
+                            <span>Unit Price:&nbsp;</span>
+                            <span class="mb-2 me-2">
+                                <s>£{{ item.product.price }}</s>
+                            </span>
+                            <span class="mb-2 on-sale-price">£{{ item.product.on_sale_price | floatformat:2 }}</span>
+                            {% else %}
+                            <p class="mb-0">Unit Price: £{{ item.product.price }}</p>
+                            {% endif %}
+                        </div>
                     </div>
                     <div class="row">
                         <p class="mb-0"><strong>Subtotal: £{{ item.subtotal|floatformat:2 }}</strong></p>
@@ -120,4 +135,11 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
+<!-- textfit code copied from: https://www.npmjs.com/package/textfit -->
+<script type="text/javascript" src=
+    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/textFit.js">
+</script>    
+<script type="text/javascript">
+    textFit(document.getElementsByClassName("on-sale"));
+</script>
 {% endblock %}

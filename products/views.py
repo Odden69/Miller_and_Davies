@@ -45,11 +45,17 @@ def products(request):
                     subcategory__name=selected_subcategory_name)
         if 'favorites' in request.GET:
             products = products.filter(id__in=favorites)
+        if 'bargains' in request.GET:
+            products = products.filter(on_sale=True)
         if 'q' in request.GET:
             query = request.GET['q']
             queries = Q(name__icontains=query) | \
                 Q(description__icontains=query)
             products = products.filter(queries)
+    for product in products:
+        if product.on_sale:
+            product.on_sale_price = \
+                round(product.price-product.discount*product.price/100, 2)
 
     paginator = Paginator(products, 20, orphans=3)
     page_obj = paginator.get_page(page_number)
@@ -70,6 +76,9 @@ def product_detail(request, product_id):
     """ Returns a detail view of a specific product """
 
     product = get_object_or_404(Product, pk=product_id)
+    if product.on_sale:
+        product.on_sale_price = \
+            round(product.price-product.discount*product.price/100, 2)
 
     context = {
         'product': product,
