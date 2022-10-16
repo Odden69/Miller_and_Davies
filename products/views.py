@@ -110,13 +110,12 @@ Please ensure the form is valid.')
 @login_required
 def edit_product(request, product_id):
     """ Edit a product in the store """
-    redirect_url = request.POST.get('redirect_url')
     product = get_object_or_404(Product, pk=product_id)
 
     if not request.user.is_superuser:
         messages.error(
             request, 'Sorry, only a store owner can edit a product.')
-        return redirect(redirect_url)
+        return redirect('home')
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
