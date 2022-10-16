@@ -137,3 +137,17 @@ Please ensure the form is valid.')
     }
 
     return render(request, 'products/edit_product.html', context)
+
+
+@login_required
+def delete_product(request, product_id):
+    """ Delete a specific product from the store """
+    product = get_object_or_404(Product, pk=product_id)
+
+    if not request.user.is_superuser:
+        messages.error(
+            request, 'Sorry, only a store owner can delete a product.')
+        return redirect('home')
+    product.delete()
+    messages.success(request, 'Product was deleted!')
+    return redirect('home')
