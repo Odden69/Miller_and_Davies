@@ -9,7 +9,7 @@
       <li><a class="dropdown-item" href="#">My Profile</a></li>
       {% if request.user.is_superuser %}
       <hr>
-      <li><a class="dropdown-item" href="#">Product Management</a></li>
+      <li><a class="dropdown-item" href="{% url 'add_product' %}">Product Management</a></li>
       {% endif %}
       {% else %}
       <li><a class="dropdown-item" href="{% url 'account_signup' %}">Sign Up</a></li>
