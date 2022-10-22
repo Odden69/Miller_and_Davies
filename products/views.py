@@ -29,14 +29,6 @@ def products(request):
     query = None
     direction = None
 
-    # Add a price sorting attribute which takes discount into account
-    products = products.annotate(
-        sort_price=Case(
-            When(on_sale=False, then=F('price')),
-            When(on_sale=True, then=(F('price')-F('discount')*F('price')/100)),
-        ),
-    )
-
     if request.GET:
         page_number = request.GET.get('page')
 
@@ -46,13 +38,15 @@ def products(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 products = products.annotate(lower_name=Lower('name'))
-                for product in products:
-                    print(product.lower_name)
             if sortkey == 'price':
                 sortkey = 'sort_price'
-                for product in products:
-                    print(product.name)
-                    print(product.sort_price)
+                products = products.annotate(
+                    sort_price=Case(
+                        When(on_sale=False, then=F('price')),
+                        When(on_sale=True, then=(F('price') - F('discount') *
+                                                 F('price') / 100)),
+                    ),
+                )
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
