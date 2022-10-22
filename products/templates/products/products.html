@@ -4,12 +4,9 @@
 {% block content %}
 {% include 'products/includes/hero.html' %}
 {% include 'products/includes/select_category.html' %}
-<div class="container-fluid my-4">
+<div class="container-fluid container-sm px-0">
     <div class="row">
-        <div class="col-2 filter-container">
-            <p>Filter</p>
-        </div>
-        <div class="col-10 product-container">
+        <div class="col-12 product-container">
             {% if 'q' in request.GET %}
             {% if products %}
             <div class="row">
@@ -29,7 +26,7 @@
             {% endif %}
             <div class="row">
                 {% for product in page_obj %}
-                <div class="col col-sm-6 col-md-4 col-lg-3 mb-3">
+                <div class="col col-sm-6 col-md-3 col-lg-3 mb-3">
                     <div class="card h-100">
                         <a href="{% url 'product_detail' product.id %}">
                             <div>
