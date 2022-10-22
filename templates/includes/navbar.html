@@ -30,8 +30,15 @@
   </div>
   <div class="collapse navbar-collapse" id="navbarToggler">
     <ul class="navbar-nav me-auto mx-md-auto mb-lg-0">
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'products' %}">All Products</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="{% url 'products' %}" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          All Products
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <li><a class="dropdown-item" href="{% url 'products' %}?sort=name&direction=asc">By Name</a></li>
+          <li><a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">By Price</a></li>
+          <li><a class="dropdown-item" href="#">By Rating</a></li>
+        </ul>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{% url 'products' %}?category=vegetables">Vegetables</a>

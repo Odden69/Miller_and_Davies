@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.core.paginator import Paginator
-from django.db.models import Q
+from django.db.models import Q, F, Case, When
+from django.db.models.functions import Lower
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Product, Category, Subcategory
@@ -26,10 +27,39 @@ def products(request):
     favorites = request.session.get('favorites', [])
     page_number = 1
     query = None
+    direction = None
 
-    # category and subcategory filters
+    # Add a price sorting attribute which takes discount into account
+    products = products.annotate(
+        sort_price=Case(
+            When(on_sale=False, then=F('price')),
+            When(on_sale=True, then=(F('price')-F('discount')*F('price')/100)),
+        ),
+    )
+
     if request.GET:
         page_number = request.GET.get('page')
+
+        # sorting functions
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                products = products.annotate(lower_name=Lower('name'))
+                for product in products:
+                    print(product.lower_name)
+            if sortkey == 'price':
+                sortkey = 'sort_price'
+                for product in products:
+                    print(product.name)
+                    print(product.sort_price)
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            products = products.order_by(sortkey)
+
+        # category and subcategory filters
         if 'category' in request.GET:
             selected_category_name = request.GET['category']
             selected_category = categories.get(name=selected_category_name)
@@ -43,15 +73,22 @@ def products(request):
                     name=selected_subcategory_name)
                 products = products.filter(
                     subcategory__name=selected_subcategory_name)
+
+        # favorite filter
         if 'favorites' in request.GET:
             products = products.filter(id__in=favorites)
+
+        # bargain filter
         if 'bargains' in request.GET:
             products = products.filter(on_sale=True)
+
+        # search filter
         if 'q' in request.GET:
             query = request.GET['q']
             queries = Q(name__icontains=query) | \
                 Q(description__icontains=query)
             products = products.filter(queries)
+
     for product in products:
         if product.on_sale:
             product.on_sale_price = \
