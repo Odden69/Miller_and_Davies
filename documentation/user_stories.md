@@ -15,7 +15,7 @@
 |:-------------:|:-----------:|:------------------------|:------------------|:------:|
 | 8 | Shopper | search for a product by name, description or subcategory | easily find the specific seed I am looking for | |
 | 10 | Shopper | sort the available products on name, price or rating | choose the view which suits me the best | |
-| 11 | Shopper | filter products on sowing or harvest months | find seeds that suites my needs | |
+| 11* | Shopper | filter products on sowing or harvest months | find seeds that suites my needs | |
 | 12 | Shopper | find seeds suitable for indoor growing | easily rule out seeds not suitable for my needs | |
 | 13 | Shopper | quickly identify products on sale | make some bargains | |
 | 49 | Shopper | add products to my favorites | easily go back to those products | |
@@ -56,4 +56,4 @@
 | 31 | Store Owner | easily add a product to my site | sell new products | |
 | 32 | Store Owner | easily edit and update a product | ensure the content is correct | |
 | 33 | Store Owner | easily delete a product | make sure the site do not show products no longer for sale | |
-| 34 | Store Owner | choose to put a product up for sale | sell out outgoing products, for instance | |
+| 34 | Store Owner | choose to put a product up on sale | sell out outgoing products, for instance | |
