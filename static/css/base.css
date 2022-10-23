@@ -157,6 +157,10 @@ main {
   color: darkred;
 }
 
+.fa-star {
+  color: orange;
+}
+
 /* product detail page */
 .detail-container img {
   width: 80%;

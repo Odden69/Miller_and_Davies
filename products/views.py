@@ -1,11 +1,21 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.core.paginator import Paginator
-from django.db.models import Q, F, Case, When
+from django.db.models import Q, F, Case, When, Avg
 from django.db.models.functions import Lower
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Product, Category, Subcategory
 from .forms import ProductForm
+
+
+def get_avg_rating(product_id):
+    product = get_object_or_404(Product, pk=product_id)
+    ratings = product.ratings.all()
+    avg_rating = ratings.aggregate(Avg('score'))['score__avg']
+    if avg_rating is None:
+        avg_rating = 0
+    avg_rating = round(avg_rating)
+    return avg_rating
 
 
 def index(request):
@@ -88,6 +98,9 @@ def products(request):
             product.on_sale_price = \
                 round(product.price-product.discount*product.price/100, 2)
 
+    for product in products:
+        product.avg_rating = get_avg_rating(product.id)
+
     paginator = Paginator(products, 20, orphans=3)
     page_obj = paginator.get_page(page_number)
 
@@ -110,6 +123,9 @@ def product_detail(request, product_id):
     if product.on_sale:
         product.on_sale_price = \
             round(product.price-product.discount*product.price/100, 2)
+
+    product.avg_rating = get_avg_rating(product.id)
+    product.num_rating = product.ratings.all().count()
 
     context = {
         'product': product,

@@ -48,6 +48,17 @@
                                     <a href="{% url 'product_detail' product.id %}"
                                         class="text-decoration-none text-black">
                                         <div class="row">
+                                            <div class="col-12">
+                                                {% for star in "12345"|make_list %}
+                                                {% if forloop.counter <= product.avg_rating|add:"0" %}
+                                                <i class="fas fa-star"></i>
+                                                {% else %}
+                                                <i class="far fa-star"></i>
+                                                {% endif %}
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                        <div class="row">
                                             <h3 class="mb-3">{{ product.name}}
                                                 <form action="{% url 'adjust_favorites' product.id %}"
                                                     class="form d-inline" method="POST">
@@ -72,8 +83,7 @@
                                                 <span class="mb-2 me-2 h3">
                                                     <s>£{{ product.price }}</s>
                                                 </span>
-                                                <span
-                                                    class="mb-2 h3 on-sale-price">£{{ product.on_sale_price }}</span>
+                                                <span class="mb-2 h3 on-sale-price">£{{ product.on_sale_price }}</span>
                                                 {% else %}
                                                 <span class="mb-2 h3">£{{ product.price}}</span>
                                                 {% endif %}
@@ -130,9 +140,8 @@
 {% block postloadjs %}
 {{ block.super }}
 <!-- textfit code copied from: https://www.npmjs.com/package/textfit -->
-<script type="text/javascript" src=
-    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/textFit.js">
-</script>    
+<script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/textFit.js">
+</script>
 <script type="text/javascript">
     textFit(document.getElementsByClassName("on-sale"));
 </script>

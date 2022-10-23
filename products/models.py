@@ -1,5 +1,6 @@
 from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
+from profiles.models import Profile
 
 
 def get_sentinel_category():
@@ -77,3 +78,20 @@ class Product(models.Model):
 
     class Meta:
         ordering = ('name',)
+
+
+class Rating(models.Model):
+
+    SCORES = [
+        (1, '1'),
+        (2, '2'),
+        (3, '3'),
+        (4, '4'),
+        (5, '5'),
+    ]
+
+    score = models.IntegerField(default=0, choices=SCORES)
+    rater = models.ForeignKey(
+        Profile, on_delete=models.CASCADE, related_name='ratings')
+    product = models.ForeignKey(
+        Product, on_delete=models.CASCADE, related_name='ratings')
