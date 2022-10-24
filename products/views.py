@@ -4,7 +4,7 @@ from django.db.models import Q, F, Case, When, Avg
 from django.db.models.functions import Lower
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .models import Product, Category, Subcategory
+from .models import Product, Category, Subcategory, Rating
 from .forms import ProductForm
 
 
@@ -132,6 +132,33 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
+
+def rate_product(request, product_id):
+
+    product = get_object_or_404(Product, pk=product_id)
+    user = request.user
+
+    if request.method == 'POST':
+        redirect_url = request.POST.get('redirect_url')
+
+        if not user.is_authenticated:
+            messages.info(
+                request, 'You need to be logged in to rate a product.')
+            return redirect(redirect_url)
+
+        if product.ratings.all().filter(rater=user.profile).exists():
+            messages.info(
+                request, 'You have already rated this product.')
+            return redirect(redirect_url)
+
+        score = request.POST.get('score')
+        rating = Rating(score=score, rater=user.profile, product=product)
+        rating.save()
+        messages.success(
+            request, f'Your rating of {product.name} was successfully saved!')
+
+    return redirect(redirect_url)
 
 
 @login_required

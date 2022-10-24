@@ -4,7 +4,8 @@
 {% block content %}
 <div class="container-fluid detail-container mt-5 mb-4">
     <div class="row">
-        <div class="col-12 col-md-6 image-container d-flex justify-content-center justify-content-md-end align-items-start px-4 my-3 my-md-0 position-relative">
+        <div
+            class="col-12 col-md-6 image-container d-flex justify-content-center justify-content-md-end align-items-start px-4 my-3 my-md-0 position-relative">
             {% if product.image %}
             <img class="img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
             {% else %}
@@ -34,14 +35,23 @@
                     </h3>
                 </div>
                 <div class="col-12">
-                    {% for star in "12345"|make_list %}
-                    {% if forloop.counter <= product.avg_rating|add:"0" %}
-                    <i class="fas fa-star fa-lg"></i>
-                    {% else %}
-                    <i class="far fa-star fa-lg"></i>
-                    {% endif %}
-                    {% endfor %}
-                    <span class="ms-3">({{ product.num_rating }} ratings)</span>
+                    <form action="{% url 'rate_product' product.id %}" class="form d-inline" method="POST">
+                        {% csrf_token %}
+                        {% for star in "12345"|make_list %}
+                        {% if forloop.counter <= product.avg_rating|add:"0" %}
+                        <button class="btn rating-btn {% if not user.is_authenticated %} no-hover {% endif %}" type="submit" name="score" value="{{ star }}">
+                            <i class="fas fa-star fa-lg"></i>
+                        </button>
+                        {% else %}
+                        <button class="btn rating-btn {% if not user.is_authenticated %} no-hover {% endif %}" type="submit" name="score" value="{{ star }}">
+                            <i class="far fa-star fa-lg"></i>
+                        </button>
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        {% endif %}
+                        {% endfor %}
+                        <br class="d-sm-none ">
+                        <span class="ms-3">({{ product.num_rating }} ratings)</span>
+                    </form>
                 </div>
                 <div class="col-12">
                     <p class="mb-3">{{ product.sku}}</p>
@@ -109,8 +119,8 @@
                                             <p>This action can not be undone!</p>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn button small-button" data-bs-dismiss="modal"
-                                                aria-label="Cancel">Cancel</button>
+                                            <button type="button" class="btn button small-button"
+                                                data-bs-dismiss="modal" aria-label="Cancel">Cancel</button>
                                             <a href="{% url 'delete_product' product.id %}">
                                                 <button type="button" class="btn red-button small-button"
                                                     aria-label="Delete">Delete</button>
@@ -142,10 +152,12 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
+{% if request.user.is_authenticated %}
+{% include 'products/includes/rate_product_script.html' %}
+{% endif %}
 <!-- textfit code copied from: https://www.npmjs.com/package/textfit -->
-<script type="text/javascript" src=
-    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/textFit.js">
-</script>    
+<script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/textFit.js">
+</script>
 <script type="text/javascript">
     textFit(document.getElementsByClassName("on-sale"));
 </script>

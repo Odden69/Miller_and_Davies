@@ -1,0 +1,13 @@
+<script type="text/javascript">
+// Gives a hover effect when the user is rating a product 
+$('.rating-btn').mouseenter(function() {
+    let hoveredStar = $(this).attr("value");
+    for (let i = 0; i < hoveredStar; i++) {
+        $('.rating-btn').eq(i).addClass('select-rating-score');
+    };
+})
+
+$('.rating-btn').mouseleave(function() {
+    $('.rating-btn').removeClass('select-rating-score');
+})
+</script>

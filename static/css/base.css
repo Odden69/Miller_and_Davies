@@ -157,7 +157,7 @@ main {
   color: darkred;
 }
 
-.fa-star {
+.product-container .fa-star {
   color: orange;
 }
 
@@ -191,6 +191,25 @@ main {
 
 .favorite-btn:focus {
   box-shadow: none;
+}
+
+.rating-btn {
+  color: orange;
+  padding: 0.375rem 0.175rem !important;
+}
+
+.rating-btn:focus {
+  box-shadow: none;
+}
+
+.select-rating-score,
+.rating-btn:hover {
+  color: darkred !important;
+}
+
+.no-hover:hover {
+  color: orange !important;
+  cursor: default !important;
 }
 
 /* .select_quantity {
