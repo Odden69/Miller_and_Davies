@@ -182,7 +182,7 @@ main {
 }
 
 .favorite-btn {
-  padding-left: 1px;
+  padding-right: 0px;
 }
 
 .favorite-btn:hover {
@@ -293,5 +293,9 @@ main {
 
   .message-container {
     top: 134px;
+  }
+
+  .detail-container img {
+    width: 100%;
   }
 }
