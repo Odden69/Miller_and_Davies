@@ -26,7 +26,7 @@
             {% endif %}
             <div class="row">
                 {% for product in page_obj %}
-                <div class="col col-sm-6 col-md-3 col-lg-3 mb-3">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
                     <div class="card h-100">
                         <a href="{% url 'product_detail' product.id %}">
                             <div>
@@ -59,7 +59,7 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <h3 class="mb-3">{{ product.name}}
+                                            <h5 class="mb-3">
                                                 <form action="{% url 'adjust_favorites' product.id %}"
                                                     class="form d-inline" method="POST">
                                                     {% csrf_token %}
@@ -72,7 +72,8 @@
                                                     </button>
                                                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                                                 </form>
-                                            </h3>
+                                                {{ product.name}}
+                                            </h5>
                                         </div>
                                         <div class="row">
                                             <p class="mb-0">Pkt of {{ product.size}} seeds</p>
