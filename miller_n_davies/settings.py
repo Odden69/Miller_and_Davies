@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'products',
     'basket',
     'favorites',
+    'checkout',
 
     # other
     'storages',
