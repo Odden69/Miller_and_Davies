@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- Hero image -->
+<div class="basket-hero-image d-flex justify-content-center align-items-center text-center bg-image">
+    <div class="hero-text mask px-4 d-flex justify-content-center align-items-center">
+        <div class="text-white h-100">
+            <h1>Checkout</h1>
+        </div>
+    </div>
+</div>
+<!-- Hero image -->
+<div class="container-md my-4">
+    <div class="row">
+        <div class="col-12 col-lg-6 order-lg-last mb-4 item-container">
+            <h5 class="text-muted">Order Content</h5>
+            {% for item in basket_items%}
+            <div class="row border border-secondary align-items-md-center
+                {% if not forloop.last %} border-bottom-0 {% endif %}">
+                <div class="col-5 col-md-2 my-2 basket-prod-image position-relative">
+                    <a href="{% url 'product_detail' item.product.id %}">
+                        {% if item.product.image %}
+                        <img class="img-fluid" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                        {% else %}
+                        <img class="img-fluid" src="{{ MEDIA_URL }}no-image.jpg" alt="Image coming soon">
+                        {% endif %}
+                        {% if item.product.on_sale %}
+                        <div class="on-sale d-inline-flex align-items-center justify-content-center">
+                            -{{ item.product.discount}}%
+                        </div>
+                        {% endif %}
+                    </a>
+                </div>
+                <div class="col-7 col-md-4 mt-2 mt-md-0">
+                    <div class="row">
+                        <h5 class="mb-0">{{ item.product.name }}</h5>
+                    </div>
+                    <div class="row">
+                        <p class="mb-1">{{ item.product.sku }}</p>
+                    </div>
+                    <div class="row">
+                        <p class="mb-0">{{ item.quantity }} pkt</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 text-end pe-4">
+                    <div class="row">
+                        <div class="col">
+                            {% if item.product.on_sale %}
+                            <span>Unit Price:&nbsp;</span>
+                            <span class="mb-2 me-2">
+                                <s>£{{ item.product.price }}</s>
+                            </span>
+                            <span class="mb-2 on-sale-price">£{{ item.product.on_sale_price | floatformat:2 }}</span>
+                            {% else %}
+                            <p class="mb-0">Unit Price: £{{ item.product.price }}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p class="mb-0"><strong>Subtotal: £{{ item.subtotal|floatformat:2 }}</strong></p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <div class="row">
+                <div class="col-12 text-end pe-4 mt-2">
+                    <h6>Order Total: £{{ total|floatformat:2 }}</h6>
+                    <h6>Delivery Cost: £{{ delivery|floatformat:2 }}</h6>
+                    <h4>Grand Total: £{{ grand_total|floatformat:2 }}</h6>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <a href="{% url 'basket' %}">
+                    <button type="button" class="button btn small-button" aria-label="Safe Checkout">Adjust
+                        Content</button>
+                </a>
+            </div>
+        </div>
+        <hr class="my-0 d-lg-none mb-4">
+        <div class="col-12 col-lg-6 pe-lg-4">
+            <h5 class="text-muted">Please fill out the form below to complete your order</h5>
+            <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+                {% csrf_token %}
+                <fieldset>
+                    <legend class="fieldet-label small text-black px-2 w-auto">Details</legend>
+                    {{ order_form.full_name | as_crispy_field }}
+                    {{ order_form.email | as_crispy_field }}
+                </fieldset>
+                <fieldset>
+                    <legend class="fieldet-label small text-black px-2 w-auto">Delivery</legend>
+                    {{ order_form.phone_number | as_crispy_field }}
+                    {{ order_form.street_address1 | as_crispy_field }}
+                    {{ order_form.street_address2 | as_crispy_field }}
+                    {{ order_form.town_or_city | as_crispy_field }}
+                    {{ order_form.county | as_crispy_field }}
+                    {{ order_form.postcode | as_crispy_field }}
+                    {{ order_form.country | as_crispy_field }}
+                    <div class="form-check form-check-inline float-start mr-0">
+                        {% if user.is_authenticated %}
+                        <label class="form-check-label" for="id-save-info">Save this delivery information to my
+                            profile</label>
+                        <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info"
+                            checked>
+                        {% else %}
+                        <label class="form-check-label" for="id-save-info">
+                            <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or
+                            <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                        </label>
+                        {% endif %}
+                    </div>
+                </fieldset>
+                <fieldset class="px-3">
+                    <legend class="fieldet-label small text-black px-2 w-auto">Payment</legend>
+                    <div class="mb-3" id="card-element"></div>
+                    <div class="mb-3 text-danger" id="card-errors"></div>
+                </fieldset>
+                <div class="submit-button mt-2 mb-2">
+                    <button id="submit-button" class="btn button small-button">
+                        <span class="font-weight-bold">Complete Order</span>
+                        <span class="icon">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                    </button>
+                    <p class="small text-danger my-0">
+                        <span class="icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </span>
+                        <span>Your card will be charged <strong>£{{ grand_total|floatformat:2 }}</strong></span>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<!-- textfit code copied from: https://www.npmjs.com/package/textfit -->
+<script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/textFit.js">
+</script>
+<script type="text/javascript">
+    textFit(document.getElementsByClassName("on-sale"));
+</script>
+{% endblock %}
