@@ -119,7 +119,12 @@
                     <h4>Grand Total: £{{ grand_total|floatformat:2 }}</h6>
                 </div>
             </div>
-
+            <div class="row">
+                <a href="{% url 'checkout' %}">
+                    <button type="button" class="button btn small-button"
+                        aria-label="Safe Checkout">Safe Checkout</button>
+                </a>
+            </div>
         </div>
     </div>
     {% else %}
