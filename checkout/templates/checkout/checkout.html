@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
 {% block content %}
 <!-- Hero image -->
 <div class="basket-hero-image d-flex justify-content-center align-items-center text-center bg-image">
@@ -32,9 +36,9 @@
                         {% endif %}
                     </a>
                 </div>
-                <div class="col-7 col-md-4 mt-2 mt-md-0">
+                <div class="col-7 col-md-5 mt-2 mt-md-0 ps-0">
                     <div class="row">
-                        <h5 class="mb-0">{{ item.product.name }}</h5>
+                        <strong class="mb-0">{{ item.product.name }}</strong>
                     </div>
                     <div class="row">
                         <p class="mb-1">{{ item.product.sku }}</p>
@@ -43,7 +47,7 @@
                         <p class="mb-0">{{ item.quantity }} pkt</p>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 text-end pe-4">
+                <div class="col-12 col-md-5 text-end pe-4 ps-0">
                     <div class="row">
                         <div class="col">
                             {% if item.product.on_sale %}
@@ -111,9 +115,13 @@
                     </div>
                 </fieldset>
                 <fieldset class="px-3">
-                    <legend class="fieldet-label small text-black px-2 w-auto">Payment</legend>
+                    <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
+                    <!-- A Stripe card element will go here -->
                     <div class="mb-3" id="card-element"></div>
-                    <div class="mb-3 text-danger" id="card-errors"></div>
+                    <!-- Used to display form errors -->
+                    <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                    <!-- Pass the client secret to the view so we can get the payment intent id -->
+                    <input type="hidden" value="{{ client_secret }}" name="client_secret">
                 </fieldset>
                 <div class="submit-button mt-2 mb-2">
                     <button id="submit-button" class="btn button small-button">
@@ -138,6 +146,10 @@
 
 {% block postloadjs %}
 {{ block.super }}
+<!-- Stripe code taken from Boutique Ado -->
+{{ stripe_public_key|json_script:"id_stripe_public_key" }}
+{{ client_secret|json_script:"id_client_secret" }}
+<script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 <!-- textfit code copied from: https://www.npmjs.com/package/textfit -->
 <script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/textFit.js">
 </script>
