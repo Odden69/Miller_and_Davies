@@ -3,8 +3,7 @@
   box-sizing: border-box;
   height: 40px;
   padding: 10px 12px;
-  /* border: 1px solid transparent; */
-  border: 1px solid #ced4da;
+  border: 1px solid #969a9e;
   border-radius: 4px;
   background-color: white;
   box-shadow: 0 1px 3px 0 #e6ebf1;
@@ -15,7 +14,8 @@
 .StripeElement--focus,
 .stripe-style-input:focus,
 .stripe-style-input:active {
-  box-shadow: 0 1px 3px 0 #cfd7df;
+  box-shadow: 0 1px 3px 0 #cfd7df !important;
+  border: 1px solid #969a9e !important;
 }
 
 .StripeElement--webkit-autofill {
@@ -34,7 +34,7 @@
 #payment-form .form-control,
 #card-element {
     color: #000;
-    border: 1px solid #000;
+    border: 1px solid #969a9e;
 }
 
 select,
@@ -64,4 +64,10 @@ select option[value="country"] {
     justify-content: center;
     margin: 0;
     height: 100%;
+}
+
+@media (max-width: 576px) {
+  .order-number {
+    font-size: .8rem;
+  }
 }
