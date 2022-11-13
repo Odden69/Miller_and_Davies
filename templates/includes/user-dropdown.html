@@ -6,7 +6,7 @@
       {% if request.user.is_authenticated %}
       <li><a class="dropdown-item" href="{% url 'account_logout' %}">Log Out</a></li>
       <hr>
-      <li><a class="dropdown-item" href="#">My Profile</a></li>
+      <li><a class="dropdown-item" href="{% url 'profile' %}">My Profile</a></li>
       {% if request.user.is_superuser %}
       <hr>
       <li><a class="dropdown-item" href="{% url 'add_product' %}">Product Management</a></li>
