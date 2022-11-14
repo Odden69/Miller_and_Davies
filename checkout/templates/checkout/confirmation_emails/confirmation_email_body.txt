@@ -1,0 +1,28 @@
+Hello {{ order.full_name }}!
+
+Thank you for shopping at Miller & Davies!
+
+This is a confirmation of your order {{ order.order_number }}.
+Please check the information below and if you find any mistake please contact us as soon as possible.
+
+Order Date: {{ order.date }}
+
+{% for item in order.lineitems.all %}
+{{ item.product.name }} x {{ item.quantity }}     £{{ item.lineitem_total|floatformat:2 }}
+{% endfor %}
+
+Order Total: £{{ order.order_total|floatformat:2 }}
+Delivery: £{{ order.delivery_cost|floatformat:2 }}
+Grand Total: £{{ order.grand_total|floatformat:2 }}
+
+Shipping info:
+{{ order.full_name }}
+{{ order.street_address1 }}
+{{ order.town_or_city }}
+{{ order.postcode }}
+{{ order.country.name }}
+
+If you have any questions or comments, please do not hesitate to contact us at {{ contact_email }}.
+
+Best Regards,
+Miller & Davies
