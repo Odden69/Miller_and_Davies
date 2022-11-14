@@ -16,13 +16,23 @@
 </div>
 <!-- Hero image -->
 <div class="container-md my-4">
+    {% if from_profile %}
     <div class="row">
-        <div class="col-12 col-lg-6 order-lg-last mb-4 item-container">
+        <div class="col-12 col-lg-6 mb-4 item-container">
+            <h5 class="text-muted">Thank You for Your order!</h5>
+            <p>This is a past order confirmation</p>
+            <p>A confirmation email was sent to <strong>{{ order.email }}</strong> on <strong>{{ order.date }}</strong></p>
+        </div>
+    </div>
+    {% else %}
+    <div class="row">
+        <div class="col-12 col-lg-6 mb-4 item-container">
             <h5 class="text-muted">Thank You for Your order!</h5>
             <p>Please check the order summary below and if you find any mistake please get back to us as soon as possible.</p>
             <p>A confirmation email will be sent to <strong>{{ order.email }}</strong></p>
         </div>
     </div>
+    {% endif %}
     <div class="row">
         <div class="col-12 col-lg-7">
             <div class="order-confirmation-wrapper p-2 border">
@@ -172,6 +182,15 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-lg-7 mt-2">
+            {% if from_profile %}
+            <a href="{% url 'profile' %}" class="btn button small-button">
+                <span>Back to Profile</span>
+            </a>
+            {% endif %}
         </div>
     </div>
 </div>
