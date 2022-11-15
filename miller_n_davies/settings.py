@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'basket',
     'favorites',
     'checkout',
+    'newsletters',
 
     # other
     'storages',
@@ -94,6 +95,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
                 'basket.contexts.basket_contents',
+                'newsletters.contexts.newsletter_signup',
             ],
             'builtins': [
                 'crispy_forms.templatetags.crispy_forms_tags',

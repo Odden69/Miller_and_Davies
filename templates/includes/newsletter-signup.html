@@ -1,1 +1,22 @@
-<div class="news-letter border-top" style="height: 35px;"></div>
+<div class="news-letter-container border-top container">
+    <div class="row">
+        <div class="col-12">
+            <p class="mb-0 mt-3 text-center">
+                Sign up for our newsletter. Get inspiration, discounts and news every week!
+            </p>
+        </div>
+        <div class="col-12 col-md-8 mx-auto">
+            <form class="py-2 text-center text-sm-start " method="POST" id="newsletter-form">
+                <div class="row">
+                    <div class="col-12 col-md-10">
+                        {% csrf_token %}
+                        {{ newsletter_signup_form | crispy }}
+                    </div>
+                    <div class="col-12 col-md-2">
+                        <button class="button btn small-button" type="submit">Send</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

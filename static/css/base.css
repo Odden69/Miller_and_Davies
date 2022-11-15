@@ -124,6 +124,11 @@ main {
   min-height: 100px;
 }
 
+/* newsletter subscription */
+.news-letter-container {
+  height: 100px;
+}
+
 /* footer */
 .social-icon {
   width: 20px;
@@ -298,4 +303,8 @@ main {
   .detail-container img {
     width: 100%;
   }
+
+.news-letter-container {
+  height: 200px;
+}
 }
