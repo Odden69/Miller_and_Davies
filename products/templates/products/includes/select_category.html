@@ -8,15 +8,15 @@
         </div>
         {% else %}
         <div class="col">
-            <a href="{% url 'products' %}">All Products/</a>
-            <a href="{% url 'products' %}?category={{ selected_category.name }}">{{ selected_category.friendly_name|title }}</a>
+            <a class="text-black" href="{% url 'products' %}">All Products/</a>
+            <a class="text-black" href="{% url 'products' %}?category={{ selected_category.name }}">{{ selected_category.friendly_name|title }}</a>
         </div>
         {% endif %}
         {% else %}
         <div class="col">
-            <a href="{% url 'products' %}">All Products/</a>
-            <a href="{% url 'products' %}?category={{ selected_category.name }}">{{ selected_category.friendly_name|title }}/</a>
-            <a href="{% url 'products' %}?category={{ selected_category.name }}&subcategory={{ selected_subcategory.name }}">{{ selected_subcategory.friendly_name|title }}</a>
+            <a class="text-black" href="{% url 'products' %}">All Products/</a>
+            <a class="text-black" href="{% url 'products' %}?category={{ selected_category.name }}">{{ selected_category.friendly_name|title }}/</a>
+            <a class="text-black" href="{% url 'products' %}?category={{ selected_category.name }}&subcategory={{ selected_subcategory.name }}">{{ selected_subcategory.friendly_name|title }}</a>
         </div>
         {% endif %}
     </div>
