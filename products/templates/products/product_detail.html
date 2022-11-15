@@ -51,7 +51,9 @@
                         {% endif %}
                         {% endfor %}
                         <br class="d-sm-none ">
-                        <span class="ms-3">({{ product.num_rating }} ratings)</span>
+                        {% with r=product.num_rating %}
+                        <span class="ms-3">({{ r }} rating{{ r|pluralize }})</span>
+                        {% endwith %}
                     </form>
                 </div>
                 <div class="col-12">
