@@ -4,13 +4,15 @@
     </button>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuUserButton">
       {% if request.user.is_authenticated %}
-      <li><a class="dropdown-item" href="{% url 'account_logout' %}">Log Out</a></li>
+      <li class="dropdown-item">Logged in as "{{ request.user.username}}"</li>
       <hr>
       <li><a class="dropdown-item" href="{% url 'profile' %}">My Profile</a></li>
       {% if request.user.is_superuser %}
       <hr>
       <li><a class="dropdown-item" href="{% url 'add_product' %}">Product Management</a></li>
       {% endif %}
+      <hr>
+      <li><a class="dropdown-item" href="{% url 'account_logout' %}">Log Out</a></li>
       {% else %}
       <li><a class="dropdown-item" href="{% url 'account_signup' %}">Sign Up</a></li>
       <li><a class="dropdown-item" href="{% url 'account_login' %}">Log In</a></li>
