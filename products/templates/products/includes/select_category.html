@@ -9,14 +9,17 @@
         {% else %}
         <div class="col">
             <a class="text-black" href="{% url 'products' %}">All Products/</a>
-            <a class="text-black" href="{% url 'products' %}?category={{ selected_category.name }}">{{ selected_category.friendly_name|title }}</a>
+            <a class="text-black"
+                href="{% url 'products' %}?category={{ selected_category.name }}">{{ selected_category.friendly_name|title }}</a>
         </div>
         {% endif %}
         {% else %}
         <div class="col">
             <a class="text-black" href="{% url 'products' %}">All Products/</a>
-            <a class="text-black" href="{% url 'products' %}?category={{ selected_category.name }}">{{ selected_category.friendly_name|title }}/</a>
-            <a class="text-black" href="{% url 'products' %}?category={{ selected_category.name }}&subcategory={{ selected_subcategory.name }}">{{ selected_subcategory.friendly_name|title }}</a>
+            <a class="text-black"
+                href="{% url 'products' %}?category={{ selected_category.name }}">{{ selected_category.friendly_name|title }}/</a>
+            <a class="text-black"
+                href="{% url 'products' %}?category={{ selected_category.name }}&subcategory={{ selected_subcategory.name }}">{{ selected_subcategory.friendly_name|title }}</a>
         </div>
         {% endif %}
     </div>
@@ -48,12 +51,22 @@
         </div>
         {% endif %}
         {% else %}
-        <div class="row">
-            <div class="col text-center mb-3">
+        <div class="col">
+            <div class="row text-center my-3">
                 <h2>My Favorites</h3>
             </div>
+            <div class="row my-3">
+                {% if not request.session.favorites %}
+                <div class="col-11 col-sm-8 col-lg-6 mx-auto">
+                    <p class="fs-sm-5 text-lg-center">You haven't selected any favorites.<br class="d-lg-none">
+                        Click on a product's <i class="fa-regular fa-heart fa-lg favorite-icon"></i>-symbol to add it
+                        to your favorites.</p>
+                </div>              
+                <br>
+                {% endif %}
+            </div>
         </div>
-        {% endif %}     
+        {% endif %}
     </div>
 </div>
 <!-- Select Category / Subcategory -->
