@@ -31,7 +31,8 @@
   <div class="collapse navbar-collapse" id="navbarToggler">
     <ul class="navbar-nav me-auto mx-md-auto mb-lg-0">
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="{% url 'products' %}" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="{% url 'products' %}" id="navbarDropdownMenuLink" role="button"
+          data-bs-toggle="dropdown" aria-expanded="false">
           All Products
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -47,7 +48,10 @@
         <a class="nav-link" href="{% url 'products' %}?category=flowers">Flowers</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'products' %}?category=herbs">Herbs</a>
+        <a class="nav-link" href="{% url 'products' %}?category=herbs">Herbs</a>      
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'products' %}?indoors">Indoor Growing</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{% url 'products' %}?bargains">Bargains</a>
@@ -55,17 +59,17 @@
     </ul>
     <div class="float-end">
       <div class="row">
-      <div class="col-3">
-        <a href="{% url 'products' %}?favorites" class="fs-3 text-reset">
-          <button class="btn favorite-btn mb-md-1 text-reset">
-            <div class="my-0 fs-6">
-              <i class="fa-solid fa-heart fa-lg me-1"></i>
-            </div>
-          </button>
-        </a>
+        <div class="col-3">
+          <a href="{% url 'products' %}?favorites" class="fs-3 text-reset">
+            <button class="btn favorite-btn mb-md-1 text-reset">
+              <div class="my-0 fs-6">
+                <i class="fa-solid fa-heart fa-lg me-1"></i>
+              </div>
+            </button>
+          </a>
+        </div>
+        {% include 'includes/user-dropdown.html' %}
       </div>
-      {% include 'includes/user-dropdown.html' %}
-    </div>
     </div>
   </div>
 </nav>

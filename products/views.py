@@ -82,6 +82,10 @@ def products(request):
         if 'favorites' in request.GET:
             products = products.filter(id__in=favorites)
 
+        # indoor filter
+        if 'indoors' in request.GET:
+            products = products.filter(indoors=True)
+
         # bargain filter
         if 'bargains' in request.GET:
             products = products.filter(on_sale=True)

@@ -24,6 +24,15 @@
             </div>
             {% endif %}
             {% endif %}
+            {% if 'indoors' in request.GET %}
+            <div class="row my-3">
+                <div class="col-10 col-sm-8 mx-auto">
+                    <p class="fs-sm-5">These are our products suitable for growing indoors.<br> 
+                    Perfect for you without a garden or for anyone who wants fresh home grown greens all year around.</p>
+                </div>
+                <br>
+            </div>
+            {% endif %}
             <div class="row">
                 {% for product in page_obj %}
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
