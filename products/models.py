@@ -56,9 +56,9 @@ class Product(models.Model):
     subcategory = models.ForeignKey(Subcategory,
                                     on_delete=models.SET(
                                         get_sentinel_subcategory))
-    sawing_times = models.ManyToManyField(Season,
+    sawing_times = models.ManyToManyField(Season, blank=True,
                                           related_name='products_to_saw')
-    harvest_times = models.ManyToManyField(Season,
+    harvest_times = models.ManyToManyField(Season, blank=True,
                                            related_name='products_to_harvest')
     indoors = models.BooleanField(default=False)
     on_sale = models.BooleanField(default=False, null=False, blank=False)
