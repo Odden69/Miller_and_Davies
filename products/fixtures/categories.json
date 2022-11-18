@@ -1,0 +1,29 @@
+[
+  {
+    "model": "products.category",
+    "id": 1,
+    "fields": {
+      "name": "vegetables",
+      "friendly_name": "Vegetables",
+      "image": "vegetables.jpg"
+    }
+  },
+  {
+    "model": "products.category",
+    "id": 2,
+    "fields": {
+      "name": "herbs",
+      "friendly_name": "Herbs",
+      "image": "herbs.jpg"
+    }
+  },
+  {
+    "model": "products.category",
+    "id": 3,
+    "fields": {
+      "name": "flowers",
+      "friendly_name": "Flowers",
+      "image": "flowers.jpg"
+    }
+  }
+]  

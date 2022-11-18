@@ -1,0 +1,123 @@
+[
+  {
+    "model": "products.subcategory",
+    "id": 1,
+    "fields": {
+      "name": "cucurbits",
+      "friendly_name": "Cucurbits",
+	    "category": 1,
+      "image": "cucurbits.jpg"
+    }
+  },
+  {
+    "model": "products.subcategory",
+    "id": 2,
+    "fields": {
+      "name": "leafy_greens",
+      "friendly_name": "Leafy Greens",
+	    "category": 1,
+      "image": "leafy_greens.jpg"
+    }
+  },
+  {
+    "model": "products.subcategory",
+    "id": 3,
+    "fields": {
+      "name": "legumes",
+      "friendly_name": "Legumes",
+	    "category": 1,
+      "image": "legumes.jpg"
+    }
+  },
+  {
+    "model": "products.subcategory",
+    "id": 4,
+    "fields": {
+      "name": "various_veg",
+      "friendly_name": "Various Vegetables",
+	    "category": 1,
+      "image": "various_veg.jpg"
+    }
+  },
+  {
+    "model": "products.subcategory",
+    "id": 5,
+    "fields": {
+      "name": "onions",
+      "friendly_name": "Onions",
+	    "category": 1,
+      "image": "onions.jpg"
+    }
+  },
+  {
+    "model": "products.subcategory",
+    "id": 6,
+    "fields": {
+      "name": "peppers",
+      "friendly_name": "Peppers",
+	    "category": 1,
+      "image": "peppers.jpg"
+    }
+  },
+  {
+    "model": "products.subcategory",
+    "id": 7,
+    "fields": {
+      "name": "root_vegetables",
+      "friendly_name": "Root Vegetables",
+	    "category": 1,
+      "image": "root_vegetables.jpg"
+    }
+  },
+  {
+    "model": "products.subcategory",
+    "id": 8,
+    "fields": {
+      "name": "tomatoes",
+      "friendly_name": "Tomatoes",
+	    "category": 1,
+      "image": "tomatoes.jpg"
+    }
+  },
+  {
+    "model": "products.subcategory",
+    "id": 9,
+    "fields": {
+      "name": "annuals",
+      "friendly_name": "Annuals",
+	    "category": 3,
+      "image": "annuals.jpg"
+    }
+  },
+  {
+    "model": "products.subcategory",
+    "id": 10,
+    "fields": {
+      "name": "biennuals",
+      "friendly_name": "Biennuals",
+	    "category": 3,
+      "image": "biennuals.jpg"
+    }
+  },
+  {
+    "model": "products.subcategory",
+    "id": 11,
+    "fields": {
+      "name": "perennials",
+      "friendly_name": "Perennials",
+	    "category": 3,
+      "image": "perennials.jpg"
+    }
+  },
+    {
+    "model": "products.subcategory",
+    "id": 12,
+    "fields": {
+      "name": "na",
+      "friendly_name": "N/A",
+	    "category": 2,
+      "image": "herbs.jpg"
+    }
+  }
+ ]
+  

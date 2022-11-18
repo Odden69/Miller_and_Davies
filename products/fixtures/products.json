@@ -1,0 +1,1139 @@
+[
+  {
+    "model": "products.product",
+    "id": 1,
+    "fields": {
+      "sku": "000C7EBF0F3",
+      "name": "Pea 'Sugar Pop'",
+      "description": "A high-yielding, 4 feet tall plant with straight, flat pods around 9cm (31/2in) in length.\nRegular picking of the sweet, crisp pods will encourage further cropping.\nDirect sow outdoors from March through June every other week to ensure successional crops.\n\nSow indoors on a thin layer of soil for crispy, tasty and nutritious pea shots",
+      "image": "000C7EBF0F3.jpg",
+      "subcategory": 3,
+      "on_sale": false,
+      "discount": 0,
+      "price": 2.49,
+      "size": 100,
+      "indoors": true
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 2,
+    "fields": {
+      "sku": "000110E4F58",
+      "name": "Pea 'Waltz'",
+      "description": "This 30 inches tall plant produces high yields of pods filled with sweet and tender peas. Support the plants with twigs, wire or net as they grow. Grown in blocks it is self supporting.\nDirect sow outdoors from March through June every other week to ensure successional crops.",
+      "image": "000110E4F58.jpg",
+      "subcategory": 3,
+      "on_sale": true,
+      "discount": 15,
+      "price": 3.29,
+      "size": 200,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 3,
+    "fields": {
+      "sku": "0005B6722D7",
+      "name": "Broad Bean 'Luzy Jane'",
+      "description": "This lovely broad bean can be sown from November through June. Sow in autumn or winter under cloches for extra early crops, or in the summer, for extra late. The plants need support as they grow, especially in windy gardens",
+      "image": "0005B6722D7.jpg",
+      "subcategory": 3,
+      "on_sale": false,
+      "discount": 0,
+      "price": 3.79,
+      "size": 30,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 4,
+    "fields": {
+      "sku": "0006494D56D",
+      "name": "Dwarf Bean 'Linda'",
+      "description": "A high-yielding 18 inches tall variety is highly resistant to bean mosaic virus and anthracnose. It's mid green, stringless beans are praised for their excellent flavour.\nSow outdoors from May to July when the soil is warm. French beans like full sun and protection from strong winds.",
+      "image": "0006494D56D.jpg",
+      "subcategory": 3,
+      "on_sale": false,
+      "discount": 0,
+      "price": 1.00,
+      "size": 100,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 5,
+    "fields": {
+      "sku": "0007DC6B465",
+      "name": "Dwarf Bean 'Green Cargo'",
+      "description": "'Green Cargo' is an extra fine variety of french beans with a fantastic flavour and large crops. 20 inches tall, the plants are self supportive.\nSow outdoors from May to July when the soil is warm. French beans like full sun and protection from strong winds.\nHarvest the beans regulary from July to October.",
+      "image": "0007DC6B465.jpg",
+      "subcategory": 3,
+      "on_sale": false,
+      "discount": 0,
+      "price": 2.49,
+      "size": 40,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 6,
+    "fields": {
+      "sku": "0005C8FE817",
+      "name": "Climbing Bean 'Mary Sue'",
+      "description": "This flat podden french bean has an excellent flavour. The plants are 70 inches tall and produces 8 inches long pods from July onwards.\nSow outdoors from May to July when the soil is warm. Support is required and should be placed at the time of sowing.",
+      "image": "0005C8FE817.jpg",
+      "subcategory": 3,
+      "on_sale": true,
+      "discount": 25,
+      "price": 1.49,
+      "size": 15,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 7,
+    "fields": {
+      "sku": "000F25B05C2",
+      "name": "Marrow 'Tigers Eye'",
+      "description": "This excellent, high-yielding, striped marrow hybrid produces a well tasting fruit which can be harvested through the whole summer. Harvest early, as courgettes, for use in salads or cooking. Or let them maure to full size (about 20 inches) and store them in a cool place for winter use.\nSow indoors in April and transplant them outdoors when all risk of frost has passed.",
+      "image": "000F25B05C2.jpg",
+      "subcategory": 1,
+      "on_sale": true,
+      "discount": 30,
+      "price": 3.29,
+      "size": 10,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 8,
+    "fields": {
+      "sku": "00090C944DD",
+      "name": "Squash 'Winter Delight'",
+      "description": "A winter squash with good storage properties. The fruits weigh around 4-5lb. Its nutty taste and dry flesh makes it superb for roasting and gets sweeter and more enriched the longer the squash is stored.\nSow indoors February through April and transplant outdoors when all risk of frost has passed. Keep well watered and fertilized throughout the season.",
+      "image": "00090C944DD.jpg",
+      "subcategory": 1,
+      "on_sale": false,
+      "discount": 0,
+      "price": 1.49,
+      "size": 5,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 9,
+    "fields": {
+      "sku": "0001CD7DCBD",
+      "name": "Cucumber 'Loretta'",
+      "description": "'Loretta' is a greenhouse grown cucmber with crispy, tasty fruits perfect for slicing into a salad or having as a midday snack just as it is.\nSow indoors March through April and transplant to a warm humid greenhouse when the plants are large enough. Keep well watered throughout the season.",
+      "image": "0001CD7DCBD.jpg",
+      "subcategory": 1,
+      "on_sale": false,
+      "discount": 0,
+      "price": 4.29,
+      "size": 5,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 10,
+    "fields": {
+      "sku": "00062241BA7",
+      "name": "Cucmber 'Crispy Green'",
+      "description": "An excellent greenhouse cucmber with crispy fruits suitable for pickling.\nSow indoors March through April and transplant to a warm humid greenhouse when the plants are large enough. Keep well watered throughout the season. Support the shoots to about 6 feet for higher yields.",
+      "image": "00062241BA7.jpg",
+      "subcategory": 1,
+      "on_sale": false,
+      "discount": 0,
+      "price": 3.79,
+      "size": 10,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 11,
+    "fields": {
+      "sku": "000E9D26A23",
+      "name": "Watermelon 'Summer Sweet'",
+      "description": "This outdoors or greehouse grown watermelon produces juicy, cispy and sweet fruits early in the season. Each plant gives 4-5 fruits which weigh up to 8lbs.\nSow indoors from April to May and transplant to a greenhouse when the plants are large enough or outdoors when all risk of frost has passed. Keep well watered throughout the season.",
+      "image": "000E9D26A23.jpg",
+      "subcategory": 1,
+      "on_sale": true,
+      "discount": 10,
+      "price": 4.99,
+      "size": 4,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 12,
+    "fields": {
+      "sku": "00028F2DEA1",
+      "name": "Cucmber 'Chinese Farm'",
+      "description": "An old variety originated from China with crispy, non-bitter fruits. Use in salads, pickle or cook in typical chinese dishes.\nSow indoors from April to May and transplant to a greenhouse when the plants are large enough or outdoors when all risk of frost has passed. Keep well watered throughout the season.",
+      "image": "00028F2DEA1.jpg",
+      "subcategory": 1,
+      "on_sale": false,
+      "discount": 0,
+      "price": 4.49,
+      "size": 10,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 13,
+    "fields": {
+      "sku": "0001ADCB63A",
+      "name": "Kale 'Frostbite'",
+      "description": "This splendid kale variety is extremely winter hardy. Grown outdoors it can stand for months before harvesting. It is also well suited for indoors growing for a all year around baby leaf supply. For outdoors growing sow outdoors in a seedbed from March to June and transplant to the final growing position when the plants are big enough.",
+      "image": "0001ADCB63A.jpg",
+      "subcategory": 2,
+      "on_sale": false,
+      "discount": 0,
+      "price": 1.99,
+      "size": 25,
+      "indoors": true
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 14,
+    "fields": {
+      "sku": "0009CF59A3A",
+      "name": "Mache 'Winter Blossom'",
+      "description": "Small, glossy, dark green leaves with a pleasant nutty flavour. Eat raw in salads or as a steamed side dish. The leaves a very winter hardy and can be grown all through the winter in an unheated greenhouse. Water regulary throughout the season",
+      "image": "0009CF59A3A.jpg",
+      "subcategory": 2,
+      "on_sale": true,
+      "discount": 20,
+      "price": 2.99,
+      "size": 400,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 15,
+    "fields": {
+      "sku": "0006CEFEB2E",
+      "name": "Swiss Chard 'Lucy'",
+      "description": "As all chards, this variety is a splendid alterantive to spinach as steamed vegetables or in a stir fry.\nDirect saw from March to August and harvest as baby leaves for a salad, or as full grown plants. Do not sow too early and keep the soil moist to prevent early bolting.\nSuitable for growing baby leafs indoors all year around.",
+      "image": "0006CEFEB2E.jpg",
+      "subcategory": 2,
+      "on_sale": false,
+      "discount": 0,
+      "price": 1.99,
+      "size": 200,
+      "indoors": true
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 16,
+    "fields": {
+      "sku": "000AA781BA3",
+      "name": "Swiss Chard 'On Fire'",
+      "description": "As all chards, this beautiful orange variety is a splendid alterantive to spinach as steamed vegetables or in a stir fry.\nDirect saw from March to August and harvest as baby leaves for a salad, or as full grown plants. Do not sow too early and keep the soil moist to prevent early bolting.\nSuitable for growing baby leafs indoors all year around.",
+      "image": "000AA781BA3.jpg",
+      "subcategory": 2,
+      "on_sale": false,
+      "discount": 0,
+      "price": 2.99,
+      "size": 150,
+      "indoors": true
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 17,
+    "fields": {
+      "sku": "00026EFB084",
+      "name": "Swiss Chard 'Red Dream'",
+      "description": "As all chards, this colorful variety is a splendid alterantive to spinach as steamed vegetables or in a stir fry.\nDirect saw from March to August and harvest as baby leaves for a salad, or as full grown plants. Do not sow too early and keep the soil moist to prevent early bolting.\nSuitable for growing baby leafs indoors all year around.",
+      "image": "00026EFB084.jpg",
+      "subcategory": 2,
+      "on_sale": true,
+      "discount": 15,
+      "price": 2.49,
+      "size": 200,
+      "indoors": true
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 18,
+    "fields": {
+      "sku": "000E7511ACC",
+      "name": "Spinach 'Zeus'",
+      "description": "This excellent spinach variety has glossy green leaves with a good flavour and texture. As it grows quickly you can harvest them within a few weeks. With successive sowing you can harvest delightful leaves from late spring to late autumn and even into the winter months.\nExcellent for indoor growing all year around.",
+      "image": "000E7511ACC.jpg",
+      "subcategory": 2,
+      "on_sale": false,
+      "discount": 0,
+      "price": 2.96,
+      "size": 100,
+      "indoors": true
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 19,
+    "fields": {
+      "sku": "00025F71710",
+      "name": "Spinach 'Green Giant'",
+      "description": "As the name implies this spinach variety grown extremely large leaves. It is very tasty and produces a huge crop.\nSow it in the late summer to avoid bolting and harvest during the fall and winter, and get a second crop in the early spring.",
+      "image": "00025F71710.jpg",
+      "subcategory": 2,
+      "on_sale": false,
+      "discount": 0,
+      "price": 2.49,
+      "size": 100,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 20,
+    "fields": {
+      "sku": "000F00028F2",
+      "name": "Lettuce 'Arctic Flower'",
+      "description": "Saw this beautiful lettuce in the autumn for a super early spring crop. Protect with cloche in perticual cold weather or sow in a unheated greenhouse.\nSaw from August to October and harvest March through May. Make sure to keep the soil moist to prevent the plants from bolting.",
+      "image": "000F00028F2.jpg",
+      "subcategory": 2,
+      "on_sale": false,
+      "discount": 0,
+      "price": 2.99,
+      "size": 400,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 21,
+    "fields": {
+      "sku": "000AEC90957",
+      "name": "Lettuce 'Loose Leaf'",
+      "description": "A crisp and non-bitter loose leafed lettuce perfect in a salad.\nSow it from early spring to late summer, apart from the hottest weeks when lettuce seeds rarley germinate, to ensure successional crops.\nExcellent for growing baby leafs indoors all year around.",
+      "image": "000AEC90957.jpg",
+      "subcategory": 2,
+	  
+      "on_sale": false,
+      "discount": 0,
+      "price": 2.49,
+      "size": 500,
+      "indoors": true
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 22,
+    "fields": {
+      "sku": "000CCD70C15",
+      "name": "Chinese Cabbage 'Peking'",
+      "description": "This tasty variety of chinese cabbage is perfect in a salad or in a stir fry.\nSaw in May through July, avoid early sawing to prevent bolting. Harvest continously for a cut and come again crop, or let the heads mature. A mature head can be wrapped in a newspaper or plastic wrap and be stored in a cold damp area for several months.",
+      "image": "000CCD70C15.jpg",
+      "subcategory": 2,
+      "on_sale": false,
+      "discount": 0,
+      "price": 1.49,
+      "size": 50,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 23,
+    "fields": {
+      "sku": "00073B4239B",
+      "name": "Artichoke 'Purple Heart'",
+      "description": "Purple Heart is an impressive perennial vegetable which makes a beatiful perennial addition to any garden. Pickle the hearts of the heads or eat them lightly cooked with garlic butter. They are a real delicacy! Unharvested heads turn in to tistle like flowers attractive to bees.\nDirect sow seeds outdoors from March to April and harvest from July to September.",
+      "image": "00073B4239B.jpg",
+      "subcategory": 4,
+      "on_sale": false,
+      "discount": 0,
+      "price": 3.99,
+      "size": 20,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 24,
+    "fields": {
+      "sku": "0003960FBCF",
+      "name": "Artichoke 'Green Delight'",
+      "description": "As any artichoke, Green Delight makes a beatiful perennial addition to any garden. Pickle the hearts of the heads or eat them lightly cooked with garlic butter. They are a real delicacy! Unharvested heads turn in to tistle like flowers attractive to bees.\nDirect sow seeds outdoors from March to April and harvest from July to September.",
+      "image": "0003960FBCF.jpg",
+      "subcategory": 4,
+      "on_sale": false,
+      "discount": 0,
+      "price": 2.99,
+      "size": 5,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 25,
+    "fields": {
+      "sku": "000D962F957",
+      "name": "Asparagus 'White Dream'",
+      "description": "This asparagus variety was bread to produce tender white spears, but is equally appreciated grown without mounding thus producing green spears. Sow indoors from February to April and transplant them outdoors when all risk of frost has passed. Let the plant have a couple of years to settle before harvesting any spears. As soon as the plant is established it will give large crops.",
+      "image": "000D962F957.jpg",
+      "subcategory": 4,
+      "on_sale": true,
+      "discount": 30,
+      "price": 4.49,
+      "size": 5,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 26,
+    "fields": {
+      "sku": "000FE5F25BE",
+      "name": "Asparagus 'Venus'",
+      "description": "Venus is a high-yielding asparagus variety. Its spears are straight and firm and the plants are suitable for producing white, as well as green spears. Sow indoors from February to April and transplant them outdoors when all risk of frost has passed. Let the plant have a couple of years to settle before harvesting any spears. As soon as the plant is established it will give large crops.",
+      "image": "000FE5F25BE.jpg",
+      "subcategory": 4,
+      "on_sale": false,
+      "discount": 0,
+      "price": 3.99,
+      "size": 5,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 27,
+    "fields": {
+      "sku": "00032A70735",
+      "name": "Fennel 'Juliet'",
+      "description": "The aniseed flavour of a fennel is especially appealing in this variety. 'Juliet' was bred to give large and firm bulbs with a resistance to bolting.\nDirect sow outdoors from April to July. Make regular sowings to ensure successional crops.",
+      "image": "00032A70735.jpg",
+      "subcategory": 4,
+      "on_sale": false,
+      "discount": 0,
+      "price": 1.99,
+      "size": 20,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 28,
+    "fields": {
+      "sku": "0002E5B9C8D",
+      "name": "Chives",
+      "description": "A herb garden is not complete without chives. The grass like onion is useful in so many dishes and is very easy to grow with little demand on its environment.\n Sow outdoors from march to June.",
+      "image": "0002E5B9C8D.jpg",
+      "subcategory": 5,
+      "on_sale": false,
+      "discount": 0,
+      "price": 1.99,
+      "size": 100,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 29,
+    "fields": {
+      "sku": "000E85A93AB",
+      "name": "Green Onions 'Paradise'",
+      "description": "This spring onion variety has a mild fresh taste, perfect for a salad or a sandwich. \nSow successively from March to July and you can harvest fresh onions from early summer to late autumn. Avoid sowing onions on particulary wet grounds.",
+      "image": "000E85A93AB.jpg",
+      "subcategory": 5,
+      "on_sale": false,
+      "discount": 0,
+      "price": 1.00,
+      "size": 100,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 30,
+    "fields": {
+      "sku": "00035D77681",
+      "name": "Onion 'Mouse Trap'",
+      "description": "'Mouse Trap' is an onion variety bred to resist downy mildew. A fresh tasting onion with excellent storage qualities.\nSow outdoors from Feb to April and harvest from July to September. Avoid sowing onions on particulary wet grounds.",
+      "image": "00035D77681.jpg",
+      "subcategory": 5,
+      "on_sale": false,
+      "discount": 0,
+      "price": 2.99,
+      "size": 450,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 31,
+    "fields": {
+      "sku": "00066114CE8",
+      "name": "Onion 'Purple Heart'",
+      "description": "A nice onion variety with a taste somewhere between a traditional yellow onion and a red one. It is best harvested early and enjoyed in a salad or pickled.\nSow outdoors from March to July and harvest from June to September. Avoid sowing onions on particulary wet grounds.",
+      "image": "00066114CE8.jpg",
+      "subcategory": 5,
+      "on_sale": true,
+      "discount": 25,
+      "price": 2.49,
+      "size": 200,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 32,
+    "fields": {
+      "sku": "000B585F100",
+      "name": "Red Onion 'Red Paris'",
+      "description": "'Red Paris' is a mild red onion with excellent storage qualities.\nSow outdoors from Feb to April and harvest in August and September. Avoid sowing onions on particulary wet grounds.",
+      "image": "000B585F100.jpg",
+      "subcategory": 5,
+      "on_sale": false,
+      "discount": 0,
+      "price": 1.99,
+      "size": 200,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 33,
+    "fields": {
+      "sku": "000A6848B1A",
+      "name": "Shallot 'Prisma'",
+      "description": "'Prisma' is short compact variety of shallot with a taste much appreciated by many chefs. It has excellent storage qualities.\nSow outdoors from March to May in a well drained and fertilized soil, and harvest in July and August. Avoid sowing onions on particulary wet grounds.",
+      "image": "000A6848B1A.jpg",
+      "subcategory": 5,
+      "on_sale": false,
+      "discount": 0,
+      "price": 2.99,
+      "size": 100,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 35,
+    "fields": {
+      "sku": "000A5857342",
+      "name": "Chili Pepper 'Tabasco'",
+      "description": "The very hot chili peppar used in the well known sauce with the same name.\nSow indoors in March to April and harvest August through October. Grow in a greenhouse or in pots placed in full sun in a sheltered position.",
+      "image": "000A5857342.jpg",
+      "subcategory": 6,
+      "on_sale": false,
+      "discount": 0,
+      "price": 2.49,
+      "size": 10,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 36,
+    "fields": {
+      "sku": "0005E390288",
+      "name": "Chili Pepper 'Red Dragon'",
+      "description": "This semi hot chili pepper produces 5in long fruits which turn deep red when ripe.\nSow indoors in March to April and harvest August through October. Grow in a greenhouse or in pots placed in full sun in a sheltered position.",
+      "image": "0005E390288.jpg",
+      "subcategory": 6,
+      "on_sale": true,
+      "discount": 15,
+      "price": 2.99,
+      "size": 15,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 37,
+    "fields": {
+      "sku": "00083EDED1E",
+      "name": "Chili Pepper 'Yellow Dragon'",
+      "description": "This semi hot chili pepper produces 5in long fruits which turn bright yellow when ripe.\nSow indoors in March to April and harvest August through October. Grow in a greenhouse or in pots placed in full sun in a sheltered position.",
+      "image": "00083EDED1E.jpg",
+      "subcategory": 6,
+      "on_sale": true,
+      "discount": 15,
+      "price": 2.99,
+      "size": 15,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 38,
+    "fields": {
+      "sku": "000836131B6",
+      "name": "Chili Pepper 'King of Tapas'",
+      "description": "This chili pepper with a moderate heat is perfect to fill and barbeque as a side dish.\nSow indoors in March to April and harvest August through October. Grow in a greenhouse or in pots placed in full sun in a sheltered position.",
+      "image": "000836131B6.jpg",
+      "subcategory": 6,
+      "on_sale": true,
+      "discount": 15,
+      "price": 2.49,
+      "size": 5,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 39,
+    "fields": {
+      "sku": "0003621C85D",
+      "name": "Sweet Pepper 'Sweet Mary'",
+      "description": "A sweet pepper variety which goes from deep green to deep red as it ripes.\nSow indoors in March to April and harvest June through September. Grow in a greenhouse or in pots placed in full sun in a sheltered position.",
+      "image": "0003621C85D.jpg",
+      "subcategory": 6,
+      "on_sale": false,
+      "discount": 0,
+      "price": 2.49,
+      "size": 10,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 40,
+    "fields": {
+      "sku": "000661FD70C",
+      "name": "Sweet Pepper 'Horizon'",
+      "description": "A really tasty sweet pepper variety which goes from deep green to deep red as it ripes.\nSow indoors in March to April and harvest June through September. Grow in a greenhouse or in pots placed in full sun in a sheltered position.",
+      "image": "000661FD70C.jpg",
+      "subcategory": 6,
+      "on_sale": false,
+      "discount": 0,
+      "price": 2.99,
+      "size": 10,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 41,
+    "fields": {
+      "sku": "00059AA3720",
+      "name": "Beetroot 'Deep Red'",
+      "description": "A sweet, tender deep red variety of beetroot which is a perfect root for a salad or to roast or pickle. 'Deep Red' is resistant to bolting which makes it suitable for early sowing.\nSow outdoors from March to July and make regular sowings to ensure successional crops.\nExcellent for growing baby leafs indoors all year around.",
+      "image": "00059AA3720.jpg",
+      "subcategory": 7,
+      "on_sale": false,
+      "discount": 0,
+      "price": 1.99,
+      "size": 100,
+      "indoors": true
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 43,
+    "fields": {
+      "sku": "0002CD7137C",
+      "name": "Carrot 'Summer Breeze'",
+      "description": "A sweet summer carrot variety with long tapered roots. It is excellent for both cooking or to be eaten raw. It is store well but is at its best when its eaten fresh. \nSow outdoors from March to June and make regular sowings to ensure successional crops from July to October.",
+      "image": "0002CD7137C.jpg",
+      "subcategory": 7,
+      "on_sale": false,
+      "discount": 0,
+      "price": 1.99,
+      "size": 250,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 44,
+    "fields": {
+      "sku": "000E4A069A2",
+      "name": "Carrot 'Autumn Queen'",
+      "description": "A splendid carrot for winter storage.\nSow outdoors from April to June and harvest from August to November.",
+      "image": "000E4A069A2.jpg",
+      "subcategory": 7,
+      "on_sale": true,
+      "discount": 20,
+      "price": 4.29,
+      "size": 500,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 45,
+    "fields": {
+      "sku": "000071FAD20",
+      "name": "Celeriac 'Cello'",
+      "description": "A large, firm celeriac variety with crunchy, white flesh.\nSow indoors from February to April and harvest in October and November for winter storage. Or cover the crop with 6 inches of straw and keep it in the ground over winter.",
+      "image": "000071FAD20.jpg",
+      "subcategory": 7,
+      "on_sale": true,
+      "discount": 10,
+      "price": 1.99,
+      "size": 100,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 46,
+    "fields": {
+      "sku": "000D0E2F1A0",
+      "name": "Parsnip 'Sweet Sun'",
+      "description": "'Sweet Sun' is a sweet, delicious, crispy parsnip with white flesh.\nSow outdoors from April to May and harvest from September to February. Their taste grow sweeter if you leave them in the ground through some winter months.",
+      "image": "000D0E2F1A0.jpg",
+      "subcategory": 7,
+      "on_sale": false,
+      "discount": 0,
+      "price": 2.49,
+      "size": 300,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 47,
+    "fields": {
+      "sku": "0007251EA0F",
+      "name": "Radish 'Golden Globe'",
+      "description": "A deep red, round radish variety with a mild flavour.\nSow under glass as early as February and March or outdoors from April to August. Regulary sowing every other weeks ensure successional crops from April to October.",
+      "image": "0007251EA0F.jpg",
+      "subcategory": 7,
+      "on_sale": false,
+      "discount": 0,
+      "price": 2.49,
+      "size": 100,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 48,
+    "fields": {
+      "sku": "0000549967E",
+      "name": "Sweed 'Avatar'",
+      "description": "A well shaped, nice coloured variety of Sweed with a tasty, mild flesh. It is perfect for a salad or the Swdish way, mashed with potatoes and carrots.\nSow in May or June and harvest in October to December. Harvest the crop in the end of December and store in a cool place the rest of the season.",
+      "image": "0000549967E.jpg",
+      "subcategory": 7,
+      "on_sale": true,
+      "discount": 20,
+      "price": 2.99,
+      "size": 200,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 49,
+    "fields": {
+      "sku": "0005467A23E",
+      "name": "Aubergine 'Solano'",
+      "description": "This beautiful Aubergine variety produces long, striped, oval fruits with a wonderful taste.\nSow indoors February through April and transplant to a greenhouse when the plants are large enough. Keep well watered throughout the season. 'Solano' gives a large crop from July to October.",
+      "image": "0005467A23E.jpg",
+      "subcategory": 4,
+      "on_sale": false,
+      "discount": 0,
+      "price": 7.48,
+      "size": 100,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 50,
+    "fields": {
+      "sku": "000F1960AAB",
+      "name": "Tomato 'Cherry Bite'",
+      "description": "A lovely, heavy cropping cherry tomato with a sweet rich flavour.\nSow indoors February through April and transplant to a greenhouse when the plants are large enough. Harvest delicious small tomatoes from July to October. Keep well watered throughout the season.",
+      "image": "000F1960AAB.jpg",
+      "subcategory": 8,
+      "on_sale": false,
+      "discount": 0,
+      "price": 2.99,
+      "size": 10,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 51,
+    "fields": {
+      "sku": "0004FF7EF99",
+      "name": "Tomato 'Prego'",
+      "description": "This hardy cherry plum tomato is easy to grow both indoors and outdoors. It gives nice small fruits with a rich flavour.\nSow indoors February to March and transplant to a greenhouse when the plants are large enough or outdoors when all risk of frost has passed. Harvest from July to September.",
+      "image": "0004FF7EF99.jpg",
+      "subcategory": 8,
+      "on_sale": false,
+      "discount": 0,
+      "price": 1.99,
+      "size": 8,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 52,
+    "fields": {
+      "sku": "0007F88DB53",
+      "name": "Tomato 'Ruby Taste'",
+      "description": "An excellent tasting variety of tomato with a productive, long season.\nSow indoors February to March and transplant to a greenhouse when the plants are large enough or outdoors when all risk of frost has passed. Harvest from July to October.",
+      "image": "0007F88DB53.jpg",
+      "subcategory": 8,
+      "on_sale": true,
+      "discount": 30,
+      "price": 3.29,
+      "size": 10,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 53,
+    "fields": {
+      "sku": "0005C689E75",
+      "name": "Basil 'Italian Star'",
+      "description": "Basil is appreciated in a wide range of cuisins and is easy to grow to have your own fresh basil all year around. Sow indoors from February to June and transplant outside in a sunny position when all risk of frost has passed.\nExcellent for windowsill growing all year around.",
+      "image": "0005C689E75.jpg",
+      "subcategory": 12,
+      "on_sale": false,
+      "discount": 0,
+      "price": 0.99,
+      "size": 50,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 54,
+    "fields": {
+      "sku": "000485CB556",
+      "name": "Rosemary",
+      "description": "Rosemary might be most known for its use with lamb but is useful in the kitchen in so many cases. It is easy to grow and have little requirements on soil and environment.\n Sow indoors from February to April and transplant outdoors when the plants are large enough.\nRosemary prefers the outdoors but can also be grown indoors all year around.",
+      "image": "000485CB556.jpg",
+      "subcategory": 12,
+      "on_sale": false,
+      "discount": 0,
+      "price": 1.99,
+      "size": 30,
+      "indoors": true
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 55,
+    "fields": {
+      "sku": "000FB2710EC",
+      "name": "Oregano",
+      "description": "Oregano is a hardy perennial herb, useful in so many ways in the kitchen and really easy to grow.\nSow indoors from Feb to June and transplant outside in a sunny position when all risk of frost has passed. When the plant is established it will stand a cold winter and spread by it self.\nSuitable for indoor growing all year around.",
+      "image": "000FB2710EC.jpg",
+      "subcategory": 12,
+      "on_sale": false,
+      "discount": 0,
+      "price": 2.29,
+      "size": 1000,
+      "indoors": true
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 56,
+    "fields": {
+      "sku": "00076FC4E1B",
+      "name": "Dill 'Elle'",
+      "description": "A low variety of dill which makes it more resistant to hard winds than regular dill, and also suitable for indoor growing.\nSow outdoors from April to July every other weeks ensure successional crops.\nSuitable for indoor growing all year around.",
+      "image": "00076FC4E1B.jpg",
+      "subcategory": 12,
+      "on_sale": false,
+      "discount": 0,
+      "price": 2.49,
+      "size": 200,
+      "indoors": true
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 57,
+    "fields": {
+      "sku": "000829E7E85",
+      "name": "Parsley 'Laura'",
+      "description": "A herb known for its versatile use in the kitchen. This variety is perticular rich in flavour.\nSow outdoors from April to July and harvest from June and until the plant bolt about next June.\nSuitable for indoor growing all year around.",
+      "image": "000829E7E85.jpg",
+      "subcategory": 12,
+      "on_sale": true,
+      "discount": 15,
+      "price": 1.29,
+      "size": 400,
+      "indoors": true
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 58,
+    "fields": {
+      "sku": "0009EFC0364",
+      "name": "Parsley 'Green Moss'",
+      "description": "A herb known for its versatile use in the kitchen.\nSow outdoors from April to July and harvest from June and until the plant bolt about next June.\nSuitable for indoor growing all year around.",
+      "image": "0009EFC0364.jpg",
+      "subcategory": 12,
+      "on_sale": true,
+      "discount": 10,
+      "price": 0.99,
+      "size": 750,
+      "indoors": true
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 59,
+    "fields": {
+      "sku": "000C7583939",
+      "name": "Calendula 'Pink Crown",
+      "description": "An annual flower, well known for its edible flowers. They are well suited for beginners since they are very easy to grow.\nSow outdoors from March to May for flowers from June to September or sow in August or September for even earlier blooming. Can also be left to self-sow. ",
+      "image": "000C7583939.jpg",
+      "subcategory": 9,
+      "on_sale": true,
+      "discount": 20,
+      "price": 2.29,
+      "size": 100,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 61,
+    "fields": {
+      "sku": "0002F4875BF",
+      "name": "Cornflower 'Blue Diamond'",
+      "description": "An annual flower, well known for its edible flowers. They are well suited for beginners since they are very easy to grow.\nSow outdoors from March to April for flowers from June to August or sow in August or September for even earlier blooming. Can also be left to self-sow. ",
+      "image": "0002F4875BF.jpg",
+      "subcategory": 9,
+      "on_sale": false,
+      "discount": 0,
+      "price": 1.99,
+      "size": 200,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 62,
+    "fields": {
+      "sku": "000D03F0C2F",
+      "name": "Poppy 'Daisy'",
+      "description": "This variety of Poppy is extremely suitable for beginners since they are very easy to grow.\nSow outdoors from March to May for flowers from June to August. Can also be left to self-sow.",
+      "image": "000D03F0C2F.jpg",
+      "subcategory": 9,
+      "on_sale": false,
+      "discount": 0,
+      "price": 3.49,
+      "size": 100,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 63,
+    "fields": {
+      "sku": "00077B06E02",
+      "name": "Rudbeckia 'Sophia'",
+      "description": "An annual flower with little to no demand on soil or surroundings. It blooms with beautiful tall flowers where ever it is planted.\nSow from February to March for flowers from July to October.",
+      "image": "00077B06E02.jpg",
+      "subcategory": 9,
+      "on_sale": false,
+      "discount": 0,
+      "price": 1.99,
+      "size": 50,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 64,
+    "fields": {
+      "sku": "0004CD46676",
+      "name": "Sunflower 'Dream'",
+      "description": "A rich blooming variety of medium height which gives lots of seeds. Perfect to pick as many as you can for beautiful bouquets and leave the rest for a feast for the birds.\nSow from March to June and get flowers from July to October.",
+      "image": "0004CD46676.jpg",
+      "subcategory": 9,
+      "on_sale": true,
+      "discount": 25,
+      "price": 3.29,
+      "size": 50,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 65,
+    "fields": {
+      "sku": "000DAD88960",
+      "name": "Bellis 'Bellisima'",
+      "description": "This adorable little plant brightens up any part of the garden. It is edible and very easy to grow.\nSow from May to June and get spring flowers from March to May the next year.",
+      "image": "000DAD88960.jpg",
+      "subcategory": 10,
+      "on_sale": true,
+      "discount": 15,
+      "price": 2.99,
+      "size": 200,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 66,
+    "fields": {
+      "sku": "0001610D993",
+      "name": "Brush Clove 'Victoria'",
+      "description": "A magnificant purple beauty, much loved by bees and other insects.\nSow indoors from February to March or outdoors from May to September. Blooms the next season and self seed very easily.",
+      "image": "0001610D993.jpg",
+      "subcategory": 10,
+      "on_sale": false,
+      "discount": 0,
+      "price": 3.49,
+      "size": 500,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 67,
+    "fields": {
+      "sku": "00047C002C1",
+      "name": "Hollyhock 'Summer Sun'",
+      "description": "An old traditional biannual. This peach-pink-yellow variety is a sturdy plant which does not need to be tied up in the same extent as many others.\nSow indoors from February to March and transplant when the risk of frost has past. Or sow in September to October for even sturdier plants",
+      "image": "00047C002C1.jpg",
+      "subcategory": 10,
+      "on_sale": false,
+      "discount": 0,
+      "price": 2.49,
+      "size": 50,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 68,
+    "fields": {
+      "sku": "000D5963FBC",
+      "name": "Viola 'Bambi'",
+      "description": "A flower with small to little demand on their surroundings. It will bloom the whole season where ever you saw it. An extra bonus is the edible flowers.\nSow outdoors from March to May or August to September and get a colorful flowerbed the whole next season.",
+      "image": "000D5963FBC.jpg",
+      "subcategory": 10,
+      "on_sale": true,
+      "discount": 15,
+      "price": 3.49,
+      "size": 100,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 69,
+    "fields": {
+      "sku": "00092A4845C",
+      "name": "Aquilegia Vulgaris",
+      "description": "The oldfashioned aquilegia, perfect in a cottage flowerbed.\nSow indoors from February to April and transplant when the plants are big enough. Place in a well drained, sunny spot. Blooms from May to July",
+      "image": "00092A4845C.jpg",
+      "subcategory": 11,
+      "on_sale": false,
+      "discount": 0,
+      "price": 3.99,
+      "size": 100,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 70,
+    "fields": {
+      "sku": "00079E7CC99",
+      "name": "Ox-Eye Daisy",
+      "description": "The oldfashioned aquilegia, perfect in a cottage flowerbed or a wildflower meadow.\nSow indoors from February to April or outdoors from March to June. Will bloom from May to July",
+      "image": "00079E7CC99.jpg",
+      "subcategory": 11,
+      "on_sale": false,
+      "discount": 0,
+      "price": 3.99,
+      "size": 500,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 71,
+    "fields": {
+      "sku": "0004A4208BE",
+      "name": "Geranium 'Purple Ocean'",
+      "description": "A ground cover plant which gives, as the name suggests, a sea of purple flowers.\nSow indoors from February to April or outdoors from March to June. Transplant when the plants are big enough to handle and the risk of frost is over. Self-seed easily.",
+      "image": "0004A4208BE.jpg",
+      "subcategory": 11,
+      "on_sale": true,
+      "discount": 20,
+      "price": 3.29,
+      "size": 10,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 72,
+    "fields": {
+      "sku": "0008724F65A",
+      "name": "Hellebore 'Winter Beauty'",
+      "description": "This beautiful flower which blooms when hardly anything else does. It is a lovely sight when it sticks its head up through the snow in January. \nSow at any time of the year in a well drained pot outdoors. Keep the soil damp and be patient. It may take over a year for a Hellebore to germinate.",
+      "image": "0008724F65A.jpg",
+      "subcategory": 11,
+      "on_sale": true,
+      "discount": 15,
+      "price": 4.49,
+      "size": 5,
+      "indoors": false
+    }
+  },
+  {
+    "model": "products.product",
+    "id": 73,
+    "fields": {
+      "sku": "0005FAA7323",
+      "name": "Lavender 'Lady'",
+      "description": "The fragrant of a big Lavender bed attracts both humans and bees. The flowers are edible and perfect for drying.\nPlace the seeds in a fridge for six weeks before sowing indoors, but in a relative cool place. Lavender seeds take a few months to germinate.",
+      "image": "0005FAA7323.jpg",
+      "subcategory": 11,
+      "on_sale": false,
+      "discount": 0,
+      "price": 2.29,
+      "size": 100,
+      "indoors": false
+    }
+  },
+    {
+    "model": "products.product",
+    "id": 74,
+    "fields": {
+      "sku": "0004ADL6876",
+      "name": "Sweet Pea 'Mixed Beauty'",
+      "description": "A rich blooming variety with flower in duplicate colors of many different kinds. Their fragrance is outstanding and it is perfect to cut since the more flowers you pick, the more it blooms.\nSow outdoors from March to April and get beautiful flowers from June to August.",
+      "image": "0004ADL6876.jpg",
+      "subcategory": 9,
+      "on_sale": false,
+      "discount": 0,
+      "price": 2.99,
+      "size": 100,
+      "indoors": false
+    }
+  }
+ ]
