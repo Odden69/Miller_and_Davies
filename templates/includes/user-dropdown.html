@@ -1,8 +1,3 @@
-<div class="col-6 dropdown">
-    <button class="btn dropdown-toggle user-dropdown-btn mt-1" type="button" id="dropdownMenuUserButton" data-bs-toggle="dropdown" aria-expanded="false">
-      <i class="fa-solid fa-user"></i>
-    </button>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuUserButton">
       {% if request.user.is_authenticated %}
       <li class="dropdown-item">Logged in as "{{ request.user.username}}"</li>
       <hr>
@@ -17,5 +12,3 @@
       <li><a class="dropdown-item" href="{% url 'account_signup' %}">Sign Up</a></li>
       <li><a class="dropdown-item" href="{% url 'account_login' %}">Log In</a></li>
       {% endif %}
-    </ul>
-  </div>

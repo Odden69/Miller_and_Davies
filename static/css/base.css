@@ -3,6 +3,7 @@
 
 /* variables */
 :root {
+  --extra-light-green: #D1DDBB;
   --light-green: #acc185;
   --medium-green: #304b08;
   --dark-green: #0b180a;
@@ -106,7 +107,12 @@ i.text-black:hover {
 }
 
 main {
-  margin-top: 107px;
+  margin-top: 102px;
+}
+
+.dropdown-menu {
+  width: 15rem;
+  background-color: var(--extra-light-green);
 }
 
 .user-dropdown-btn::after {
@@ -295,13 +301,13 @@ main {
 
 
 /* media queries */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   main {
-    margin-top: 142px;
+    margin-top: 138px;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 575px) {
   .toast {
     width: 260px;
     font-size: .750rem;
@@ -318,4 +324,10 @@ main {
 .news-letter-container {
   height: 200px;
 }
+}
+
+@media (min-width: 768px) and (max-width: 1072px) {
+  .header-logo {
+    font-size: 1.6rem!important;
+  }
 }
