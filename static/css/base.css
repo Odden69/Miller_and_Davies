@@ -68,8 +68,7 @@ html {
 }
 
 i.text-black:hover {
-  /*color: blue!important; */
-  font-size: x-large;
+  color: var(--medium-green) !important;
 }
 /* messages */
 .toast-header {
