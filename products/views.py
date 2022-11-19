@@ -7,6 +7,8 @@ from django.contrib.auth.decorators import login_required
 from .models import Product, Category, Subcategory, Rating
 from .forms import ProductForm
 
+import operator
+
 
 def get_avg_rating(product_id):
     product = get_object_or_404(Product, pk=product_id)
@@ -31,7 +33,8 @@ def products(request):
     """
     products = Product.objects.all()
     categories = Category.objects.all()
-    subcategories = Subcategory.objects.all()
+    all_subcategories = Subcategory.objects.all()
+    subcategories = all_subcategories
     selected_category = None
     selected_subcategory = None
     favorites = request.session.get('favorites', [])
@@ -97,11 +100,28 @@ def products(request):
                 Q(description__icontains=query)
             products = products.filter(queries)
 
+    for sc in all_subcategories:
+        if sc.name == 'various_veg':
+            sc.index = 1
+        else:
+            sc.index = 0
+    all_subcategories = sorted(
+        all_subcategories, key=operator.attrgetter('index'))
+    for sc in subcategories:
+        if sc.name == 'various_veg':
+            sc.index = 1
+        else:
+            sc.index = 0
+    subcategories = sorted(
+        subcategories, key=operator.attrgetter('index'))
+
+    # add on sale price attribute to products on sale
     for product in products:
         if product.on_sale:
             product.on_sale_price = \
                 round(product.price-product.discount*product.price/100, 2)
 
+    # add avg rating attribute to products
     for product in products:
         product.avg_rating = get_avg_rating(product.id)
 
@@ -111,6 +131,7 @@ def products(request):
     context = {
         'products': products,
         'categories': categories,
+        'all_subcategories': all_subcategories,
         'subcategories': subcategories,
         'selected_category': selected_category,
         'selected_subcategory': selected_subcategory,
