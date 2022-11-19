@@ -321,9 +321,15 @@ main {
     width: 100%;
   }
 
-.news-letter-container {
+  .news-letter-container {
   height: 200px;
 }
+}
+
+@media (min-width: 553px) and (max-width: 575px) {
+  .news-letter-container {
+    height: 150px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1072px) {
