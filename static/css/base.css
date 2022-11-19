@@ -6,7 +6,7 @@
   --extra-light-green: #D1DDBB;
   --light-green: #acc185;
   --medium-green: #304b08;
-  --dark-green: #0b180a;
+  --dark-green: #10230F;
 }
 
 /* general */
@@ -16,6 +16,10 @@ html {
 
 .logo-font {
   font-family: Lemonada;
+}
+
+.header-logo:hover {
+  color: var(--medium-green);
 }
 
 .button,
@@ -34,6 +38,15 @@ html {
 .red-button {
   background-color:darkred;
   border: 2px solid indianred;
+}
+
+.button:hover {
+  background-color: var(--dark-green);
+}
+
+.red-button:hover {
+  background-color: #3d0000;
+  border: 2px solid darkred;
 }
 
 .small-button {
@@ -103,7 +116,7 @@ i.text-black:hover {
 
 .header-top .nav-link:hover,
 .header-top i:hover {
-  color: var(--light-green) !important;
+  color: var(--medium-green) !important;
 }
 
 main {
