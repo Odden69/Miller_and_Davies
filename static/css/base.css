@@ -1,3 +1,6 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Marhey:wght@700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@700&family=Marhey:wght@700&display=swap');
+
 /* variables */
 :root {
   --light-green: #acc185;
@@ -8,6 +11,10 @@
 /* general */
 html {
   height: 100%;
+}
+
+.logo-font {
+  font-family: Lemonada;
 }
 
 .button,
@@ -40,6 +47,10 @@ html {
 
 .text-black {
   color: black;
+}
+
+.text-dark-green {
+  color: var(--dark-green);
 }
 
 i.text-black:hover {
