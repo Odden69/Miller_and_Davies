@@ -24,54 +24,57 @@
         {% endif %}
     </div>
     <div class="row d-none d-md-block">
-        {% if 'favorites' not in request.GET %}
-        {% if selected_subcategory is None %}
-        {% if selected_category is None %}
-        <div class="col-10 d-flex justify-content-center mx-auto">
-            {% for category in categories %}
-            <a href="{% url 'products' %}?category={{ category.name }}">
-                <button class="button large-button">{{ category.friendly_name }}</button>
-            </a>
-            {% endfor %}
-        </div>
+        {% if 'indoors' in request.GET %}
         {% else %}
-        <div class="col-sm-10 col-md-8 d-flex justify-content-center mx-auto">
-            <div class="row mw-100 justify-content-center">
-                {% for subcategory in subcategories %}
-                <div class="col-auto px-0">
-                    {% if subcategory.name == 'na' %}
+            {% if 'favorites' not in request.GET %}
+                {% if selected_subcategory is None %}
+                    {% if selected_category is None %}
+                        <div class="col-10 d-flex justify-content-center mx-auto">
+                            {% for category in categories %}
+                            <a href="{% url 'products' %}?category={{ category.name }}">
+                                <button class="button large-button">{{ category.friendly_name }}</button>
+                            </a>
+                            {% endfor %}
+                        </div>
                     {% else %}
-                    <a
-                        href="{% url 'products' %}?category={{ selected_category.name }}&subcategory={{ subcategory.name }}">
-                        <button class="button large-button text-nowrap">{{ subcategory.friendly_name }}</button>
-                    </a>
+                        <div class="col-sm-10 col-md-8 d-flex justify-content-center mx-auto">
+                            <div class="row mw-100 justify-content-center">
+                                {% for subcategory in subcategories %}
+                                <div class="col-auto px-0">
+                                    {% if subcategory.name == 'na' %}
+                                    {% else %}
+                                    <a
+                                        href="{% url 'products' %}?category={{ selected_category.name }}&subcategory={{ subcategory.name }}">
+                                        <button class="button large-button text-nowrap">{{ subcategory.friendly_name }}</button>
+                                    </a>
+                                    {% endif %}
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
                     {% endif %}
+                    {% else %}
+                        <div class="col d-flex justify-content-center">
+                        </div>
+                    {% endif %}
+                {% else %}
+                <div class="col">
+                    <div class="row text-center my-3">
+                        <h2>My Favorites</h3>
+                    </div>
+                    <div class="row my-3">
+                        {% if not request.session.favorites %}
+                        <div class="col-11 col-sm-8 col-lg-6 mx-auto">
+                            <p class="fs-sm-5 text-lg-center">You haven't selected any favorites.<br class="d-lg-none">
+                                Click on a product's <i class="fa-regular fa-heart fa-lg favorite-icon"></i>-symbol to add
+                                it
+                                to your favorites.</p>
+                        </div>
+                        <br>
+                        {% endif %}
+                    </div>
                 </div>
-                {% endfor %}
-            </div>
-        </div>
-        {% endif %}
-        {% else %}
-        <div class="col d-flex justify-content-center">
-        </div>
-        {% endif %}
-        {% else %}
-        <div class="col">
-            <div class="row text-center my-3">
-                <h2>My Favorites</h3>
-            </div>
-            <div class="row my-3">
-                {% if not request.session.favorites %}
-                <div class="col-11 col-sm-8 col-lg-6 mx-auto">
-                    <p class="fs-sm-5 text-lg-center">You haven't selected any favorites.<br class="d-lg-none">
-                        Click on a product's <i class="fa-regular fa-heart fa-lg favorite-icon"></i>-symbol to add
-                        it
-                        to your favorites.</p>
-                </div>
-                <br>
-                {% endif %}
-            </div>
-        </div>
+            {% endif %}
         {% endif %}
     </div>
 </div>
