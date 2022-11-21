@@ -217,8 +217,6 @@ if 'USE_AWS' in os.environ:
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-DEFAULT_FROM_EMAIL = 'millerndavies@example.com'
-
 # Shopping variables
 STANDARD_DELIVERY_PERCENTAGE = 7
 MINIMUM_DELIVERY_COST = 3
