@@ -26,7 +26,7 @@
         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <li><a class="dropdown-item" href="{% url 'products' %}?sort=name&direction=asc">By Name</a></li>
           <li><a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">By Price</a></li>
-          <li><a class="dropdown-item" href="#">By Rating</a></li>
+          <li><a class="dropdown-item" href="{% url 'products' %}?sort=rating&direction=desc">By Rating</a></li>
         </ul>
       </li>
       <li class="nav-item d-none d-md-block">

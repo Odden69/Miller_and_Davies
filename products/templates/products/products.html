@@ -81,7 +81,7 @@
                                                     </button>
                                                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                                                 </form>
-                                                {{ product.name}}
+                                                {{ product.name}}{{ product.avg_rating }}
                                             </h5>
                                         </div>
                                         <div class="row">
@@ -134,7 +134,6 @@
                         Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
                     </span>
                     {% endif %}
-
                     {% if page_obj.has_next %}
                     <a href="?page={{ page_obj.next_page_number }}">next &gt</a>
                     <a href="?page={{ page_obj.paginator.num_pages }}" class="d-none d-sm-inline">last &raquo;</a>
