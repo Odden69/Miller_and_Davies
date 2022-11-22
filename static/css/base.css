@@ -318,6 +318,11 @@ main {
   main {
     margin-top: 138px;
   }
+
+  .small-screen-user-dropdown{
+    max-height:80vh;
+    overflow-y:auto;
+}
 }
 
 @media (max-width: 575px) {
