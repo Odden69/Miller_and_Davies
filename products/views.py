@@ -40,7 +40,6 @@ def products(request):
     favorites = request.session.get('favorites', [])
     page_number = 1
     query = None
-    direction = None
 
     if request.GET:
         page_number = request.GET.get('page')
@@ -51,6 +50,7 @@ def products(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 products = products.annotate(lower_name=Lower('name'))
+                products = products.order_by(sortkey)
             if sortkey == 'price':
                 sortkey = 'sort_price'
                 products = products.annotate(
@@ -60,14 +60,11 @@ def products(request):
                                                  F('price') / 100)),
                     ),
                 )
+                products = products.order_by(sortkey)
             if sortkey == 'rating':
-                sortkey = 'avg_rating'
                 products = products.annotate(avg_rating=Avg('ratings__score'))
-            if 'direction' in request.GET:
-                direction = request.GET['direction']
-                if direction == 'desc':
-                    sortkey = f'-{sortkey}'
-            products = products.order_by(sortkey)
+                products = products.order_by(
+                    F('avg_rating').desc(nulls_last=True))
 
         # category and subcategory filters
         if 'category' in request.GET:
