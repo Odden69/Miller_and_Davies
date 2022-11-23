@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="error-image d-flex justify-content-center align-items-center text-center bg-image"
+      style="background-image: url('{{ MEDIA_URL }}hand_planting_seeds.jpg');">
+
+  <div class="hero-text mask px-4 d-flex justify-content-center align-items-center">
+    <div class="text-white h-100">
+        <span class="my-2 fs-1 logo-font">Miller & Davies</span>
+        <h3 class="mb-3 fw-normal">Oops, something went wrong!</h3>
+        <p class="mb-3 fs-5 d-none d-md-block">A server error prevented us from showing this page<br>
+            Try refreshing it or come back later</p>
+    </div>
+  </div>
+</div>
+{% endblock %}

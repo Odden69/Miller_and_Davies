@@ -27,3 +27,6 @@ urlpatterns = [
     path('', include('checkout.urls')),
     path('', include('profiles.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+handler404 = 'miller_n_davies.views.handler404'
+handler500 = 'miller_n_davies.views.handler500'

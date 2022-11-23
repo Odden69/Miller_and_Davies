@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="error-image d-flex justify-content-center align-items-center text-center bg-image"
+    style="background-image: url('{{ MEDIA_URL }}hand_planting_seeds.jpg');">
+
+    <div class="row hero-text mask px-4 d-flex justify-content-center align-items-center">
+        <div class="col-12 text-white h-100">
+            <span class="my-3 fs-1 logo-font">Miller & Davies</span>
+            <h3 class="mb-3 fw-normal">Oops, something went wrong!</h3>
+            <p class="mb-3 fs-5">We couldn't find the page you tried to reach</p>
+        </div>
+        <div class="col-12 clearfix text-center mb-3">
+            <a class="btn button small-button" href="{% url 'products' %}" aria-label="Back to the Product Page">
+                To the Product Page</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -148,6 +148,12 @@ main {
   height: 425px;
 }
 
+.error-image {
+  background: no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+}
+
 .hero-text {
   background-color: rgba(0, 0, 0, 0.75);
   min-height: 100px;
