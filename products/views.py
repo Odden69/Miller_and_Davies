@@ -125,7 +125,7 @@ def products(request):
     for product in products:
         product.avg_rating = get_avg_rating(product.id)
 
-    paginator = Paginator(products, 100, orphans=3)
+    paginator = Paginator(products, 20, orphans=3)
     page_obj = paginator.get_page(page_number)
 
     context = {
