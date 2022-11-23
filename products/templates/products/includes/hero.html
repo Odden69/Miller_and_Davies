@@ -2,9 +2,9 @@
 <div class="hero-image d-flex justify-content-center align-items-center text-center bg-image"
   {% if selected_category is None %} 
     {% if 'indoors' in request.GET %}
-      style="background-image: url('/media/indoors.jpg');" 
+      style="background-image: url('{{ MEDIA_URL }}indoors.jpg');" 
     {% else %}
-      style="background-image: url('/media/hand_planting_seeds.jpg');"
+      style="background-image: url('{{ MEDIA_URL }}hand_planting_seeds.jpg');"
     {% endif %}
   {% endif %}
   {% if selected_category is not None and selected_subcategory is None %}
