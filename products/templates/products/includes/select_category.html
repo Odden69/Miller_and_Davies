@@ -4,22 +4,24 @@
         {% if selected_subcategory is None %}
         {% if selected_category is None %}
         <div class="col d-block d-md-none">
-            <a class="text-black" href="{% url 'products' %}">All Products</a>
+            <a class="text-black" href="{% url 'products' %}" aria-label="All Products">All Products</a>
         </div>
         {% else %}
         <div class="col">
-            <a class="text-black" href="{% url 'products' %}">All Products/</a>
+            <a class="text-black" href="{% url 'products' %}" aria-label="All Products">All Products/</a>
             <a class="text-black"
-                href="{% url 'products' %}?category={{ selected_category.name }}">{{ selected_category.friendly_name|title }}</a>
+                href="{% url 'products' %}?category={{ selected_category.name }}"
+                aria-label="{{ selected_category.friendly_name|title }}">{{ selected_category.friendly_name|title }}</a>
         </div>
         {% endif %}
         {% else %}
         <div class="col">
-            <a class="text-black" href="{% url 'products' %}">All Products/</a>
+            <a class="text-black" href="{% url 'products' %}" aria-label="All Products">All Products/</a>
             <a class="text-black"
-                href="{% url 'products' %}?category={{ selected_category.name }}">{{ selected_category.friendly_name|title }}/</a>
+                href="{% url 'products' %}?category={{ selected_category.name }}" aria-label="{{ selected_category.friendly_name|title }}">{{ selected_category.friendly_name|title }}/</a>
             <a class="text-black"
-                href="{% url 'products' %}?category={{ selected_category.name }}&subcategory={{ selected_subcategory.name }}">{{ selected_subcategory.friendly_name|title }}</a>
+                href="{% url 'products' %}?category={{ selected_category.name }}&subcategory={{ selected_subcategory.name }}"
+                aria-label="{{ selected_subcategory.friendly_name|title }}">{{ selected_subcategory.friendly_name|title }}</a>
         </div>
         {% endif %}
     </div>
@@ -31,7 +33,7 @@
                     {% if selected_category is None %}
                         <div class="col-10 d-flex justify-content-center mx-auto">
                             {% for category in categories %}
-                            <a href="{% url 'products' %}?category={{ category.name }}">
+                            <a href="{% url 'products' %}?category={{ category.name }}" aria-label="{{ category.friendly_name }}">
                                 <button class="button large-button">{{ category.friendly_name }}</button>
                             </a>
                             {% endfor %}
@@ -44,7 +46,8 @@
                                     {% if subcategory.name == 'na' %}
                                     {% else %}
                                     <a
-                                        href="{% url 'products' %}?category={{ selected_category.name }}&subcategory={{ subcategory.name }}">
+                                        href="{% url 'products' %}?category={{ selected_category.name }}&subcategory={{ subcategory.name }}"
+                                            aria-label="{{ subcategory.friendly_name }}">
                                         <button class="button large-button text-nowrap">{{ subcategory.friendly_name }}</button>
                                     </a>
                                     {% endif %}

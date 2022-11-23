@@ -19,7 +19,7 @@
             {% for item in basket_items%}
             <div class="row border border-secondary align-items-md-center">
                 <div class="col-5 col-md-2 my-2 basket-prod-image position-relative">
-                    <a href="{% url 'product_detail' item.product.id %}">
+                    <a href="{% url 'product_detail' item.product.id %}" aria-label="{{ item.product.name }}">
                         {% if item.product.image %}
                         <img class="img-fluid" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                         {% else %}
@@ -60,20 +60,20 @@
                                             <div class="col-2 input-group-append px-0 quantity-buttons">
                                                 <button class="increment-qty btn quantity-icon-btn"
                                                     data-item_id="{{ item.item_id }}"
-                                                    id="increment-qty_{{ item.item_id }}">
+                                                    id="increment-qty_{{ item.item_id }}" aria-label="Increase Quantity">
                                                     <i class="fa-solid fa-caret-up fa-xl"></i>
                                                 </button>
                                                 <button class="decrement-qty btn quantity-icon-btn"
                                                     data-item_id="{{ item.item_id }}"
-                                                    id="decrement-qty_{{ item.item_id }}">
+                                                    id="decrement-qty_{{ item.item_id }}" aria-label="Decrease Quantity">
                                                     <i class="fa-solid fa-caret-down fa-xl"></i>
                                                 </button>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-3 ps-1">
-                                        <button type="submit" class="refresh-button"><i class="fa-solid fa-rotate fa-xl"
-                                                aria-hidden="true"></i></button>
+                                        <button type="submit" class="refresh-button" aria-label="Refresh Item Row">
+                                            <i class="fa-solid fa-rotate fa-xl" aria-hidden="true"></i></button>
                                     </div>
                                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                                 </div>
@@ -84,7 +84,7 @@
                                 {% csrf_token %}
                                 <div class="row align-items-center">
                                     <div class="col-3 justify-item-end">
-                                        <button type="submit" class="remove-item">
+                                        <button type="submit" class="remove-item" aria-label="Remove Item">
                                             <i class="fa-solid fa-trash-can fa-xl"></i>
                                         </button>
                                     </div>
@@ -110,7 +110,7 @@
                     </div>
                     <div class="row">
                         <p class="mb-0"><strong>Subtotal: £{{ item.subtotal|floatformat:2 }}</strong></p>
-                    </div>f
+                    </div>
                 </div>
             </div>
             {% endfor %}
@@ -132,7 +132,7 @@
     {% else %}
     <div class="col-12">
         <h5>Your basket is empty</h5>
-        <a href="{% url 'products' %}">Keep Shopping</a>
+        <a href="{% url 'products' %}" aria-label="Keep Shopping">Keep Shopping</a>
     </div>
     {% endif %}
 </div>

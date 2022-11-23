@@ -11,7 +11,7 @@
   <div class="col-9 d-block d-md-none my-auto">
     <div class="row justify-content-end">
       <div class="col pe-0">
-        <a href="{% url 'basket' %}" class="fs-3 d-block d-md-none text-end text-reset">
+        <a href="{% url 'basket' %}" class="fs-3 d-block d-md-none text-end text-reset" aria-label="Your Basket">
           {% include 'includes/basket-btn.html' %}
         </a>
       </div>
@@ -21,31 +21,31 @@
     <ul class="navbar-nav me-auto mx-md-auto mb-lg-0 small-screen-user-dropdown">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="{% url 'products' %}" id="navbarDropdownMenuLink" role="button"
-          data-bs-toggle="dropdown" aria-expanded="false">
+          data-bs-toggle="dropdown" aria-expanded="false" aria-label="All Products">
           All Products
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <li><a class="dropdown-item" href="{% url 'products' %}?sort=name&direction=asc">By Name</a></li>
-          <li><a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">By Price</a></li>
-          <li><a class="dropdown-item" href="{% url 'products' %}?sort=rating&direction=desc">By Rating</a></li>
+          <li><a class="dropdown-item" href="{% url 'products' %}?sort=name&direction=asc" aria-label="Sort by Name">By Name</a></li>
+          <li><a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc" aria-label="Sort by Price">By Price</a></li>
+          <li><a class="dropdown-item" href="{% url 'products' %}?sort=rating&direction=desc" aria-label="Sort by Rating">By Rating</a></li>
         </ul>
       </li>
       <!-- vegetable link for large screens -->
       <li class="nav-item d-none d-md-block">
-        <a class="nav-link" href="{% url 'products' %}?category=vegetables">Vegetables</a>
+        <a class="nav-link" href="{% url 'products' %}?category=vegetables" aria-label="Vegetables">Vegetables</a>
       </li>
       <!-- vegetable dropdown link for small screens -->
       <li class="nav-item dropdown d-md-none">
-        <a class="nav-link dropdown-toggle" href="{% url 'products' %}?category=vegetables" id="vegDropdownMenuLink"
+        <a class="nav-link dropdown-toggle" href="{% url 'products' %}?category=vegetables" id="vegetablesDropdownMenuLink"
           role="button" data-bs-toggle="dropdown" aria-expanded="false">
           Vegetables
         </a>
-        <ul class="dropdown-menu" aria-labelledby="vegDropdownMenuLink">
-          <li><a class="dropdown-item" href="{% url 'products' %}?category=vegetables">All Vegetables</a></li>
+        <ul class="dropdown-menu" aria-labelledby="vegetablesDropdownMenuLink">
+          <li><a class="dropdown-item" href="{% url 'products' %}?category=vegetables" aria-label="All Vegetables">All Vegetables</a></li>
           {% for sb in all_subcategories %}
           {% if sb.category.name == 'vegetables'%}
           <li><a class="dropdown-item"
-              href="{% url 'products' %}?category=vegetables&subcategory={{ sb.name }}">{{sb.friendly_name|title}}</a>
+              href="{% url 'products' %}?category=vegetables&subcategory={{ sb.name }}" aria-label="{{sb.friendly_name|title}}">{{sb.friendly_name|title}}</a>
           </li>
           {% endif %}
           {% endfor %}
@@ -53,40 +53,40 @@
       </li>
       <!-- flower link for large screens -->
       <li class="nav-item d-none d-md-block">
-        <a class="nav-link" href="{% url 'products' %}?category=flowers">Flowers</a>
+        <a class="nav-link" href="{% url 'products' %}?category=flowers" aria-label="Flowers"}>Flowers</a>
       </li>
       <!-- flower dropdown link for small screens -->
       <li class="nav-item dropdown d-md-none">
-        <a class="nav-link dropdown-toggle" href="{% url 'products' %}?category=vegetables" id="floDropdownMenuLink"
+        <a class="nav-link dropdown-toggle" href="{% url 'products' %}?category=vegetables" id="flowerDropdownMenuLink"
           role="button" data-bs-toggle="dropdown" aria-expanded="false">
           Flowers
         </a>
-        <ul class="dropdown-menu" aria-labelledby="floDropdownMenuLink">
-          <li><a class="dropdown-item" href="{% url 'products' %}?category=flowers">All Flowers</a></li>
+        <ul class="dropdown-menu" aria-labelledby="flowerDropdownMenuLink">
+          <li><a class="dropdown-item" href="{% url 'products' %}?category=flowers" aria-label="All Flowers">All Flowers</a></li>
           {% for sb in all_subcategories %}
           {% if sb.category.name == 'flowers'%}
           <li><a class="dropdown-item"
-              href="{% url 'products' %}?category=flowers&subcategory={{ sb.name }}">{{sb.friendly_name|title}}</a></li>
+              href="{% url 'products' %}?category=flowers&subcategory={{ sb.name }}" aria-label="{{sb.friendly_name|title}}">{{sb.friendly_name|title}}</a></li>
           {% endif %}
           {% endfor %}
         </ul>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'products' %}?category=herbs">Herbs</a>
+        <a class="nav-link" href="{% url 'products' %}?category=herbs" aria-label="Herbs">Herbs</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'products' %}?indoors">Indoor Growing</a>
+        <a class="nav-link" href="{% url 'products' %}?indoors" aria-label="Indoor Growing">Indoor Growing</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'products' %}?bargains">Bargains</a>
+        <a class="nav-link" href="{% url 'products' %}?bargains" aria-label="Bargains">Bargains</a>
       </li>
       <li class="nav-item d-md-none">
-        <a class="nav-link" href="{% url 'products' %}?favorites">Favorites</a>
+        <a class="nav-link" href="{% url 'products' %}?favorites" aria-label="Favorites">Favorites</a>
       </li>
       <!-- user dropdown for large screens -->
       <li class="nav-item dropdown d-md-none">
-        <a class="nav-link dropdown-toggle" href="{% url 'products' %}?category=vegetables" id="userDropdownMenuLink"
-          role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="{% url 'products' %}" id="userDropdownMenuLink"
+          role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="User Drop Down">
           <i class="fa-solid fa-user"></i>
         </a>
         <ul class="dropdown-menu mb-2" aria-labelledby="userDropdownMenuLink">
@@ -98,7 +98,7 @@
       <div class="row">
         <div class="col-4">
           <a href="{% url 'products' %}?favorites" class="fs-3 text-reset">
-            <button class="btn favorite-btn mb-md-1 text-reset">
+            <button class="btn favorite-btn mb-md-1 text-reset" aria-label="Favorites">
               <div class="my-0 fs-6">
                 <i class="fa-solid fa-heart fa-lg me-1"></i>
               </div>
@@ -108,7 +108,7 @@
         <!-- user dropdown for small screens -->
         <div class="col-6 dropdown">
           <button class="btn dropdown-toggle user-dropdown-btn mt-1" type="button" id="dropdownMenuUserButton"
-            data-bs-toggle="dropdown" aria-expanded="false">
+            data-bs-toggle="dropdown" aria-expanded="false" aria-label="User Drop Down">
             <i class="fa-solid fa-user"></i>
           </button>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuUserButton">

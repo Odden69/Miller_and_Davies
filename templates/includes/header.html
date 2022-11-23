@@ -3,7 +3,7 @@
 <header class="mb-4 fixed-top container-fluid">
     <div class="header-top row py-2 d-flex">
         <div class="col-12 col-md-4 text-xl-start ps-xxl-4 d-flex d-xl-block align-items-center justify-content-center">
-            <a href="/" class="text-dark text-decoration-none">
+            <a href="/" class="text-dark text-decoration-none" aria-label="Product Page">
                 <span class="fs-1 fw-bold logo-font text-dark-green header-logo">Miller & Davies</span>
             </a>
         </div>
@@ -13,7 +13,7 @@
             </form>
         </div>
         <div class="col-md-4 d-none d-md-block text-md-end my-md-auto">
-            <a href="{% url 'basket' %}" class="fs-3 text-reset">
+            <a href="{% url 'basket' %}" aria-label="Basket" class="fs-3 text-reset">
                 {% include 'includes/basket-btn.html' %}
             </a>
         </div>

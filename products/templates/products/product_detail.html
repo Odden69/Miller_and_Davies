@@ -23,7 +23,7 @@
                     <h3 class="mb-0">
                         <form action="{% url 'adjust_favorites' product.id %}" class="form d-inline" method="POST">
                             {% csrf_token %}
-                            <button class="btn favorite-btn mb-2" type="submit">
+                            <button class="btn favorite-btn mb-2" type="submit" aria-label="Toggle add/remove favorites">
                                 {% if product.id in request.session.favorites %}
                                 <i class="fa-solid fa-heart fa-lg favorite-icon"></i>
                                 {% else %}
@@ -84,11 +84,11 @@
                                             id="id_qty_{{ product.id }}">
                                     </div>
                                     <div class="col-2 input-group-append px-0 quantity-buttons">
-                                        <button class="increment-qty btn quantity-icon-btn"
+                                        <button class="increment-qty btn quantity-icon-btn" aria-label="Increase Quantity"
                                             data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
                                             <i class="fa-solid fa-caret-up fa-xl"></i>
                                         </button>
-                                        <button class="decrement-qty btn quantity-icon-btn"
+                                        <button class="decrement-qty btn quantity-icon-btn" aria-label="Decrease Quantity"
                                             data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
                                             <i class="fa-solid fa-caret-down fa-xl"></i>
                                         </button>
@@ -97,11 +97,11 @@
                             </div>
                             {% if request.user.is_superuser %}
                             <div class="col-7 col-md-4 ps-0">
-                                <a class="btn button small-button" href="{% url 'edit_product' product.id %}">Edit</a>
+                                <a class="btn button small-button" href="{% url 'edit_product' product.id %}" aria-label="Edit">Edit</a>
                                 <!-- Button trigger modal -->
                                 <!-- Modal code was copied from https://getbootstrap.com/docs/5.0/components/modal/ -->
                                 <a class="btn red-button small-button" href="#delete-product-{{ product.id }}"
-                                    data-bs-toggle="modal" aria-label="Delete Product">Delete</a>
+                                    data-bs-toggle="modal" aria-label="Delete Product" aria-label="Delete">Delete</a>
                                 </a>
                             </div>
                             <!-- Modal -->

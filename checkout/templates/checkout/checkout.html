@@ -19,7 +19,7 @@
             <div class="row border border-secondary align-items-md-center
                 {% if not forloop.last %} border-bottom-0 {% endif %}">
                 <div class="col-5 col-md-2 my-2 basket-prod-image position-relative">
-                    <a href="{% url 'product_detail' item.product.id %}">
+                    <a href="{% url 'product_detail' item.product.id %}" aria-label="{{ item.product.name }}">
                         {% if item.product.image %}
                         <img class="img-fluid" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                         {% else %}
@@ -72,7 +72,7 @@
             </div>
             <div class="row mt-2">
                 <a href="{% url 'basket' %}">
-                    <button type="button" class="button btn small-button" aria-label="Safe Checkout">Adjust
+                    <button type="button" class="button btn small-button" aria-label="Adjust Content">Adjust
                         Content</button>
                 </a>
             </div>
@@ -120,7 +120,7 @@
                     <input type="hidden" value="{{ client_secret }}" name="client_secret">
                 </fieldset>
                 <div class="submit-button mt-2 mb-2">
-                    <button id="submit-button" class="btn button small-button">
+                    <button id="submit-button" class="btn button small-button" aria-label="Adjust Content">
                         <span class="font-weight-bold">Complete Order</span>
                         <span class="icon">
                             <i class="fas fa-lock"></i>
