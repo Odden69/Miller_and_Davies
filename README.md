@@ -37,7 +37,7 @@ To illustrate the logic of the database I used [diagrams.net](https://www.diagra
 ![Database diagram](documentation/images/database_diagram.png)
 
 ### SEO
-By brainstorming for ideas, I came up with a number of words and expressions I thought would be relevant searches for a user looking for a site like this. After searching for them on Google, using “others search for” and “related searches”, and finally Wordtracker, I ended up with these words and phrases to use on the site to improve SEO:
+When brainstorming for ideas, I came up with a number of words and expressions I thought would be relevant searches for a user looking for a site like this. After searching for them on Google, using “others search for” and “related searches”, and finally Wordtracker, I ended up with these words and phrases to use on the site to improve SEO:
 - organic seeds
 - gardening seeds
 - vegetable seeds
@@ -50,6 +50,9 @@ By brainstorming for ideas, I came up with a number of words and expressions I t
 - seeds online
 - seeds for vegetables
 - seeds for garden
+- seeds for windowsill
+
+These keywords and expressions has been added to the sites keywords and to headers throughout the site, to improve its ranking by search engines.
 
 ### Wireframes
 The wireframes for this project can be found in [this document](documentation/wireframes.md).

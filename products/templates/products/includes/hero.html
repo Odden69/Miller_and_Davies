@@ -21,10 +21,11 @@
       {% if selected_category is None and selected_subcategory is None %}
         {% if 'indoors' in request.GET %}
         <h1>Growing Greens Indoors</h1>
+        <h2 class="mb-3 fs-5 fw-normal">Seeds suitable for windowsill growing.</h2>
         {% else %}
         <span class="my-2 fs-1 logo-font">Miller & Davies</span>
         <h1>Organic Seeds</h1>
-        <h5 class="mb-3 fs-5 fw-normal">Buy the seeds for your garden online from Miller&nbsp;&&nbsp;Davies.</h5>
+        <h2 class="mb-3 fs-5 fw-normal">Buy the seeds for your garden online from Miller&nbsp;&&nbsp;Davies.</h2>
         <p class="mb-3 fs-5 d-none d-md-block">Our seeds are all organic,<br>
           and most of them are from our own production.</p>
         {% endif %}
