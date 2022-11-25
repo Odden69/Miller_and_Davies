@@ -42,7 +42,8 @@ def products(request):
     query = None
 
     if request.GET:
-        page_number = request.GET.get('page')
+        if request.GET.get('page'):
+            page_number = request.GET.get('page')
 
         # sorting functions
         if 'sort' in request.GET:
@@ -125,8 +126,9 @@ def products(request):
     for product in products:
         product.avg_rating = get_avg_rating(product.id)
 
-    paginator = Paginator(products, 20, orphans=3)
+    paginator = Paginator(products, 12, orphans=3)
     page_obj = paginator.get_page(page_number)
+    products = paginator.page(page_number).object_list
 
     context = {
         'products': products,
