@@ -3,9 +3,10 @@
         <div class="my-0 fs-6">
             {% if grand_total %}
             <i class="fa-solid fa-basket-shopping fa-lg me-1"></i>
-            ${{ grand_total|floatformat:2 }}
+            £{{ grand_total|floatformat:2 }}
             {% else %}
-            <div class="fs-6">Your Basket is Empty</div>
+            <i class="fa-solid fa-basket-shopping fa-lg me-1"></i>
+            <div class="fs-6 d-inline">Your Basket is Empty</div>
             {% endif %}
         </div>
     </button>
