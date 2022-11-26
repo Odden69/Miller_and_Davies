@@ -1,9 +1,8 @@
 <h1 align="center">Miller  Davies</h1>
+These days, when the world around us seems to get more and more chaotic each day, people need to feel that their lives have some kind of stability and that they are somehow prepared for harder times. To help create this sense of security, gardening and growing your own food, to at least some extent, is a good start. Therefore the gardening and seed-selling business should be a growing market.
+ 
+Miller & Davies is an imaginary ecommerce site selling organic seeds for garden and indoor growing. It focuses on a wide range of users by offering a large collection of seeds. For now it is focusing on the products available, but in the future the site will increase its contents with gardening information, for beginners and more experienced gardeners and also with more material with inspirational content.
 
-¨¨This is a web based app made to give the user a simple but effective tool to plan and track their gym workouts.
-It is flexible in the sense that the user can add all the exercises and workouts they want and don't need to use an app crowded with extra 
-features that they will never use.
-The goal is for the user to set up the app at home on a wide screen and then easily view today's session at the gym.¨¨
 
 [View the live project here]().  
 ![Responsiveness image](documentation/responsive_design.png)
@@ -11,7 +10,8 @@ The goal is for the user to set up the app at home on a wide screen and then eas
 ## Table of Contents
 **[User Experience](#user-experience)**  
 **[Planning the Project](#planning-the-project)**  
-**[Features](#features)**  
+**[Features](#features)** 
+**[E-Commerce Business Model and Marketing Strategies](#e-commerce-business-model-and-marketing-strategies)** 
 **[Technologies Used](#technologies-used)**   
 **[Testing](#testing)**  
 **[Deployment](#deployment)**  
@@ -247,18 +247,14 @@ Good luck!
 - The colour scheme was extracted from the background image and some complementary colour were added on [coolors](https://coolors.co/).¨¨
 
 ## Acknowledgements
-¨¨
-- First of all my mentor Narender Singh deserves a big thank you for mental support and cheering, and also for some hands on technical advice, when I got stuck.
-- A big thank you to Ed and the other tutors who showed me the importance of taking a step back to view problems from a new angle, and who supported me with help at some crucial stages in the project.
+- First of all I want to thank my mentor, Narender Singh. As always he comes up with good ideas and useful hints. Thank you Narender for your support during my course at Code Institute!
+- A big thank you to Sean and the other tutors who patiently guided me through some, quite embarrassing questions, which I should have solved on my own. (I think I blamed it on stressful times.) But who also helped me with some really tough ones which would have taken me forever to solve by myself. You're heroic!
 - As usual the slack crowd can't be thanked enough. Especially I like to thank StevenW_5p for a lot of tips and encouragement all through this project.
-- And a giant thank you to my, always supportive, friends from my very first Hackathon. Thanks Andrew, Patrik and Kat for your support through the whole project and for the time you spent on checking the site!¨¨
-
+- And a giant thank you to my, always supportive, friends from my very first Hackathon. Thanks Andrew, Patrik and Kat for your support through this project too and for the time you spent on checking the site!
 
 ## Conclusion
-¨¨
-This coding journey keeps proving itself as a bumpy road, or bumpy is not the right word, it's passing low valleys and high peaks.
-Sometimes it feels really overwhelming looking up, and then, after having your neck bent down and the eyes focused on the ground for a while, the top of the hill is there and the feeling is awesome!
-Before this course, and at some points during this project, I didn't think I would get this far, but here I am :smile:!
-¨¨
+Finally my journey with Code Institute has come to an end. I am so grateful for this experience which has taken me to a new era in my life. I'm a bit nervous about the future but I feel that I'm ready to throw myself out there and try my wings.  
+  
+Happy Coding!
 
 [Back to the top](#table-of-contents)
