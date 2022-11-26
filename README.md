@@ -121,6 +121,16 @@ On the help page a user can find out how to use the ITrain app. Each category is
 - An option to add images, especially to exercises.
 - A nice thing would be to add a notification feature, where the user gets a reminder before a session.¨¨
 
+## E-Commerce Business Model and Marketing Strategies
+This is an E-commerce site in its simplest form, a B2C business model only meant for stand-alone transactions to private customers where no subscribed transactions are offered.
+
+Miller and Davies' marketing strategies are to be seen on social medias and to send newsletter to signed up customers.  
+There are Facebook and Instagram links in the footer of the site to pages where the business is promoted by regular posts with inspiration and information.  
+The newsletter is sent out regularly to promote news and offers, and to share information and inspiration with the customers.  
+(Since this is just a project created for educational purposes, the links on the site are not directed to a specific facebook or instagram page.)
+This image shows what a facebook page created for this site might look like.  
+![Miller & Davies facebook page](documentation/images/facebook.jpg)
+
 ## Technologies Used
 ### Programming Languages
 Python
