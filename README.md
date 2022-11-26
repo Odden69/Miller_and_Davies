@@ -127,27 +127,36 @@ This is an E-commerce site in its simplest form, a B2C business model only meant
 Miller and Davies' marketing strategies are to be seen on social medias and to send newsletter to signed up customers.  
 There are Facebook and Instagram links in the footer of the site to pages where the business is promoted by regular posts with inspiration and information.  
 The newsletter is sent out regularly to promote news and offers, and to share information and inspiration with the customers.  
-(Since this is just a project created for educational purposes, the links on the site are not directed to a specific facebook or instagram page.)
+(Since this is just a project created for educational purposes, the links on the site are not directed to a specific facebook or instagram page.)  
 This image shows what a facebook page created for this site might look like.  
 ![Miller & Davies facebook page](documentation/images/facebook.jpg)
 
 ## Technologies Used
 ### Programming Languages
-Python
-CSS
-HTML
-JavaScript
+**Python**  
+**CSS**  
+**HTML**  
+**JavaScript**  
 
 ### Libraries and Frameworks
-¨¨The whole project is built on the **Django** framework and a lot of different django libraries are used throughout the project.  
-The deployed database is a **PostgreSQL** database with a **gunicorn** server and a **psycopg2** adapter.
-To store the static files for deployment I used **whitenoise**.
+The whole project is built on the [**Django**](https://www.djangoproject.com/) framework and quite a few different django libraries are used throughout the project.  
+  
+To check the python code, dynamically, I installed **pylint-django** and **pylint-plugin-utils**.  
+  
+To aid the styling and responsivness process I used [**Bootstrap 5**](https://getbootstrap.com/).  
 
-To check the python code, dynamically, I installed **pylint-django** and **pylint-plugin-utils**.
+### Programs and Sites
+The site is deployed on [**Heroku**](https://www.heroku.com/) with a **gunicorn** server and a **psycopg2** adapter, using an external **PostgreSQL** database on [**ElephantSQL**](https://www.elephantsql.com/).  
+  
+To store the static and media files for deployment I used [**AWS**](https://aws.amazon.com/).  
+  
+The payment service used is [**Stripe**](https://stripe.com/).  
+  
+For the Logo font I used [**Google Fonts**](https://fonts.google.com/).  
+  
+The icons are collected from [**Font Awsome**](https://fontawesome.com/).  
+ 
 
-For the automatic testing I used **Coverage** and **ModelBakery**.
-
-The standard Python libraries, **datetime** and **calendar**, have been used for the calendar feature.¨¨
 
 ## Testing
 ¨¨All through the development process the site has been undergoing manual testing to confirm the intended functionality.
