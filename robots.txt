@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /basket/
+Disallow: /favorites/
+Disallow: /checkout/
+Disallow: /profiles/
+Sitemap: https://hj-miller-and-davies.herokuapp.com/sitemap.xml
