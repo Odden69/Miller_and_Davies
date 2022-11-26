@@ -54,6 +54,9 @@ When brainstorming for ideas, I came up with a number of words and expressions I
 
 These keywords and expressions has been added to the sites keywords and to headers throughout the site, to improve its ranking by search engines.
 
+This project is still in its early stages and needs a lot of more content before it is a fully developed website. The SEO will improve with relevant information about
+gardening, tools and inspiration for users on different levels of background knowledge.   
+
 ### Wireframes
 The wireframes for this project can be found in [this document](documentation/wireframes.md).
 
