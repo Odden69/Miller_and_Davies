@@ -83,11 +83,16 @@
       <li class="nav-item d-md-none">
         <a class="nav-link" href="{% url 'products' %}?favorites" aria-label="Favorites">Favorites</a>
       </li>
-      <!-- user dropdown for large screens -->
+      <!-- user dropdown for small screens -->
       <li class="nav-item dropdown d-md-none">
-        <a class="nav-link dropdown-toggle" href="{% url 'products' %}" id="userDropdownMenuLink"
+        <a class="nav-link dropdown-toggle text-reset" href="{% url 'products' %}" id="userDropdownMenuLink"
           role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="User Drop Down">
           <i class="fa-solid fa-user"></i>
+          {% if request.user.is_authenticated %}
+          Logged in as <i>{{ request.user.username}}</i>
+          {% else %}
+          <span>Log in/Sign up</span>
+          {% endif %}
         </a>
         <ul class="dropdown-menu mb-2" aria-labelledby="userDropdownMenuLink">
           {% include 'includes/user-dropdown.html' %}
@@ -105,11 +110,16 @@
             </button>
           </a>
         </div>
-        <!-- user dropdown for small screens -->
+        <!-- user dropdown for large screens -->
         <div class="col-6 dropdown">
-          <button class="btn dropdown-toggle user-dropdown-btn mt-1" type="button" id="dropdownMenuUserButton"
+          <button class="btn dropdown-toggle user-dropdown-btn mt-1 text-reset" type="button" id="dropdownMenuUserButton"
             data-bs-toggle="dropdown" aria-expanded="false" aria-label="User Drop Down">
             <i class="fa-solid fa-user"></i>
+            {% if request.user.is_authenticated %}
+            Logged in as <i>{{ request.user.username}}</i>
+            {% else %}
+            <span>Log in/Sign up</span>
+            {% endif %}
           </button>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuUserButton">
             {% include 'includes/user-dropdown.html' %}
