@@ -221,7 +221,8 @@ To even begin to resemble an actual e-commerce site Miller & Davies would need a
 
 When I started the project I added sowing and harvest seasons to the product model 
 but I decided quite early in the project to postpone these, since I realized it would grow too big for my time frame.  
-It would be nice to implement these to let a user view and select products from this point of view.
+It would be nice to implement these to let a user view and select products from this point of view.  
+I also planned to implement a Product in Stock feature. That is not hard to implement but is still postponed to after the deadline of this project. 
 
 The admin side of this site also needs a lot more work.
 * First out is the ability to compose confirmation letters that are appealing to the eye.
@@ -293,11 +294,6 @@ These tests are documented in the [Test Document](documentation/testing_itrain.x
 ### Color Contrast Check
 ¨¨The color contrast was checked on [Contrast Grid](https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%23FFFFFF%2C%20White%0D%0A%23000%2C%20black%0D%0A%2312110D%0D%0A%23A87556%0D%0A%23C7C7BC%0D%0A%236F310A%0D%0A&es-color-form__tile-size=compact&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18&es-color-form__show-contrast=dnp).  ¨¨
 ![Color Contrast Check](documentation/contrast_check.png)
-
-### Known Bugs
-¨¨- The major bug left, that I've not been able to solve, is the requirement of an existing exercise in a workout. It is now possible to save a workout without any exercises at all and this was not the intended functionality.
-
-- Another bug (or bugs) left, which is not hard to fix, but takes some coding to do which I didn't have time for, is a unique name issue. When I sketched on the database I did a mistake and made the names of muscle-groups, exercises and workouts unique, and also the session date. But of course these attribute cannot be unique in the database, but needs to be unique from the users point of view. The models are now changed and the unique conditions are gone but I will need to add some if statements in the views which prevents the user from creating duplicates.¨¨
 
 ## Deployment
 ### Clone a GitHub repository
