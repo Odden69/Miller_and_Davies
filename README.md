@@ -1,11 +1,10 @@
 <h1 align="center">Miller  Davies</h1>
 These days, when the world around us seems to get more and more chaotic each day, people need to feel that their lives have some kind of stability and that they are somehow prepared for harder times. To help create this sense of security, gardening and growing your own food, to at least some extent, is a good start. Therefore the gardening and seed-selling business should be a growing market.
  
-Miller & Davies is an imaginary ecommerce site selling organic seeds for garden and indoor growing. It focuses on a wide range of users by offering a large collection of seeds. For now it is focusing on the products available, but in the future the site will increase its contents with gardening information, for beginners and more experienced gardeners and also with more material with inspirational content.
+Miller & Davies is an imaginary e-commerce site selling organic seeds for garden and indoor growing. It focuses on a wide range of users by offering a large collection of seeds. For now it is focusing on the products available, but in the future the site will increase its contents with gardening information, for beginners and more experienced gardeners and also with more material with inspirational content.
 
-
-[View the live project here]().  
-![Responsiveness image](documentation/responsive_design.png)
+[View the live project here](https://hj-miller-and-davies.herokuapp.com/).  
+![Responsiveness image](documentation/images/responsive_image.png)
 
 ## Table of Contents
 **[User Experience](#user-experience)**  
