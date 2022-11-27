@@ -67,51 +67,127 @@ The wireframes for this project can be found in [this document](documentation/wi
 <details>
   <summary>Click to see the existing features</summary>
 
-¨¨#### Unauthorized Users
-The Start Page  
-An unauthorized user meets a concise start page with a short message of the main idea of the app. Here they find a link to a login page and from there a sign up page, if needed.  
-A link to an about page is also provided to let the user read more.  
-![Unauthorized User Start Page](documentation/features/unath_home.png)
+#### The Start/Product Page
+The first page consists of a relevant hero image of a hand planting a seed and a concise message describing the purpose of the site.  
+Scrolling down, the user can find all products from the store, paginated on several pages.
+![Start/Product Page](documentation/images/features/startpage_1.png)  
+  
+![Start/Product Page](documentation/images/features/startpage_2.png)  
 
-The About Page  
-On this page the user can see the benefits of the app. It is supposed to be appealing to the eye and to motivate the user to sign up and get access to the rest of the site.  
-![The About Page](documentation/features/about.png)
+#### The Header
+The header is consistent through all the site's pages.  
+On small screens it is compressed with a collapsed navbar.
+![Header on Large Screens](documentation/images/features/header_1.png)
+![Header on Small Screens](documentation/images/features/header_2.png)  
+* The header has a logo with a link back to the product page.  
+* The search bar gives the user the opportunity to search for site content. The scope of the search is a product's name and description. 
+* A link to the users basket can be found, in the top of the header for a large screen, and in the navbar for a small. It shows whether the basket is empty or, if it has any content, the total cost of the order.
+* The **All Products** dropdown link lets the user choose the order of the presented products, by name, by price or by rating.  
+![The All Products Dropdown](documentation/images/features/all_products_dropdown.png) 
+* The **Vegetables** link filters the products and shows only the ones belonging to the Vegetable category. The same goes for the Flowers and Herbs links respectively.
+* The **Indoor Growing** link filters the products and shows the ones marked suitable for growing indoors.
+* The **Bargains** link filters the products with respect to products on sale.
+* The @icon-heart link filters the products and shows the ones the user has marked as their favorites.
+* The content of the user dropdown menu, @icon-user, is dependent on the login status of the user and will be described in more detail below.
 
-The Sign Up Page  
-This page is a standard Django sign up page. On this site the user only enters a username and a password to sign up.  
-![The Sign Up Page](documentation/features/signup.png) 
+#### The Category/Subcategory Selection
 
-#### Authorized Users
-The Calendar  
-When a user is logged in, the home page consists of a monthly view of a calendar. The user can see all their planned sessions in this period and move back and forward to the next and previous months with buttons. All planned sessions can be viewed by clicking on a session in the calendar. From this page the user also can create a new session.  
-![The Calendar Page](documentation/features/calendar.png)
+On large screens there is a set of buttons between the hero image and the products. Which buttons are visible depends on where in the product structure the user is navigating.  
+On small screens, however, these selections are available in the collapsed navbar.  
+To help the user navigate the site a breadcrumb trail is available.  
+Every category and subcategory ahs its own il 
 
-The Session Page  
-This is the page the user uses at the gym. All planned workouts are visible together with the included exercises and its reps and sets. The workouts and exercises are clickable to see more information. From here the session can be edited in a separate form, or deleted.  
-![The Session Page](documentation/features/session.png)  
+In the image below a user has navigated to Flowers and can select between Annuals, Biennials and Perennials to narrow down the products shown even more.  
+![Category/Subcategory Selection on Large Screens](documentation/images/features/categories_1.png)  
+The category selections on a small screen:  
+![Category/Subcategory Selection on Small Screens](documentation/images/features/categories_2.png)
 
-Workouts  
-Here the users all created workouts are visible. Each workout is clickable to see more information. From the list, each workout can be edited in a separate form or deleted.  
-By clicking the *Add Workout* button the user access a form to create a new Workout.
-![The Workouts Page](documentation/features/workouts.png)
+#### Indoor Growing Page
+On this page the user finds a selection of the products which are suitable for growing on a windowsill.
+![Growing Greens Indoors](documentation/images/features/indoors.png)
 
-Exercises  
-There are a couple of exercises included in the app. On this page they are visible, together with the ones the user created. Each exercise is clickable to see more information. From the list, the exercises created by the user, can be edited in a separate form or deleted.  
-By clicking the *Add Exercise* button the user access a form to create a new Exercise.  
-![The Exercises Page](documentation/features/exercises.png)
+#### Bargains Page 
+Here the products on sale can be found.  
+![Bargains](documentation/images/features/bargains.png)
 
-Muscle Groups  
-There are a lot of muscle groups included in the app. On this page they are visible, together with the ones the user created. From the list, the muscle groups created by the user, can be edited in a separate form or deleted.  
-By clicking the *Add Muscle Group* button the user access a form to create a new Muscle Group.  
-![The Muscle Groups Page](documentation/features/muscle_groups.png)
+#### The Favorites Page
+A user can mark products as favorites and then find them all gathered on this page. 
+![Favorites](documentation/images/features/favorites.png)
 
-The Help Page  
-On the help page a user can find out how to use the ITrain app. Each category is clickable to easily find the information the user is searching for.  
-![The Help Page](documentation/features/help.png)
+#### Product Cards
+Each product on the products page is presented on an individual card. Each card shows an image of the product, the product's rating, the name of the product and if the user marked it as a favorite. Also the size of the product's packet and its price is presented as well as a note shown if the product is on sale. On the bottom there is a button to add the product to the shopping basket.  
+![Product Card](documentation/images/features/card.png)
+
+#### Product Detail Page
+Each product has a detail page which can be reached by clicking anywhere on the product card, except for the buy now button.  
+A product detail page consists of a larger image of the product, the product's name together with a description of the product.
+The rating is displayed together with the number of ratings. On this page a logged in user can rate the product. There is also a favorite icon which shows if the user added the product to their favorites.   
+The products sku, packet's size and and prize is also displayed.
+If the product is on sale the original price as well as the on sale price is shown.  
+On this page a user can adjust the amount before adding the product to the shopping basket.  
+
+![Product Detail](documentation/images/features/product_detail.png)
+
+#### Shopping Basket
+Clicking on the basket link in the header will bring the user to the basket page.  
+If the basket is empty the page shows an informative message and offers a link back to the product page.  
+![Empty Basket](documentation/images/features/basket_1.png)
+  
+A basket with a content, on the other hand, shows a list of the picked products where the user can adjust the amounts of each product and also entirely delete it from the shopping basket.  
+When the user has reviewed the list there is a Checkout button which brings the user to the checkout page.  
+![Basket](documentation/images/features/basket_2.png)
+
+#### Checkout
+On the checkout page the user can go back and adjust the basket via a link or they can fill out the delivery and payment form and finally push the Complete Order Button to place the order.  
+A logged in user is proposed to save the filled out form to simplify a future order when the information be prefilled on the form. A non logged in user is offered a link to log in or sign up for an account.  
+Completing the order brings the user to an order confirmation page.
+![Checkout](documentation/images/features/checkout.png)
+
+#### Order Confirmation
+On the order confirmation page the user can view the order they just placed to make sure everything is correct. 
+The user will also receive a confirmation email. 
+![Order Confirmation](documentation/images/features/order_conf.png)
+
+#### Sign Up
+A user does not have to create an account to place an order from Miller & Davies, but an account will simplify an order checkout and makes it possible for a user to review previous orders.  
+The sign up page is reached from the user dropdown menu.  
+![Sign Up Link, Large Screen](documentation/images/features/sign_up_1.png)  
+![Sign Up Page](documentation/images/features/sign_up_2.png)  
+After filling out and sending the form the user receives a confirmation email and is redirected to a page with a confirmation message.  
+![Sign Up Confirmation](documentation/images/features/sign_up_3.png)  
+From a link in the email the user ends up on a verify email page.
+![Verify Email](documentation/images/features/sign_up_4.png)  
+
+#### Log in
+The log in link is also reached from the user dropdown menu.  
+![Log In Link, Small Screen](documentation/images/features/login_1.png)  
+From the login page a user can recover a lost password by clicking the forgot Password? link. The user then receives an email with a recovery link.    
+![Log In Page](documentation/images/features/login_2.png)  
+  
+As a logged in user you can access a few more features than as an anonymous user.  
+
+#### Rate a product
+A logged in user can rate a product from the product detail page. 
+![Rate Product](documentation/images/features/rate.png)  
+
+#### Profile Page
+A logged in user can also access their profile page from the user dropdown menu.  
+![Profile Link](documentation/images/features/profile_1.png)  
+On this page the user can update their default delivery information and also view their previous orders.
+![Profile Page](documentation/images/features/profile_2.png)  
+With a click on the order number link the user is redirected to the past order confirmation page and can view the order and then go back to the profile page.  
+![Past Order Confirmation Page](documentation/images/features/profile_3.png)  
+
+#### Newsletters
+At the bottom of each page there is a newsletter sign up form where a user, logged in or non logged in, can sign up to receive a weekly newsletter with inspirational content.  
+![Newsletter Sign Up](documentation/images/features/newsletter.png)
+
+#### Footer
+Each page on the site has a footer with social media links and a contact email address.  
+![NFooter](documentation/images/features/footer.png)  
+  
 </details>
-¨¨
-
-
+  
 ### Features Left to Implement
 ¨¨There are quite a few features on my wishing list for this site. Apart from some user interface improvements, like pagination of lists and an up to top button on scrolling pages, there are lots of improvements to make.
 - I would like the calendar to be clickable on a date to create a session instead of using a separate button.
