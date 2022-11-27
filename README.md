@@ -176,7 +176,13 @@ A logged in user can also access their profile page from the user dropdown menu.
 On this page the user can update their default delivery information and also view their previous orders.
 ![Profile Page](documentation/images/features/profile_2.png)  
 With a click on the order number link the user is redirected to the past order confirmation page and can view the order and then go back to the profile page.  
-![Past Order Confirmation Page](documentation/images/features/profile_3.png)  
+![Past Order Confirmation Page](documentation/images/features/profile_3.png) 
+
+#### Log out
+A logged in user can log out again via the user dropdown menu.  
+![Log Out Link](documentation/images/features/logout_1.png)  
+From that link the user is redirected to a confirm logout page.  
+![Log Out Page](documentation/images/features/logout_2.png)
 
 #### Newsletters
 At the bottom of each page there is a newsletter sign up form where a user, logged in or non logged in, can sign up to receive a weekly newsletter with inspirational content.  
@@ -184,7 +190,13 @@ At the bottom of each page there is a newsletter sign up form where a user, logg
 
 #### Footer
 Each page on the site has a footer with social media links and a contact email address.  
-![NFooter](documentation/images/features/footer.png)  
+![Footer](documentation/images/features/footer.png)  
+
+#### User Action Confirmation
+All actions a user makes on the page is confirmed with a positive or negative message. For example a successful login results in:  
+![Confirmation message, success](documentation/images/features/confirmation_1.png)  
+An error message appears, for example, if a non authorized user tries to reach a page that requires authorization:  
+![Confirmation message, fail](documentation/images/features/confirmation_2.png)  
   
 </details>
   
