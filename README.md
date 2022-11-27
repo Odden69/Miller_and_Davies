@@ -205,6 +205,8 @@ An error message appears, for example, if a non authorized user tries to reach a
 #### Room for Improvements
 One main concern is the slow rendering of the pages on this app. My first effort in the right direction was when I realized I didn't filter the products by the pagination page. I was hoping this would make a bigger difference on the rendering than it did, even though it had a rather big impact on the rendering time when running the site locally. When digging just a bit deeper in the problem I saw that, of 8.39s for a page to load, 7.25s were "waiting for server response". I'm not sure what can be done to improve that and leave that issue for more investigations after this project is finished.  
 One major thing I should do is to replace all the current .jpg images with .webp to decrease the size of the images.  
+
+There is some code left that would appreciate some refactoring. Especially the product view is quite complex and would benefit from being divided into smaller parts and being simplified.
   
 #### Remaining Bugs
 One big bug still left on the site, which I with some more experience probably would have realized earlier and could have done something about, is a URL problem. All URL queries are lost when rerendering.  
