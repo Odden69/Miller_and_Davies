@@ -28,9 +28,10 @@ The site fulfills their needs of buying organic vegetable, flower and herb seeds
 The user stories for this project can be found in [this document](documentation/user_stories.md).
 
 ## Planning the Project
-¨¨The planning of this project is done in Github Projects and follows an Agile strategy.
-[Link to the project's Kanban Board](https://github.com/Odden69/ITrain/projects/1).  
-I soon realized that, since this was the first time I ran a project like this, it was very hard to make any close time estimates. Therefore the time aspect has not been very highly prioritized in the planning of this project, instead I focused on the content and on always having a working app after each iteration. This was a big learning outcome and with more experience, I am sure the benefits of the agile planning method will be even more obvious.¨¨
+The planning of this project is done in Github Projects and follows an Agile strategy.
+[Link to the project's Kanban Board](https://github.com/Odden69/Miller_and_Davies/projects/1).  
+My observation during this project is that it takes a lot of experience to make good time estimates! Therefore the time aspect, in this project as well as my previous, has not been very highly prioritized when doing the planning of this project. I have instead focused on the tasks and the acceptance criteria as well as on always having a working app after each iteration. Even if the time aspect wasn't perfect I found myself using the Kanban board quite often to scroll through, and check tasks and issues.
+
 
 ### Database Diagram
 To illustrate the logic of the database I used [diagrams.net](https://www.diagrams.net/).
