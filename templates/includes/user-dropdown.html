@@ -1,4 +1,5 @@
       {% if request.user.is_authenticated %}
+      <li class="ms-3 fw-bold">Logged in as "{{ request.user.username}}"</li>
       <li><a class="dropdown-item" href="{% url 'profile' %}" aria-label="My Profile">My Profile</a></li>
       {% if request.user.is_superuser %}
       <li><a class="dropdown-item" href="{% url 'add_product' %}" aria-label="Product Management">Product Management</a></li>
