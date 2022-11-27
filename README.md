@@ -195,20 +195,39 @@ Each page on the site has a footer with social media links and a contact email a
 #### User Action Confirmation
 All actions a user makes on the page is confirmed with a positive or negative message. For example a successful login results in:  
 ![Confirmation message, success](documentation/images/features/confirmation_1.png)  
-An error message appears, for example, if a non authorized user tries to reach a page that requires authorization:  
+An information message appears, for example, when the user tries to rate a product they already rated:
+![Confirmation message, info](documentation/images/features/confirmation_3.png)  
+An error message appears, for example, if a non authorized user tries to reach a page that requires authorization by entering the URL:  
 ![Confirmation message, fail](documentation/images/features/confirmation_2.png)  
   
 </details>
+
+### Remaining Bugs, Room for improvements and Features Left to Implement
+#### Room for Improvements
+One main concern is the slow rendering of the pages on this app. My first effort in the right direction was when I realized I didn't filter the products by the pagination page. I was hoping this would make a bigger difference on the rendering than it did, even though it had a rather big impact on the rendering time when running the site locally. When digging just a bit deeper in the problem I saw that, of 8.39s for a page to load, 7.25s were "waiting for server response". I'm not sure what can be done to improve that and leave that issue for more investigations after this project is finished.  
+One major thing I should do is to replace all the current .jpg images with .webp to decrease the size of the images.  
   
-### Features Left to Implement
-¨¨There are quite a few features on my wishing list for this site. Apart from some user interface improvements, like pagination of lists and an up to top button on scrolling pages, there are lots of improvements to make.
-- I would like the calendar to be clickable on a date to create a session instead of using a separate button.
-- I would like to add tags to exercises and workouts and also add dynamic filters to the forms and list views, for easier searches when the user can filter on tags and muscle groups.
-- There should be a user account page where password and usernames could be changed.
-- I would like to add a checkbox where a workout and an exercise can be disabled and not visible in the forms, but saved for future use.
-- I would like a copy function to create a session similar to an old one.
-- An option to add images, especially to exercises.
-- A nice thing would be to add a notification feature, where the user gets a reminder before a session.¨¨
+#### Remaining Bugs
+One big bug still left on the site, which I with some more experience probably would have realized earlier and could have done something about, is a URL problem. All URL queries are lost when rerendering.  
+There are a lot of situations on this site that would work, or improve, if the URL of the current page was used as input to the next. Here are a couple of them:  
+* The pagination only works for non sorted All Products pages. All other filtered or sorted pages returns to an All Products page when the paginate page is changed.
+* If a user is on the favorite page and removes one of their favorites, they are redirected back to the product page instead of remaining on the favorite page.   
+  
+Another bug left to fix is a rating issue. Trying to rate a product with five stars results in a 500 error page even though the rating is successfully saved.  
+The investigation to solve that issue would take more time that I have right now, so it will also have to wait.
+
+#### Features Left to Implement
+To even begin to resemble an actual e-commerce site Miller & Davies would need a lot more interesting content. Pages with gardening tips and inspirational ideas as well as more relating products like tools and fertilizers for instance. It also lacks links to other sites with relating content.  
+
+When I started the project I added sowing and harvest seasons to the product model 
+but I decided quite early in the project to postpone these, since I realized it would grow too big for my time frame.  
+It would be nice to implement these to let a user view and select products from this point of view.
+
+The admin side of this site also needs a lot more work.
+* First out is the ability to compose confirmation letters that are appealing to the eye.
+* The newsletter feature is not finished. The user can sign up for a newsletter but there is no way for an admin user to compose the letters or use the send list. 
+
+It would also be nice to implement a contact form for a user to fill in, in case of questions or comments.
 
 ## E-Commerce Business Model and Marketing Strategies
 This is an E-commerce site in its simplest form, a B2C business model only meant for stand-alone transactions to private customers where no subscribed transactions are offered.
