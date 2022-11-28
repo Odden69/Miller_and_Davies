@@ -60,12 +60,14 @@
                                             <div class="col-2 input-group-append px-0 quantity-buttons">
                                                 <button class="increment-qty btn quantity-icon-btn"
                                                     data-item_id="{{ item.item_id }}"
-                                                    id="increment-qty_{{ item.item_id }}" aria-label="Increase Quantity">
+                                                    id="increment-qty_{{ item.item_id }}"
+                                                    aria-label="Increase Quantity">
                                                     <i class="fa-solid fa-caret-up fa-xl"></i>
                                                 </button>
                                                 <button class="decrement-qty btn quantity-icon-btn"
                                                     data-item_id="{{ item.item_id }}"
-                                                    id="decrement-qty_{{ item.item_id }}" aria-label="Decrease Quantity">
+                                                    id="decrement-qty_{{ item.item_id }}"
+                                                    aria-label="Decrease Quantity">
                                                     <i class="fa-solid fa-caret-down fa-xl"></i>
                                                 </button>
                                             </div>
@@ -118,14 +120,16 @@
                 <div class="col-12 text-end pe-4 mt-2">
                     <h6>Order Total: £{{ total|floatformat:2 }}</h6>
                     <h6>Delivery Cost: £{{ delivery|floatformat:2 }}</h6>
-                    <h4>Grand Total: £{{ grand_total|floatformat:2 }}</h6>
+                    <h4>Grand Total: £{{ grand_total|floatformat:2 }}</h4>
                 </div>
             </div>
             <div class="row">
-                <a href="{% url 'checkout' %}">
-                    <button type="button" class="button btn small-button float-end" aria-label="Safe Checkout">Safe
-                        Checkout</button>
-                </a>
+                <div class="col">
+                    <a href="{% url 'checkout' %}" class="button btn small-button float-end text-decoration-none w-auto"
+                        aria-label="Safe Checkout">
+                        Safe Checkout
+                    </a>
+                </div>
             </div>
         </div>
     </div>
