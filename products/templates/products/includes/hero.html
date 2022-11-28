@@ -9,11 +9,9 @@
   {% endif %}
   {% if selected_category is not None and selected_subcategory is None %}
     style="background-image: url('{{ selected_category.image.url }}');"
-    alt="{{ selected_category.friendly_name|title }}"
   {% endif %}
   {% if selected_subcategory is not None %}
     style="background-image: url('{{ selected_subcategory.image.url }}');"
-    alt="{{ selected_subcategory.friendly_name|title }}"
   {% endif %}>
 
   <div class="hero-text mask px-4 d-flex justify-content-center align-items-center">
