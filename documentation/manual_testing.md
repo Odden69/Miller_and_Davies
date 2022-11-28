@@ -117,57 +117,66 @@ One error from the HTML testing was repeated in the Lighthouse Validation, but a
 
 
 ### Code Tests
+The code has been checked and all errors in the code has been taken care of.  
+  
 | File | Jigsaw validator | pep8 pylint django | JSHint |
 |:-----|:----------------:|:------------------:|:------:|
 |  |  |  |  |
 | **Basket** |  |  |  |
-| contexts.py |  | :heavy_check_mark: |  |
-| urls.py |  | :heavy_check_mark: |  |
-| views.py |  | :heavy_check_mark: |  |
+| contexts.py | - | :heavy_check_mark: | - |
+| urls.py | - | :heavy_check_mark: | - |
+| views.py | - | :heavy_check_mark: | - |
 |  |  |  |  |
 | **Checkout** |  |  |  |
-| admin.py |  | :heavy_check_mark: |  |
-| forms.py |  | :heavy_check_mark: |  |
-| models.py |  | :heavy_check_mark: |  |
-| signals.py |  | :heavy_check_mark: |  |
-| urls.py |  | :heavy_check_mark: |  |
-| views.py |  | :heavy_check_mark: |  |
-| webhook_handler.py |  | :heavy_check_mark: |  |
-| webhooks.py |  | :heavy_check_mark: |  |
+| admin.py | - | :heavy_check_mark: | - |
+| forms.py | - | :heavy_check_mark: | - |
+| models.py | - | :heavy_check_mark: | - |
+| signals.py | - | :heavy_check_mark: | - |
+| urls.py | - | :heavy_check_mark: | - |
+| views.py | - | :heavy_check_mark: | - |
+| webhook_handler.py | - | :heavy_check_mark: | - |
+| webhooks.py | - | :heavy_check_mark: | - |
+| checkout.css | :heavy_check_mark: | - | - |
+| stripe_elements.js | - | - | :heavy_check_mark: |
 |  |  |  |  |
 | **Favorites** |  |  |  |
-| urls.py |  | :heavy_check_mark: |  |
-| views.py |  | :heavy_check_mark: |  |
+| urls.py | - | :heavy_check_mark: | - |
+| views.py | - | :heavy_check_mark: | - |
 |  |  |  |  |
 | **Newsletters** |  |  |  |
-| admin.py |  | :heavy_check_mark: |  |
-| contexts.py |  | :heavy_check_mark: |  |
-| forms.py |  | :heavy_check_mark: |  |
-| models.py |  | :heavy_check_mark: |  |
+| admin.py | - | :heavy_check_mark: | - |
+| contexts.py | - | :heavy_check_mark: | - |
+| forms.py | - | :heavy_check_mark: | - |
+| models.py | - | :heavy_check_mark: | - |
 |  |  |  |  |
 | **Products** |  |  |  |
-| admin.py |  | :heavy_check_mark: |  |
-| forms.py |  | :heavy_check_mark: |  |
-| models.py |  | :heavy_check_mark: |  |
-| urls.py |  | :heavy_check_mark: |  |
-| views.py |  | :heavy_check_mark: |  |
-| widgets.py |  | :heavy_check_mark: |  |
+| admin.py | - | :heavy_check_mark: | - |
+| forms.py | - | :heavy_check_mark: | - |
+| models.py | - | :heavy_check_mark: | - |
+| urls.py | - | :heavy_check_mark: | - |
+| views.py | - | :heavy_check_mark: | - |
+| widgets.py | - | :heavy_check_mark: | - |
+| quantity_input_script.html | - | - | :heavy_check_mark: |
+| rate_product_script.html | - | - | :heavy_check_mark: |
+| edit_product.html | - | - | :heavy_check_mark: |
 |  |  |  |  |
 | **Profiles** |  |  |  |
-| admin.py |  | :heavy_check_mark: |  |
-| forms.py |  | :heavy_check_mark: |  |
-| models.py |  | :heavy_check_mark: |  |
-| urls.py |  | :heavy_check_mark: |  |
-| views.py |  | :heavy_check_mark: |  |
-|  |  |  |  |
+| admin.py | - | :heavy_check_mark: | - |
+| forms.py | - | :heavy_check_mark: | - |
+| models.py | - | :heavy_check_mark: | - |
+| urls.py | - | :heavy_check_mark: | - |
+| views.py | - | :heavy_check_mark: | - |
+| profile.css | :heavy_check_mark: | - | - |
+| countryfield.js | - | - | :heavy_check_mark: |
 |  |  |  |  |
 | **Miller_n_davies** |  |  |  |
-| forms.py |  | :heavy_check_mark: |  |
-| settings.py |  | long lines and env imported not used |  |
-| urls.py |  | :heavy_check_mark: |  |
-| views.py |  | :heavy_check_mark: |  |
+| forms.py | - | :heavy_check_mark: | - |
+| settings.py | - | long lines and env imported not used | - |
+| urls.py | - | :heavy_check_mark: | - |
+| views.py | - | :heavy_check_mark: | - |
 |  |  |  |  |
 |  |  |  |  |
-| custom_storages.py |  | :heavy_check_mark: |  |
+| custom_storages.py | - | :heavy_check_mark: | - |
+| base.css | :heavy_check_mark: | - | - |
 
 
