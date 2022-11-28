@@ -55,37 +55,37 @@
                         <div class="card-body text-center d-flex justify-content-center">
                             <div class="row">
                                 <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            {% for star in "12345"|make_list %}
+                                            {% if forloop.counter <= product.avg_rating|add:"0" %}
+                                            <i class="fas fa-star"></i>
+                                            {% else %}
+                                            <i class="far fa-star"></i>
+                                            {% endif %}
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="mb-3">
+                                            <form action="{% url 'adjust_favorites' product.id %}" class="form d-inline"
+                                                method="POST">
+                                                {% csrf_token %}
+                                                <button class="btn favorite-btn mb-2" type="submit"
+                                                    aria-label="Previous">
+                                                    {% if product.id in request.session.favorites %}
+                                                    <i class="fa-solid fa-heart fa favorite-icon"></i>
+                                                    {% else %}
+                                                    <i class="fa-regular fa-heart fa favorite-icon"></i>
+                                                    {% endif %}
+                                                </button>
+                                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                            </form>
+                                            <h5 class="d-inline">{{ product.name}}</h5>
+                                        </div>
+                                    </div>
                                     <a href="{% url 'product_detail' product.id %}"
                                         class="text-decoration-none text-black" aria-label="{{ product.name }}">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                {% for star in "12345"|make_list %}
-                                                {% if forloop.counter <= product.avg_rating|add:"0" %}
-                                                <i class="fas fa-star"></i>
-                                                {% else %}
-                                                <i class="far fa-star"></i>
-                                                {% endif %}
-                                                {% endfor %}
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="mb-3">
-                                                <form action="{% url 'adjust_favorites' product.id %}"
-                                                    class="form d-inline" method="POST">
-                                                    {% csrf_token %}
-                                                    <button class="btn favorite-btn mb-2" q2a3 type="submit"
-                                                        aria-label="Previous">
-                                                        {% if product.id in request.session.favorites %}
-                                                        <i class="fa-solid fa-heart fa favorite-icon"></i>
-                                                        {% else %}
-                                                        <i class="fa-regular fa-heart fa favorite-icon"></i>
-                                                        {% endif %}
-                                                    </button>
-                                                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                                                </form>
-                                                <h5 class="d-inline">{{ product.name}}</h5>
-                                            </div>
-                                        </div>
                                         <div class="row">
                                             <p class="mb-0">Pkt of {{ product.size}} seeds</p>
                                         </div>
