@@ -136,11 +136,6 @@ main {
   box-shadow: none;
 }
 
-/* .user-dropdown-btn:hover,
-.basket-btn:hover {
-  color:var(--light-green)!important;
-} */
-
 /* hero image */
 .hero-image {
   background: no-repeat center center;
@@ -252,10 +247,6 @@ main {
   color: orange !important;
   cursor: default !important;
 }
-
-/* .select_quantity {
-  padding-top: 0.35rem!important;
-} */
 
 .quantity-buttons {
   position: relative;

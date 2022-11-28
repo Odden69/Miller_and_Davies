@@ -7,7 +7,6 @@ def newsletter_signup(request):
 
     if request.method == 'POST':
         form = NewsletterSignupForm(request.POST)
-        # redirect_url = request.POST.get('redirect_url')
         if form.is_valid():
             instance = form.save(commit=False)
             if NewsletterSubscriber.objects.filter(
