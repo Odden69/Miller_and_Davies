@@ -42,13 +42,13 @@
                         <div class="col-sm-10 col-md-8 d-flex justify-content-center mx-auto">
                             <div class="row mw-100 justify-content-center">
                                 {% for subcategory in subcategories %}
-                                <div class="col-auto px-0">
+                                <div class="col-auto px-0 my-2">
                                     {% if subcategory.name == 'na' %}
                                     {% else %}
                                     <a
                                         href="{% url 'products' %}?category={{ selected_category.name }}&subcategory={{ subcategory.name }}"
-                                            aria-label="{{ subcategory.friendly_name }}">
-                                        <button class="button large-button text-nowrap">{{ subcategory.friendly_name }}</button>
+                                            aria-label="{{ subcategory.friendly_name }}" class="button large-button text-decoration-none align-text-center">
+                                        {{ subcategory.friendly_name }}
                                     </a>
                                     {% endif %}
                                 </div>
