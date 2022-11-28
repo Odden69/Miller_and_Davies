@@ -19,8 +19,8 @@
         </div>
         <div class="col-12 col-md-6 info-container text-center text-md-start px-4">
             <div class="row">
-                <div class="col-12">
-                    <h3 class="mb-0">
+                <div class="col-12 mt-3">
+                    <div class="mb-0">
                         <form action="{% url 'adjust_favorites' product.id %}" class="form d-inline" method="POST">
                             {% csrf_token %}
                             <button class="btn favorite-btn mb-2" type="submit" aria-label="Toggle add/remove favorites">
@@ -32,8 +32,8 @@
                             </button>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </form>
-                        {{ product.name}}
-                    </h3>
+                        <h3 class="d-inline">{{ product.name}}</h3>
+                    </div>
                 </div>
                 <div class="col-12">
                     <form action="{% url 'rate_product' product.id %}" class="form d-inline" method="POST">

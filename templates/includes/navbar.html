@@ -11,7 +11,7 @@
   <div class="col-10 d-block d-md-none my-auto">
     <div class="row justify-content-end">
       <div class="col pe-0">
-        <a href="{% url 'basket' %}" class="fs-3 d-block d-md-none text-end text-reset" aria-label="Your Basket">
+        <a href="{% url 'basket' %}" class="fs-3 d-block d-md-none text-end text-reset text-decoration-none basket-btn me-2" aria-label="Your Basket">
           {% include 'includes/basket-btn.html' %}
         </a>
       </div>
@@ -53,7 +53,7 @@
       </li>
       <!-- flower link for large screens -->
       <li class="nav-item d-none d-md-block">
-        <a class="nav-link" href="{% url 'products' %}?category=flowers" aria-label="Flowers"}>Flowers</a>
+        <a class="nav-link" href="{% url 'products' %}?category=flowers" aria-label="Flowers">Flowers</a>
       </li>
       <!-- flower dropdown link for small screens -->
       <li class="nav-item dropdown d-md-none">
@@ -97,12 +97,12 @@
     <div class="float-end d-none d-md-block">
       <div class="row">
         <div class="col-4">
-          <a href="{% url 'products' %}?favorites" class="fs-3 text-reset">
-            <button class="btn favorite-btn mb-md-1 text-reset" aria-label="Favorites">
+          <a href="{% url 'products' %}?favorites" class="fs-3 text-reset" aria-label="Favorites">
+            <div class="btn favorite-btn mb-md-1 text-reset">
               <div class="my-0 fs-6">
                 <i class="fa-solid fa-heart fa-lg me-1"></i>
               </div>
-            </button>
+            </div>
           </a>
         </div>
         <!-- user dropdown for small screens -->

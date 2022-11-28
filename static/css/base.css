@@ -56,7 +56,7 @@ html {
 .large-button {
   font-size: large;
   height: 40px;
-  padding: 0 20px;
+  padding: 3px 20px;
 }
 
 .text-black {
@@ -134,6 +134,10 @@ main {
 .user-dropdown-btn:focus,
 .basket-btn:focus {
   box-shadow: none;
+}
+
+.basket-btn:hover {
+  color: var(--medium-green) !important;
 }
 
 /* hero image */

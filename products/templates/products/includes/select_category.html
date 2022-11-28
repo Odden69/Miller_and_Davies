@@ -33,8 +33,8 @@
                     {% if selected_category is None %}
                         <div class="col-10 d-flex justify-content-center mx-auto">
                             {% for category in categories %}
-                            <a href="{% url 'products' %}?category={{ category.name }}" aria-label="{{ category.friendly_name }}">
-                                <button class="button large-button">{{ category.friendly_name }}</button>
+                            <a href="{% url 'products' %}?category={{ category.name }}" aria-label="{{ category.friendly_name }}"
+                                class="button large-button text-decoration-none align-text-center">{{ category.friendly_name }}
                             </a>
                             {% endfor %}
                         </div>
