@@ -5,6 +5,9 @@ from products.models import Product
 
 
 def basket_contents(request):
+    """
+    Makes the basket content available throughout the site
+    """
 
     basket_items = []
     total = 0

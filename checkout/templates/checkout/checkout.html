@@ -80,6 +80,7 @@
         <hr class="my-0 d-lg-none mb-4">
         <div class="col-12 col-lg-6 pe-lg-4">
             <h5 class="text-muted">Please fill out the form below to complete your order</h5>
+            <!-- The checkout form code was taken from the CI Boutique Ado project-->
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}
                 <fieldset class="px-3 mb-5">

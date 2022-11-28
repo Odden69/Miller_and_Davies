@@ -1,6 +1,8 @@
 from django import forms
 from .models import Profile
 
+# This code is copied in its whole from the CI boutique ado project
+
 
 class UserProfileForm(forms.ModelForm):
     class Meta:

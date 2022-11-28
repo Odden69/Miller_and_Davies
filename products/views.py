@@ -101,6 +101,7 @@ def products(request):
                 Q(description__icontains=query)
             products = products.filter(queries)
 
+    # Sorts various_veg subcategory last
     for sc in all_subcategories:
         if sc.name == 'various_veg':
             sc.index = 1

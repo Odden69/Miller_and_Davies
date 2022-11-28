@@ -7,6 +7,8 @@ from django.conf import settings
 from profiles.models import Profile
 from products.models import Product
 
+# This code was taken from the CI project Boutique Ado
+
 
 class Order(models.Model):
     order_number = models.CharField(max_length=32, null=False, editable=False)

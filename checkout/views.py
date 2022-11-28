@@ -13,6 +13,8 @@ from basket.contexts import basket_contents
 import stripe
 import json
 
+# This code is copied in its whole from the CI boutique ado project
+
 
 @require_POST
 def cache_checkout_data(request):

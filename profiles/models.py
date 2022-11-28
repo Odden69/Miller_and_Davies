@@ -4,6 +4,8 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django_countries.fields import CountryField
 
+# This code is copied in its whole from the CI boutique ado project
+
 
 class Profile(models.Model):
     """

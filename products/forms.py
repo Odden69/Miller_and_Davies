@@ -4,6 +4,9 @@ from .models import Product, Subcategory
 
 
 class ProductForm(forms.ModelForm):
+    """
+    Form for creating and updating a product
+    """
 
     class Meta:
         model = Product

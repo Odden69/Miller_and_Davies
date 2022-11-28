@@ -4,6 +4,7 @@ from .forms import UserProfileForm
 from .models import Profile
 from checkout.models import Order
 
+# This code was pretty much copied from the CI boutique ado project
 
 def profile(request):
     """ Display the user's profile. """

@@ -4,6 +4,9 @@ from .forms import NewsletterSignupForm
 
 
 def newsletter_signup(request):
+    """
+    Makes the newsletter sign up form available throughout the site
+    """
 
     if request.method == 'POST':
         form = NewsletterSignupForm(request.POST)

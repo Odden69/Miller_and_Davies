@@ -4,14 +4,23 @@ from profiles.models import Profile
 
 
 def get_sentinel_category():
+    """
+    Creates a sentinel category if a used category is deleted
+    """
     return Category.objects.get_or_create(name='deleted_category')[0]
 
 
 def get_sentinel_subcategory():
+    """
+    Creates a sentinel subcategory if a used subcategory is deleted
+    """
     return Subcategory.objects.get_or_create(name='deleted_subcategory')[0]
 
 
 class Season(models.Model):
+    """
+    Model for Seasons (to be used with products)
+    """
     name = models.CharField(max_length=50)
     friendly_name = models.CharField(max_length=50)
 
@@ -20,7 +29,9 @@ class Season(models.Model):
 
 
 class Category(models.Model):
-
+    """
+    Model for categories
+    """
     class Meta:
         verbose_name_plural = 'Categories'
 
@@ -33,7 +44,9 @@ class Category(models.Model):
 
 
 class Subcategory(models.Model):
-
+    """
+    Model for subcategories
+    """
     class Meta:
         verbose_name_plural = 'Subcategories'
 
@@ -49,6 +62,9 @@ class Subcategory(models.Model):
 
 
 class Product(models.Model):
+    """
+    Model for products
+    """
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
@@ -82,7 +98,9 @@ class Product(models.Model):
 
 
 class Rating(models.Model):
-
+    """
+    Model for product ratings
+    """
     SCORES = [
         (1, '1'),
         (2, '2'),

@@ -3,9 +3,7 @@ from django.dispatch import receiver
 
 from .models import OrderLineItem
 
-"""
-This code is copied in its whole from the CI boutique ado project
-"""
+# This code is copied in its whole from the CI boutique ado project
 
 
 @receiver(post_save, sender=OrderLineItem)

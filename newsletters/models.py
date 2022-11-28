@@ -2,6 +2,9 @@ from django.db import models
 
 
 class NewsletterSubscriber(models.Model):
+    """
+    Model for newsletter subscriptions
+    """
     email = models.EmailField()
     signup_date = models.DateTimeField(auto_now_add=True)
 

@@ -1,9 +1,8 @@
 from django.contrib import admin
 from .models import Order, OrderLineItem
 
-"""
-This code is copied in its whole from the CI boutique ado project
-"""
+
+# This code is copied in its whole from the CI boutique ado project
 
 
 class OrderLineItemAdminInline(admin.TabularInline):

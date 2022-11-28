@@ -1,3 +1,5 @@
+// This code was copied in its whole form CI Boutique Ado project
+
 let countrySelected = $('#id_default_country').val();
 if(!countrySelected) {
     $('#id_default_country').css('color', '#aab7c4');

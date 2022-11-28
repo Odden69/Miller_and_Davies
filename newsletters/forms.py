@@ -3,6 +3,9 @@ from .models import NewsletterSubscriber
 
 
 class NewsletterSignupForm(forms.ModelForm):
+    """
+    Lets the user sign up for a newsletter
+    """
 
     class Meta:
         model = NewsletterSubscriber
