@@ -67,14 +67,16 @@
                 <div class="col-12 text-end pe-4 mt-2">
                     <h6>Order Total: £{{ total|floatformat:2 }}</h6>
                     <h6>Delivery Cost: £{{ delivery|floatformat:2 }}</h6>
-                    <h4>Grand Total: £{{ grand_total|floatformat:2 }}</h6>
+                    <h4>Grand Total: £{{ grand_total|floatformat:2 }}</h4>
                 </div>
             </div>
             <div class="row mt-2">
-                <a href="{% url 'basket' %}">
-                    <button type="button" class="button btn small-button" aria-label="Adjust Content">Adjust
-                        Content</button>
-                </a>
+                <div class="col">
+                    <a href="{% url 'basket' %}" class="button btn small-button text-decoration-none w-auto"
+                        aria-label="Adjust Content">
+                        Adjust Content
+                    </a>
+                </div>
             </div>
         </div>
         <hr class="my-0 d-lg-none mb-4">
