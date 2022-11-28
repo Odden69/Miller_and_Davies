@@ -27,8 +27,9 @@
             {% if 'indoors' in request.GET %}
             <div class="row my-3">
                 <div class="col-10 col-md-8 mx-auto">
-                    <p class="fs-sm-5">These are our products suitable for growing indoors.<br> 
-                    Perfect for you without a garden or for anyone who wants fresh home grown greens all year around.</p>
+                    <p class="fs-sm-5">These are our products suitable for growing indoors.<br>
+                        Perfect for you without a garden or for anyone who wants fresh home grown greens all year
+                        around.</p>
                 </div>
                 <br>
             </div>
@@ -68,11 +69,12 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <h5 class="mb-3">
+                                            <div class="mb-3">
                                                 <form action="{% url 'adjust_favorites' product.id %}"
                                                     class="form d-inline" method="POST">
                                                     {% csrf_token %}
-                                                    <button class="btn favorite-btn" q2a3 type="submit" aria-label="Previous">
+                                                    <button class="btn favorite-btn mb-2" q2a3 type="submit"
+                                                        aria-label="Previous">
                                                         {% if product.id in request.session.favorites %}
                                                         <i class="fa-solid fa-heart fa favorite-icon"></i>
                                                         {% else %}
@@ -81,8 +83,8 @@
                                                     </button>
                                                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                                                 </form>
-                                                {{ product.name}}
-                                            </h5>
+                                                <h5 class="d-inline">{{ product.name}}</h5>
+                                            </div>
                                         </div>
                                         <div class="row">
                                             <p class="mb-0">Pkt of {{ product.size}} seeds</p>
@@ -106,7 +108,8 @@
                                         <form action="{% url 'add_to_basket' product.id %}" class="form d-inline"
                                             method="POST">
                                             {% csrf_token %}
-                                            <button class="button small-button" type="submit" aria-label="Buy Now">Buy Now</button>
+                                            <button class="button small-button" type="submit" aria-label="Buy Now">Buy
+                                                Now</button>
                                             <input type="hidden" name="quantity" value="1">
                                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                                         </form>
@@ -136,7 +139,8 @@
                     {% endif %}
                     {% if page_obj.has_next %}
                     <a href="?page={{ page_obj.next_page_number }}" aria-label="Next">next &gt;</a>
-                    <a href="?page={{ page_obj.paginator.num_pages }}" class="d-none d-sm-inline" aria-label="Last">last &raquo;</a>
+                    <a href="?page={{ page_obj.paginator.num_pages }}" class="d-none d-sm-inline" aria-label="Last">last
+                        &raquo;</a>
                     {% endif %}
                 </span>
             </div>
