@@ -9,8 +9,8 @@ Miller & Davies is an imaginary e-commerce site selling organic seeds for garden
 ## Table of Contents
 **[User Experience](#user-experience)**  
 **[Planning the Project](#planning-the-project)**  
-**[Features](#features)** 
-**[E-Commerce Business Model and Marketing Strategies](#e-commerce-business-model-and-marketing-strategies)** 
+**[Features](#features)**  
+**[E-Commerce Business Model and Marketing Strategies](#e-commerce-business-model-and-marketing-strategies)**  
 **[Technologies Used](#technologies-used)**   
 **[Testing](#testing)**  
 **[Deployment](#deployment)**  
@@ -297,6 +297,9 @@ These tests are documented in the [Test Document](documentation/testing_itrain.x
 ![Color Contrast Check](documentation/contrast_check.png)
 
 ## Deployment
+<details>
+  <summary>Click to see instructions for deployment of this project</summary>
+
 ### Clone a GitHub repository
 To make a local copy of this project you can make a clone by following these steps:
 - Log in to GitHub and find the [repository](https://github.com/Odden69/ITrain).
@@ -307,31 +310,130 @@ To make a local copy of this project you can make a clone by following these ste
 - Press Enter to create your local clone.
 
 ### Deploy to Heroku
-This site was deployed to Heroku Apps. The instructions below have been updated after my initial deployment since I changed the storage of the static files from Cloudinary to WhiteNoise.
-
+This site was deployed to Heroku Apps.  
+  
 To deploy a copy of this site, follow these steps:
-- Start by installing everything in the requirements.txt file.
-- Make sure you have correct requirements.txt and Procfile before moving on with the deployment.
+- Start by installing everything in the requirements.txt file to your.
+- Make sure you have a correct requirements.txt and Procfile before moving on with the deployment.
+#### Create a database
+- Create a PostreSQL database of your choice. For this project I used ElephantSQL.
+- Log in to ElephantSQL with your GitHub account and authorize ElephantSQL if you haven't done that before.
+- Create a new team, with your own name, if you don't already have one.
+- From your dashboard create a new instance.
+- Give your new database a Name and select the Tiny turtle(Free) plan.
+- Select a region near you and click Review.
+- Double check your entries and click Create Instance.
+- Return to the dashboard and there it should be! 
+- Click on the database Name and there you will find what you need later on. 
+#### Create a Heroku app
 - Log in to [Heroku apps](https://heroku.com/)
 - On the Heroku dashboard go to the "New" menu and choose "Create new app".
 - Give the app a name that needs to be unique, select your region and click "Create app".
-- Now the new app's dashboard is opened. Click on the resources tab.
-- Add the Heroku Postgres Add-on.
+- Now the new app's dashboard is opened.
 - Go to the settings tab and reveal the Config Vars. 
 - Add a SECRET_KEY Config Var and give it a string value of your choice. Preferably, use a secret key generator.
-- To run the project locally you need to create an env.py file in your top level directory.
-  - Copy the DATABASE_URL from Heroku's Config Vars. 
-  - Add os.environ["DATABASE_URL"] to the env.py file and set it to the DATABASE_URL copied from Heroku.
+- Go back to your ElephantSQL database and copy the URL from there. 
+- Add a DATABASE_URL Config Var in Heroku and paste in the URL from ElephantSQL. 
+#### Create an env.py file
+- To run the project locally you need to create an env.py file in your top level directory. 
+  - Add os.environ["DATABASE_URL"] to the env.py file and set it to the DATABASE_URL copied from ElephantSQL. Comment out that code for now.
   - Add os.environ["SECRET_KEY"] to your env.py file, copy the value of your SECRET_KEY in Heroku and paste it here.
 - IMPORTANT! Make sure your env.py file is added to your .gitignore file so that your sensitive information is kept secret.
-- Update the ALLOWED_HOSTS variable in the settings.py file by replacing *hj-itrain* with the name of your Heroku app. 
-- Add, commit and push your changes to GitHub
+- Update the ALLOWED_HOSTS variable in the settings.py file by replacing *hj-miller-and-davies* with the name of your Heroku app.
+#### Migrate your databases
+- Start with your local sqlite3 database.
+- Type in *python3 manage.py makemigrations* and *python3 manage.py migrate* in your terminal.
+- Create a superuser to access the admin panel, by typing *python3 manage.py createsuperuser* in your terminal and add a username and a password.
+- Populate the database with data from the fixtures files in the products app. Make sure to load them in the right order:
+  - *python3 manage.py loaddata categories*
+  - *python3 manage.py loaddata categories*
+  - *python3 manage.py loaddata products*
+- To migrate your ElephantSQL database temporarily uncomment your os.environ["DATABASE_URL"] in the env.py file.
+- Repeat the steps you just did on your local database and comment out the os.environ["DATABASE_URL"] in the env.py file when you're done.
+#### Create an Amazon AWS S3Bucket
+- Create an account and login as a root user to Amazon AWS.
+- Search for S3 service and create a new bucket. Give it a suitable name and select *eu-north-1*, or make sure to change *AWS_S3_REGION_NAME* in settings.py to your region.
+- Go to the Properties tab. Click edit on Static website hosting. Check Enable and enter *index.html* and *error.html* for the index document and error document fields and then *save*.
+- Go to the Permissions tab. Click edit on Cross-origin resource sharing (CORS), and paste in the following code into the code area:
+```
+[
+    {
+        "AllowedHeaders": [
+            "Authorization"
+        ],
+        "AllowedMethods": [
+            "GET"
+        ],
+        "AllowedOrigins": [
+            "*"
+        ],
+        "ExposeHeaders": []
+    }
+]
+```
+- Still on the Permissions tab, click edit on the Bucket Policy and open the Policy Generator.
+- Use the following setting to set up the policy:
+  - Type of Policy: 'S3 Bucket Policy'.
+  - Principal: '*' to allow all principles.
+  - Action: 'Get Object'.
+  - Amazon Resource Name (ARN): Paste your Bucket ARN (found on top of the Properies tab) and add * at the and of your Bucket Resource key arn:aws:s3:::bucket_name/.
+  - Click Save.
+- Still in the 'Permissions' tab, click edit on Access Control List and set the objects permission for everyone(public access) to *list*.
+#### Set up IAM Access to the S3bucket
+- Search for IAM service.
+- Go to User Groups and click Create New Group, enter a suitable name and click Create.
+- Go to Policies and click Create New Policy. Go to the JSON tab. Click Import Managed Policy and search for *S3*. Select *AmazonS3FullAccess* and click Import.
+- Get your ARN from *S3 Permissions*, delete the * from Resource, and add this code block into the area:
+```
+"Resource": [
+    "{YOUR ARN}",
+    "{YOUR ARN}/*"
+]
+```
+- Click Next and Review. Provide a name and a description and click *Create Policy*.
+- Go to User Groups and locate your new group. Go to the Permissions tab and click on Add Permissions -> Attach Policies. Find the policy you created, and click Add Permissions.
+- Go to Users and click on Add Users. Enter a suitable name and check Access key - Programmatic access.
+- Click Next. Select the group you just created and click through to the end.
+- Finally click Create User and download the CSV file with your AWS_SECRET_ACCESS_KEY and your AWS_ACCESS_KEY_ID. **IT IS VERY IMPORTANT TO DOWNLOAD THEM AT THIS STAGE!**
+#### Final AWS steps
+- Go back to your S3 bucket and create a media/ folder and click upload. Click Add Files and add all product images. Under the Permission drop down, select *Grant Public Read Access*. And the click upload.
+#### Connecting Heroku and AWS
+- Go back to Heroku and create a AWS_ACCESS_KEY_ID and a AWS_SECRET_ACCESS_KEY Config Var and paste in the keys from the csv file you downloaded from AWS.
+- Also add a USE_AWS Config Var and set it to True.
+#### Set up a gmail host
+- In settings.py change the DEFAULT_FROM_EMAIL to your own email address.
+- Log in to your Gmail account and navigate to the Settings tab.
+- Go to Accounts and Imports and Other Google Account Settings.
+- Go to the Security tab and scroll down to Signing in to Google.
+- If required, click to turn on 2-step Verification** and then Get Started and enter your password.
+- Verify using your preferred method and turn on 2-step verification.
+- Go back to Security, Signing in to Google and then go to App Passwords.
+- Enter your password again if prompted, then set App to Mail, Device to Other and type in **Django*.
+- Copy and paste the passcode that shows up.
+- Go back to Heroku and create an EMAIL_HOST_USER Config Var and enter your gmail address. 
+- Create an EMAIL_HOST_PASS Config Var and paste in the passcode form gmail.
+#### Stripe
+- Create an account and login to Stripe payments.
+- Go to Developers from your Stripe dashboard.
+- Under API keys you can find a publishable key and a secret key.
+- Go back to Heroku and create a STRIPE_PUBLIC_KEY Config Var for the publishable key and a STRIPE_SECRET_KEY for the secret key.
+#### Deploy to Heroku
+- Add, commit and push your changes to GitHub.
 - Login to Heroku from your terminal with: *heroku login -i*
 - Get your app name from Heroku with: *heroku apps*
 - Set the Heroku remote with: *heroku git:remote -a <app_name>*
 - Push your changes to Heroku with: *git push heroku main*
 - Run the app by clicking the Open app button on top of the page on the Heroku dashboard.
+- Hopefully it runs smoothly!
+#### Stripe Webhooks
+- Go to Developers from your Stripe dashboard.
+- Click on Add Endpoint.
+- Copy and paste in your running Heroku apps URL. Add /checkout/wh/ at the end of the URL.
+- Use card number 4242 4242 4242 4242 on an order to make a test payment.
+- Follow the result under Events on Stripe. 
 Good luck!
+
+</details>
 
 ## Credits
 ### Code
