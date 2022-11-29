@@ -62,30 +62,31 @@
 ### Page Tests
 I have marked pages with green and yellow Lighthouse Validations and with warnings in the HTML-validator as checked.
 A red Lighthouse Validation and an error in the HTML-validator has a comment in the table. Check the documentation below for more information about those comments.
+The responsive testing has been done down to a screen width of 280 pixels.
 
 | Page | Lighthouse, Desktop | Lighthouse, Mobile | Responsive, Desktop | Responsive, Tablet | Responsive, Mobile | HTML-validator W3 |
 |:-----|:-------------------:|:------------------:|:-------------------:|:------------------:|:------------------:|:-----------------:|
 |  |  |  |  |  |  |  |
-| Product | Performance | Performance |  |  |  |:heavy_check_mark:|
-| Product, Vegetables | Performance | Performance |  |  |  |:heavy_check_mark:|
-| Prod, Veget,Legumes |:heavy_check_mark:|:heavy_check_mark:|  |  |  |:heavy_check_mark:|
-| Product, Herbs | Performance |:heavy_check_mark:|  |  |  |:heavy_check_mark:|
-| Product, Flowers |:heavy_check_mark:| Performance |  |  |  |:heavy_check_mark:|
-| Product, Indoors |:heavy_check_mark:| Performance |  |  |  |:heavy_check_mark:|
-| Product, Bargains |:heavy_check_mark:| Performance |  |  |  |:heavy_check_mark:|
-| Product, Favorites |:heavy_check_mark:| Performance |  |  |  |:heavy_check_mark:|
-| Product Detail |:heavy_check_mark:|:heavy_check_mark:|  |  |  |:heavy_check_mark:|
-| Basket, Empty |:heavy_check_mark:|:heavy_check_mark:|  |  |  |:heavy_check_mark:|
-| Basket, with content |:heavy_check_mark:|:heavy_check_mark:|  |  |  |:heavy_check_mark:|
-| Checkout |:heavy_check_mark:|:heavy_check_mark:|  |  |  | Duplicate ID on email field |
-| Order Confirmation |:heavy_check_mark:|:heavy_check_mark:|  |  |  |:heavy_check_mark:|
-| Log In |:heavy_check_mark:|:heavy_check_mark:|  |  |  |:heavy_check_mark:|
-| Log Out |:heavy_check_mark:|:heavy_check_mark:|  |  |  |:heavy_check_mark:|
-| Sign Up |:heavy_check_mark:|:heavy_check_mark:|  |  |  | Duplicate ID on email field |
-| Profile | Performance |:heavy_check_mark:|  |  |  |:heavy_check_mark:|
-| Past Order Confirmation |:heavy_check_mark:|:heavy_check_mark:|  |  |  |:heavy_check_mark:|
-| Add product |:heavy_check_mark:|:heavy_check_mark:|  |  |  | See image below |
-| Edit product |:heavy_check_mark:|:heavy_check_mark:|  |  |  | See image below |
+| Product | Performance | Performance |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+| Product, Vegetables | Performance | Performance |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+| Prod, Veget,Legumes |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+| Product, Herbs | Performance |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+| Product, Flowers |:heavy_check_mark:| Performance |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+| Product, Indoors |:heavy_check_mark:| Performance |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+| Product, Bargains |:heavy_check_mark:| Performance |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+| Product, Favorites |:heavy_check_mark:| Performance |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+| Product Detail |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+| Basket, Empty |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+| Basket, with content |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+| Checkout |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:| Duplicate ID on email field |
+| Order Confirmation |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+| Log In |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+| Log Out |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+| Sign Up |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:| Duplicate ID on email field |
+| Profile | Performance |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|Cluttered order history|:heavy_check_mark:|
+| Past Order Confirmation |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+| Add product |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:| See image below |
+| Edit product |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:| See image below |
 
 The HTML-validator testing in this project taught me that in the future I will do that kind of testing continuously. It would have spared me a lot of work at the stressful final stage of the project.  
 I ended up with a few errors left. All but one coming from labels and fields on forms. These errors could obviously have been solved, but since these errors all showed up on pages generated by Allauth or from code in large copied from the Boutique Ado project, it would have taken more skills to penetrate them than I was able to muster with no time left.  
@@ -107,8 +108,10 @@ The small image on the edit product form should have an alt attribute.
 </details>
 
 #### Red Lighthouse Validations 
-
 One error from the HTML testing was repeated in the Lighthouse Validation, but apart from that it all came down to performance issues. See [this document](lighthouse_validation.pdf) for the results on different pages.
+
+#### Non responsive areas
+The order history on the profile page gets cluttered on small screens. I should have used bootstrap grids instead of a table, but realized the problem when it was too late to rework.  
 
 | |  |  |
 | **Header, wide screen** |  |  |
