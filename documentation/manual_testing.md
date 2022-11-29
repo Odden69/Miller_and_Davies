@@ -117,7 +117,7 @@ One error from the HTML testing was repeated in the Lighthouse Validation, but a
 
 
 ### Code Tests
-The code has been checked and all errors in the code has been taken care of.  
+The code has been checked and all errors in the code have been taken care of.  
   
 | File | Jigsaw validator | pep8 pylint django | JSHint |
 |:-----|:----------------:|:------------------:|:------:|
@@ -171,7 +171,7 @@ The code has been checked and all errors in the code has been taken care of.
 |  |  |  |  |
 | **Miller_n_davies** |  |  |  |
 | forms.py | - | :heavy_check_mark: | - |
-| settings.py | - | long lines and env imported not used | - |
+| settings.py | - | :heavy_check_mark: | - |
 | urls.py | - | :heavy_check_mark: | - |
 | views.py | - | :heavy_check_mark: | - |
 |  |  |  |  |
