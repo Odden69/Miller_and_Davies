@@ -25,13 +25,34 @@
             {% endif %}
             {% endif %}
             {% if 'indoors' in request.GET %}
-            <div class="row my-3">
-                <div class="col-10 col-md-8 mx-auto">
+            <div class="row mx-0 mx-sm-2">
+                <div class="col-10 col-md-8 mx-auto px-0 px-sm-2">
                     <p class="fs-sm-5">These are our products suitable for growing indoors.<br>
                         Perfect for you without a garden or for anyone who wants fresh home grown greens all year
                         around.</p>
                 </div>
                 <br>
+            </div>
+            {% endif %}
+            {% if 'favorites' in request.GET %}
+            <div class="row mx-0 mx-sm-2">
+                <div class="col mx-auto px-0">
+                    <div class="row text-center mx-0">
+                        <h2>My Favorites</h2>
+                    </div>
+                    <div class="row my-3 mx-0">
+                        {% if not request.session.favorites %}
+                        <div class="col-11 col-sm-8 col-lg-6 mx-auto px-0">
+                            <p class="fs-sm-5 text-lg-center">You haven't selected any favorites.<br class="d-lg-none">
+                                Click on a product's <i class="fa-regular fa-heart fa-lg favorite-icon"></i>-symbol to
+                                add
+                                it
+                                to your favorites.</p>
+                        </div>
+                        <br>
+                        {% endif %}
+                    </div>
+                </div>
             </div>
             {% endif %}
             <div class="row mx-0 mx-sm-2">

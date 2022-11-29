@@ -119,7 +119,7 @@ i.text-black:hover {
 }
 
 main {
-  margin-top: 102px;
+  margin-top: 98px;
 }
 
 .dropdown-menu {
@@ -315,7 +315,7 @@ main {
 /* media queries */
 @media (max-width: 767px) {
   main {
-    margin-top: 138px;
+    margin-top: 136px;
   }
 
   .small-screen-user-dropdown{

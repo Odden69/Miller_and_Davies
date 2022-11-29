@@ -98,7 +98,7 @@
                                 </div>
                             </div>
                             {% if request.user.is_superuser %}
-                            <div class="col-7 col-md-4 ps-0">
+                            <div class="col-7 col-lg-4 ps-0">
                                 <a class="btn button small-button" href="{% url 'edit_product' product.id %}" aria-label="Edit">Edit</a>
                                 <!-- Button trigger modal -->
                                 <!-- Modal code was copied from https://getbootstrap.com/docs/5.0/components/modal/ -->
@@ -144,7 +144,7 @@
                     </form>
                 </div>
             </div>
-            <div class="col-11 text-start">
+            <div class="col-12 col-md-11 text-start">
                 <p class="mb-0 mt-4">{{ product.description|linebreaksbr }}</p>
             </div>
         </div>
