@@ -437,21 +437,22 @@ Good luck!
 
 ## Credits
 ### Code
-¨¨
 - [Django documentation](https://docs.djangoproject.com/en/4.0/)  
-  If I had used a paper version of the Django documentation, I would have worn out the pages about Models and ModelForms.
-- On a [Blog by Valentino Gagliardi](https://www.valentinog.com/blog/testing-django) I found tips about automatic testing in Django.
-- [Blog by Hui Wen](https://www.huiwenteo.com/normal/2018/07/24/django-calendar.html). Here I found the code for the calendar.
-- [Simple IT Rocks](https://simpleit.rocks/python/django/dynamic-add-form-with-add-button-in-django-modelformset-template/) is where I copied the code from to dynamically add exercise formsets to the Workout form.
-- A post on [Stackoveflow](https://stackoverflow.com/questions/41129551/django-creating-an-if-statement-based-on-the-request-path-not-working) showed me how to highlight the active page in the navbar.
-- I struggled for a while to add a filter to a formset field. This was where I found the solution: [Django project forum](https://forum.djangoproject.com/t/filter-dropdown-options-in-django-inline-formset-based-on-attribute-of-through-model/13374/4).
-- As usual, [Stackoveflow](https://stackoverflow.com) has been frequently searched during the project, as well as [w3school](https://www.w3schools.com/).¨¨
+- On [Gajesh's blog](https://dev.to/gajesh/the-complete-django-allauth-guide-la3) I found out how to add first and last name to the sign up page.
+- To do the Newsletter sign up form I was inspired by [Master Code Online](https://www.youtube.com/c/LearnpythontutorialFree).
+- As usual, [Stackoveflow](https://stackoverflow.com) has been frequently searched during the project, as well as [w3school](https://www.w3schools.com/).
+
+### Images
+- Almost all product images came from [Unsplash](https://unsplash.com/).
+- I found most of the hero images on [Pexels](https://www.pexels.com).
+- The main hero image came from [Vecteezy](https://www.vecteezy.com/photo/7950964-hand-planting-corn-seed-of-marrow-in-the-vegetable-garden-with-sunshine).
+- And some remaining images came from [Pixabay](https://pixabay.com). 
 
 ### Other
-¨¨
-- The background image came from [pxhere](https://pxhere.com/sv/photo/1283826?utm_content=shareClip&utm_medium=referral&utm_source=pxhere), as well as the images on the about page.
-- The Logo came from [focusfitness](https://www.focusfitness.net/stock-photos/downloads/fit-woman-chatting-phone-exercising-treadmill/).
-- The colour scheme was extracted from the background image and some complementary colour were added on [coolors](https://coolors.co/).¨¨
+- I used this [json generator](https://json-generator.com/) to generate the fixture files.
+- The color generator on [coolors](https://coolors.co/) helped me generate the colors.
+- The sitemap was created on [XML-sitemaps.com](https://www.xml-sitemaps.com/).
+- For the favicon I used this [favicon generator](https://www.favicongenerator.com/).
 
 ## Acknowledgements
 - First of all I want to thank my mentor, Narender Singh. As always he comes up with good ideas and useful hints. Thank you Narender for your support during my course at Code Institute!
