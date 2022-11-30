@@ -206,19 +206,23 @@ An error message appears, for example, if a non authorized user tries to reach a
 One main concern is the slow rendering of the pages on this app. My first effort in the right direction was when I realized I didn't filter the products by the pagination page. I was hoping this would make a bigger difference on the rendering than it did, even though it had a rather big impact on the rendering time when running the site locally. When digging just a bit deeper in the problem I saw that, of 8.39s for a page to load, 7.25s were "waiting for server response". I'm not sure what can be done to improve that and leave that issue for more investigations after this project is finished.  
 One major thing I should do is to replace all the current .jpg images with .webp to decrease the size of the images.  
 
-There is some code left that would appreciate some refactoring. Especially the product view is quite complex and would benefit from being divided into smaller parts and being simplified.
+There is some code left that would appreciate some refactoring. The product view is especially complex and would benefit from being divided into smaller parts and being simplified.  
+I also ended up doing som quick fixes during the testing which resulted in some unnecessary divs.
   
 #### Remaining Bugs
-One big bug still left on the site, which I with some more experience probably would have realized earlier and could have done something about, is a URL problem. All URL queries are lost when rerendering.  
+One major bug left on the site is one that I am quite eager to fix. With some more experience, I probably would have foreseen the problem and could have done something about it in time. Since I didn’t add a lot of products to the database until late in the project it wasn’t until then I noticed the problem.
+The problem is that when a page is rerendered for some reason, the filter on the original page is lost.
 There are a lot of situations on this site that would work, or improve, if the URL of the current page was used as input to the next. Here are a couple of them:  
-* The pagination only works for non sorted All Products pages. All other filtered or sorted pages returns to an All Products page when the paginate page is changed.
-* If a user is on the favorite page and removes one of their favorites, they are redirected back to the product page instead of remaining on the favorite page.   
-  
+* The pagination only works for non sorted All Products pages. All other filtered or sorted pages return to an All Products page when the paginate page is changed.
+* If a user is on the favorite page and removes one of their favorites, they are redirected back to the product page instead of remaining on the favorite page.
+And quite a more… 
+ 
 Another bug left to fix is a rating issue. Trying to rate a product with five stars results in a 500 error page even though the rating is successfully saved.  
 The investigation to solve that issue would take more time that I have right now, so it will also have to wait.
 
+
 #### Features Left to Implement
-To even begin to resemble an actual e-commerce site Miller & Davies would need a lot more interesting content. Pages with gardening tips and inspirational ideas as well as more relating products like tools and fertilizers for instance. It also lacks links to other sites with relating content.  
+To even begin to resemble an actual e-commerce site Miller & Davies would need a lot more interesting content. Pages with gardening tips and inspirational ideas as well as more relating products like tools and fertilizers for instance. It also lacks links to other sites with related content.  
 
 When I started the project I added sowing and harvest seasons to the product model 
 but I decided quite early in the project to postpone these, since I realized it would grow too big for my time frame.  
@@ -376,7 +380,7 @@ To deploy a copy of this site, follow these steps:
   - Type of Policy: 'S3 Bucket Policy'.
   - Principal: '*' to allow all principles.
   - Action: 'Get Object'.
-  - Amazon Resource Name (ARN): Paste your Bucket ARN (found on top of the Properies tab) and add * at the and of your Bucket Resource key arn:aws:s3:::bucket_name/.
+  - Amazon Resource Name (ARN): Paste your Bucket ARN (found on top of the Properties tab) and add * at the end of your Bucket Resource key arn:aws:s3:::bucket_name/.
   - Click Save.
 - Still in the 'Permissions' tab, click edit on Access Control List and set the objects permission for everyone(public access) to *list*.
 #### Set up IAM Access to the S3bucket
@@ -398,7 +402,7 @@ To deploy a copy of this site, follow these steps:
 #### Final AWS steps
 - Go back to your S3 bucket and create a media/ folder and click upload. Click Add Files and add all product images. Under the Permission drop down, select *Grant Public Read Access*. And the click upload.
 #### Connecting Heroku and AWS
-- Go back to Heroku and create a AWS_ACCESS_KEY_ID and a AWS_SECRET_ACCESS_KEY Config Var and paste in the keys from the csv file you downloaded from AWS.
+- Go back to Heroku and create a AWS_ACCESS_KEY_ID and an AWS_SECRET_ACCESS_KEY Config Var and paste in the keys from the csv file you downloaded from AWS.
 - Also add a USE_AWS Config Var and set it to True.
 #### Set up a gmail host
 - In settings.py change the DEFAULT_FROM_EMAIL to your own email address.
@@ -411,7 +415,7 @@ To deploy a copy of this site, follow these steps:
 - Enter your password again if prompted, then set App to Mail, Device to Other and type in **Django*.
 - Copy and paste the passcode that shows up.
 - Go back to Heroku and create an EMAIL_HOST_USER Config Var and enter your gmail address. 
-- Create an EMAIL_HOST_PASS Config Var and paste in the passcode form gmail.
+- Create an EMAIL_HOST_PASS Config Var and paste in the passcode from gmail.
 #### Stripe
 - Create an account and login to Stripe payments.
 - Go to Developers from your Stripe dashboard.
