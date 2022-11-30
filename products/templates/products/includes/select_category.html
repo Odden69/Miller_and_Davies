@@ -25,38 +25,40 @@
         {% endif %}
     </div>
     <div class="row d-none d-md-block">
-        {% if 'indoors' or 'favorites' in request.GET %}
+        {% if 'indoors' in request.GET %}
         {% else %}
-            {% if selected_subcategory is None %}
-                {% if selected_category is None %}
-                <div class="col-10 d-flex justify-content-center mx-auto">
-                    {% for category in categories %}
-                    <a href="{% url 'products' %}?category={{ category.name }}" aria-label="{{ category.friendly_name }}"
-                        class="button large-button text-decoration-none align-text-center">{{ category.friendly_name }}
-                    </a>
-                    {% endfor %}
-                </div>
-                {% else %}
-                <div class="col-sm-10 col-md-8 d-flex justify-content-center mx-auto">
-                    <div class="row mw-100 justify-content-center">
-                        {% for subcategory in subcategories %}
-                        <div class="col-auto px-0 my-2">
-                            {% if subcategory.name == 'na' %}
-                            {% else %}
-                            <a href="{% url 'products' %}?category={{ selected_category.name }}&subcategory={{ subcategory.name }}"
-                                aria-label="{{ subcategory.friendly_name }}"
-                                class="button large-button text-decoration-none align-text-center">
-                                {{ subcategory.friendly_name }}
-                            </a>
-                            {% endif %}
-                        </div>
-                        {% endfor %}
-                    </div>
-                </div>
-                {% endif %}
+            {% if 'favorites' in request.GET %}
             {% else %}
-                <div class="col d-flex justify-content-center">
-                </div>
+                {% if selected_subcategory is None %}
+                    {% if selected_category is None %}
+                        <div class="col-10 d-flex justify-content-center mx-auto">
+                            {% for category in categories %}
+                            <a href="{% url 'products' %}?category={{ category.name }}" aria-label="{{ category.friendly_name }}"
+                                class="button large-button text-decoration-none align-text-center">{{ category.friendly_name }}
+                            </a>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        <div class="col-sm-10 col-md-8 d-flex justify-content-center mx-auto">
+                            <div class="row mw-100 justify-content-center">
+                                {% for subcategory in subcategories %}
+                                <div class="col-auto px-0">
+                                    {% if subcategory.name == 'na' %}
+                                    {% else %}
+                                    <a href="{% url 'products' %}?category={{ selected_category.name }}&subcategory={{ subcategory.name }}"
+                                        aria-label="{{ subcategory.friendly_name }}">
+                                        <button class="button large-button text-nowrap">{{ subcategory.friendly_name }}</button>
+                                    </a>
+                                    {% endif %}
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endif %}
+                {% else %}
+                    <div class="col d-flex justify-content-center">
+                    </div>
+                {% endif %}
             {% endif %}
         {% endif %}
     </div>
