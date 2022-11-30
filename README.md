@@ -428,8 +428,12 @@ To deploy a copy of this site, follow these steps:
 #### Stripe Webhooks
 - Go to Developers from your Stripe dashboard.
 - Click on Add Endpoint.
-- Copy and paste in your running Heroku apps URL. Add /checkout/wh/ at the end of the URL.
-- Use card number 4242 4242 4242 4242 on an order to make a test payment.
+- Copy and paste in your running Heroku apps URL as the Endpoint URL. Add /checkout/wh/ at the end of the URL(*...herokuapp.com*/checkout/wh/).
+- Click on + Select events and check Select all events.
+- Click on Add endpoint.
+- Click on the newly created endpoint URL and reveal the Signing secret. Copy that and go back to Heroku.
+- Add another Config Var in Heroku named STRIPE_WH_SECRET and paste in the webhook key from Stripe.
+- Test the stripe payments in the app by using the card number 4242 4242 4242 4242 on an order.
 - Follow the result under Events on Stripe. 
 Good luck!
 
