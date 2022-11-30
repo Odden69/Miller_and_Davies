@@ -349,7 +349,7 @@ main {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1072px) {
+@media (min-width: 768px) and (max-width: 1082px) {
   .header-logo {
     font-size: 1.6rem!important;
   }
