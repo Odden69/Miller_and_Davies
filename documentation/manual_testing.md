@@ -1,7 +1,7 @@
 ## Manual Testing of Miller and Davies
 
 ### Link/Action Tests
-All links on the site have been tested. Where a "link" or confirmation message is not supposed to work, or is irrelevant, the cell is marked with a -. A link that does not give the expected result has been marked with a :*:\cross::.
+All links on the site have been tested. Where a "link" or confirmation message is not supposed to work, or is irrelevant, the cell is marked with a -. A link that does not give the expected result has been marked with a :x:.
 | Link | Action | Confirmation Message |
 |:-------------|:-----------:|:------------------------:|
 | **Footer** |  |  |
@@ -125,8 +125,8 @@ All links on the site have been tested. Where a "link" or confirmation message i
 | **Pagination, filtered products** |  |  |
 | first | - | - |
 | previous | - | - |
-| next | :*:\cross:: | - |
-| last | :*:\cross:: | - |
+| next | :x: | - |
+| last | :x: | - |
 | |  |  |
 | **Newsletter Sign Up** |  |  |
 | Send, not already signed up | :heavy_check_mark: | :heavy_check_mark: |

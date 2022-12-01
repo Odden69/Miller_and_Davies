@@ -1,7 +1,7 @@
 <h1 align="center">Miller  Davies</h1>
-These days, when the world around us seems to get more and more chaotic each day, people need to feel that their lives have some kind of stability and that they are somehow prepared for harder times. To help create this sense of security, gardening and growing your own food, to at least some extent, is a good start. Therefore the gardening and seed-selling business should be a growing market.
+These days, when the world around us seems to get more and more chaotic each day, people need to feel that their lives have some kind of stability and that they are somehow prepared for harder times. To help create this sense of security, gardening and growing your own food, to at least some extent, is a good start. Therefore the gardening and seed-selling business should be a growing market where Miller and Davies will have a place.  
  
-Miller & Davies is an imaginary e-commerce site selling organic seeds for garden and indoor growing. It focuses on a wide range of users by offering a large collection of seeds. For now it is focusing on the products available, but in the future the site will increase its contents with gardening information, for beginners and more experienced gardeners and also with more material with inspirational content.
+Miller & Davies is an imaginary e-commerce site selling organic seeds for garden and indoor growing. It focuses on a wide range of users by offering a large collection of seeds. At this point it only contains the products available, but in the future the site will increase its contents with gardening information, for beginners and more experienced gardeners and also with more material with inspirational content.
 
 [View the live project here](https://hj-miller-and-davies.herokuapp.com/).  
 ![Responsiveness image](documentation/images/responsive_image.png)
@@ -58,7 +58,9 @@ This project is still in its early stages and needs a lot of more content before
 gardening, tools and inspiration for users on different levels of background knowledge.   
 
 ### Wireframes
-The wireframes for this project can be found in [this document](documentation/wireframes.md).
+The wireframes was done in [Balsamiq](https://balsamiq.com/). I did a few minor alterations to them during the project and some features didn't turn out exactly as the original.  
+The wireframes can be found in [this document](documentation/wireframes.md).  
+![Wireframe of First Page](documentation/images/wire_frames/products_pages_desktop.png)
 
 
 ## Features
@@ -132,13 +134,13 @@ Clicking on the basket link in the header will bring the user to the basket page
 If the basket is empty the page shows an informative message and offers a link back to the product page.  
 ![Empty Basket](documentation/images/features/basket_1.png)
   
-A basket with a content, on the other hand, shows a list of the picked products where the user can adjust the amounts of each product and also entirely delete it from the shopping basket.  
+A basket with a content, on the other hand, shows a list of the picked products where the user can adjust the quantity of each product and also entirely delete it from the shopping basket.  
 When the user has reviewed the list there is a Checkout button which brings the user to the checkout page.  
 ![Basket](documentation/images/features/basket_2.png)
 
 #### Checkout
 On the checkout page the user can go back and adjust the basket via a link or they can fill out the delivery and payment form and finally push the Complete Order Button to place the order.  
-A logged in user is proposed to save the filled out form to simplify a future order when the information be prefilled on the form. A non logged in user is offered a link to log in or sign up for an account.  
+A logged in user is proposed to save the filled out form to simplify a future order. If the user chooses to do so, the information will be prefilled on the form in the future. A non logged in user is offered a link to log in or sign up for an account.  
 Completing the order brings the user to an order confirmation page.
 ![Checkout](documentation/images/features/checkout.png)
 
@@ -217,12 +219,13 @@ There is some code left that would appreciate some refactoring. The product view
 I also ended up doing som quick fixes during the testing which resulted in some unnecessary divs.
   
 #### Remaining Bugs
-One major bug left on the site is one that I am quite eager to fix. With some more experience, I could probably have foreseen the problem and would have been able to do something about it in time. Since I didn’t add a lot of products to the database until late in the project it wasn’t until then I noticed the problem.
+One major bug left on the site is one that I am quite eager to fix. With some more experience, I could probably have foreseen the problem and would have been able to do something about it in time.  
+Since I didn’t add a lot of products to the database until late in the project it wasn’t until then I noticed the problem.
 The problem is that when a page is rerendered for some reason, the filter on the original page is lost.
 There are a lot of situations on this site that would work, or improve, if the URL of the current page was used as input to the next. Here are a couple of them:  
 * The pagination only works for non sorted All Products pages. All other filtered or sorted pages return to an All Products page when the paginate page is changed.
-* If a user is on the favorite page and removes one of their favorites, they are redirected back to the product page instead of remaining on the favorite page.
-And quite a more… 
+* If a user is on the favorite page and removes one of their favorites, they are redirected back to the product page instead of remaining on the favorite page.  
+And quite a few more… 
  
 Another bug left to fix is a rating issue. Trying to rate a product with five stars results in a 500 error page even though the rating is successfully saved.  
 The investigation to solve that issue would take more time that I have right now, so it will also have to wait.
@@ -276,17 +279,19 @@ The payment service used is [**Stripe**](https://stripe.com/).
 For the Logo font I used [**Google Fonts**](https://fonts.google.com/).  
   
 The icons are collected from [**Font Awsome**](https://fontawesome.com/).  
- 
 
 
 ## Testing
-All through the development process the site has been undergoing manual testing to confirm the intended functionality. Unfortunately I missed a major functionality which resulted in a [bug left](#remaining-bugs).  
+All through the development process the site has been undergoing manual testing to confirm the intended functionality. Unfortunately I missed a major functionality flaw in pagination, which would have taken too much time to correct by the time I noticed it, and therefore resulted in a [bug left](#remaining-bugs).  
+
+The **mail function** was tested by entering temporary email addresses and the **payment function** was tested with a 4242 4242 4242 4242 credit card and confirmed on Stripe, both with successful results.  
 
 ### Testing User Stories from User Experience (UX) Section
 All user stories in the [user story document](documentation/user_stories.md) has been tested and confirmed after implementation, apart from the ones marked with a "-", which will be implemented at a later stage.
+The pagination issue, mentioned above, is discussed further in the [bug left](#remaining-bugs) section.
 
 ### Link Tests
-All links on the site has been tested and was documented [here](documentation/manual_testing.md). 
+All links on the site has been tested and the results were documented [here](documentation/manual_testing.md). 
 The link tests include testing the CRUD functionality. 
 
 ### Page Tests
@@ -302,11 +307,16 @@ The validations of the code were made on these sites:
 These tests were all without errors and are also documented in the [Test Document](documentation/manual_testing.md).  
 
 ### Form Tests
-All forms were tested, both valid and invalid.
+All forms were tested, both valid and invalid. The results can be found in the [Test Document](documentation/manual_testing.md).
 
 ### Color Contrast Check
 The color contrast was checked on [Contrast Grid](https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%23FFFFFF%2C%20White%0D%0A%23000%2C%20black%0D%0A%2310230F%0D%0A%23304b08%0D%0A%23acc185%0D%0A%23D1DDBB%0D%0A%0D%0A%0D%0A%0D%0A%0D%0A&es-color-form__tile-size=compact&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18&es-color-form__show-contrast=dnp).  
+<details>
+  <summary>Click to check out the color contrast result</summary>  
+
 ![Color Contrast Check](documentation/images/tests/color_contrast.png)  
+
+</details>
 
 ## Deployment
 <details>
@@ -314,7 +324,7 @@ The color contrast was checked on [Contrast Grid](https://contrast-grid.eightsha
 
 ### Clone a GitHub repository
 To make a local copy of this project you can make a clone by following these steps:
-- Log in to GitHub and find the [repository](https://github.com/Odden69/ITrain).
+- Log in to GitHub and find the Miller & Davies [repository](https://github.com/Odden69/Miller_and_Davies).
 - Above the list of files click on the code button. By the https address there is a copy symbol, click on that.
 - Open Git Bash
 - Change the current working directory to the location where you want the cloned directory.
@@ -325,11 +335,12 @@ To make a local copy of this project you can make a clone by following these ste
 This site was deployed to Heroku Apps.  
   
 To deploy a copy of this site, follow these steps:
-- Start by installing everything in the requirements.txt file to your.
-- Make sure you have a correct requirements.txt and Procfile before moving on with the deployment.
+- Start by installing everything in the projects requirements.txt file.
+- Make sure you have a correct requirements.txt and Procfile in your workspace before moving on with the deployment.
 #### Create a database
-- Create a PostreSQL database of your choice. For this project I used ElephantSQL.
-- Log in to ElephantSQL with your GitHub account and authorize ElephantSQL if you haven't done that before.
+- Create a PostgreSQL database of your choice. 
+- For this project I used ElephantSQL, follow these instructions to do the same. 
+- Log in to [ElephantSQL](https://www.elephantsql.com/) with your GitHub account and authorize ElephantSQL if you haven't done that before.
 - Create a new team, with your own name, if you don't already have one.
 - From your dashboard create a new instance.
 - Give your new database a Name and select the Tiny turtle(Free) plan.
@@ -360,10 +371,10 @@ To deploy a copy of this site, follow these steps:
   - *python3 manage.py loaddata categories*
   - *python3 manage.py loaddata categories*
   - *python3 manage.py loaddata products*
-- To migrate your ElephantSQL database temporarily uncomment your os.environ["DATABASE_URL"] in the env.py file.
+- To migrate your ElephantSQL database, temporarily uncomment your os.environ["DATABASE_URL"] in the env.py file.
 - Repeat the steps you just did on your local database and comment out the os.environ["DATABASE_URL"] in the env.py file when you're done.
 #### Create an Amazon AWS S3Bucket
-- Create an account and login as a root user to Amazon AWS.
+- Create an account and login as a root user to [Amazon AWS](https://aws.amazon.com/).
 - Search for S3 service and create a new bucket. Give it a suitable name and select *eu-north-1*, or make sure to change *AWS_S3_REGION_NAME* in settings.py to your region.
 - Go to the Properties tab. Click edit on Static website hosting. Check Enable and enter *index.html* and *error.html* for the index document and error document fields and then *save*.
 - Go to the Permissions tab. Click edit on Cross-origin resource sharing (CORS), and paste in the following code into the code area:
@@ -425,7 +436,7 @@ To deploy a copy of this site, follow these steps:
 - Go back to Heroku and create an EMAIL_HOST_USER Config Var and enter your gmail address. 
 - Create an EMAIL_HOST_PASS Config Var and paste in the passcode from gmail.
 #### Stripe
-- Create an account and login to Stripe payments.
+- Create an account and login to [Stripe payments](https://stripe.com/).
 - Go to Developers from your Stripe dashboard.
 - Under API keys you can find a publishable key and a secret key.
 - Go back to Heroku and create a STRIPE_PUBLIC_KEY Config Var for the publishable key and a STRIPE_SECRET_KEY for the secret key.
@@ -446,14 +457,14 @@ To deploy a copy of this site, follow these steps:
 - Click on the newly created endpoint URL and reveal the Signing secret. Copy that and go back to Heroku.
 - Add another Config Var in Heroku named STRIPE_WH_SECRET and paste in the webhook key from Stripe.
 - Test the stripe payments in the app by using the card number 4242 4242 4242 4242 on an order.
-- Follow the result under Events on Stripe. 
+- Follow the result under Events on Stripe.  
 Good luck!
 
 </details>
 
 ## Credits
 ### Code
-- [Django documentation](https://docs.djangoproject.com/en/4.0/)  
+- [Django documentation](https://docs.djangoproject.com/en/4.0/) was a frequently used source to information.
 - On [Gajesh's blog](https://dev.to/gajesh/the-complete-django-allauth-guide-la3) I found out how to add first and last name to the sign up page.
 - To do the Newsletter sign up form I was inspired by [Master Code Online](https://www.youtube.com/c/LearnpythontutorialFree).
 - As usual, [Stackoveflow](https://stackoverflow.com) has been frequently searched during the project, as well as [w3school](https://www.w3schools.com/).
@@ -471,7 +482,7 @@ Good luck!
 - For the favicon I used this [favicon generator](https://www.favicongenerator.com/).
 
 ## Acknowledgements
-- First of all I want to thank my mentor, Narender Singh. As always he comes up with good ideas and useful hints. Thank you Narender for your support during my course at Code Institute!
+- First of all I want to thank my mentor, Narender Singh. As always he comes up with good ideas and useful hints. Thank you Narender for all your support during my course at Code Institute!
 - A big thank you to Sean and the other tutors who patiently guided me through some, quite embarrassing questions, which I should have solved on my own. (I think I blamed it on stressful times.) But who also helped me with some really tough ones which would have taken me forever to solve by myself. You're heroic!
 - As usual the slack crowd can't be thanked enough. Especially I like to thank StevenW_5p for a lot of tips and encouragement all through this project.
 - And a giant thank you to my, always supportive, friends from my very first Hackathon. Thanks Andrew, Patrik and Kat for your support through this project too and for the time you spent on checking the site!

@@ -4,7 +4,7 @@
 |:-------------:|:-----------:|:------------------------|:------------------|:------:|
 | 2 | Shopper | easily navigate the site | intuitively find the products, my favorites and the shopping cart |:heavy_check_mark:|
 | 3 | Shopper | view a list of all available seeds | select the ones I like to purchase |:heavy_check_mark:|
-| 4 | Shopper | paginate through different pages | don't have to scroll through very long lists of products |Does not work as intended|
+| 4 | Shopper | paginate through different pages | don't have to scroll through very long lists of products |Does not work as intended everywhere|
 | 5 | Shopper | view a detailed page of an individual product | find out more information about requirements, sowing time etc |:heavy_check_mark:|
 | 6 | Shopper | view different categories of seeds | easily find the kind I am looking for |:heavy_check_mark:|
 | 7 | Shopper | see the total of my purchases at all times | have control over my spendings |:heavy_check_mark:|
@@ -15,7 +15,7 @@
 |:-------------:|:-----------:|:------------------------|:------------------|:------:|
 | 8 | Shopper | search for a product by name, description or subcategory | easily find the specific seed I am looking for |:heavy_check_mark:|
 | 10 | Shopper | sort the available products on name, price or rating | choose the view which suits me the best |:heavy_check_mark:|
-| 11* | Shopper | filter products on sowing or harvest months | find seeds that suites my needs |-|
+| 11 | Shopper | filter products on sowing or harvest months | find seeds that suites my needs |-|
 | 12 | Shopper | find seeds suitable for indoor growing | easily rule out seeds not suitable for my needs |:heavy_check_mark:|
 | 13 | Shopper | quickly identify products on sale | make some bargains |:heavy_check_mark:|
 | 49 | Shopper | add products to my favorites | easily go back to those products |:heavy_check_mark:|
@@ -58,4 +58,4 @@
 | 32 | Store Owner | easily edit and update a product | ensure the content is correct |:heavy_check_mark:|
 | 33 | Store Owner | easily delete a product | make sure the site do not show products no longer for sale |:heavy_check_mark:|
 | 34 | Store Owner | choose to put a product up on sale | sell out outgoing products, for instance |:heavy_check_mark:|
-| -- | Store Owner | mark a product as out of stock | show the users if a product is not available at the moment |-|
+| 35 | Store Owner | mark a product as out of stock | show the users if a product is not available at the moment |-|
