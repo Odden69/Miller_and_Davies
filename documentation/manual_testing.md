@@ -1,6 +1,7 @@
 ## Manual Testing of Miller and Davies
 
-### Link Tests
+### Link/Action Tests
+All links on the site have been tested. Where a "link" or confirmation message is not supposed to work, or is irrelevant, the cell is marked with a -. A link that does not give the expected result has been marked with a :*:\cross::.
 | Link | Action | Confirmation Message |
 |:-------------|:-----------:|:------------------------:|
 | **Footer** |  |  |
@@ -10,53 +11,137 @@
 | **Header, wide screen** |  |  |
 | Logo | :heavy_check_mark: | - |
 | Basket | :heavy_check_mark: | - |
+| Search bar | :heavy_check_mark: | - |
+| |  |  |
 | **Header, small screen** |  |  |
-| Logo |  |
+| Logo | :heavy_check_mark: | - |
+| Search bar | :heavy_check_mark: | - |
 | |  |  |
 | **Navbar, not logged in, wide screen** |  |  |
-| Products, By Name|  | - |
-| Products, By Price|  | - |
-| Products, By Rating|  | - |
-| Vegetables |  | - |
-| Flowers |  | - |
-| Herbs |  | - |
-| Indoor Growing |  | - |
-| Bargains |  | - |
-| Favorites|  | - |
-| User, Sign Up |  | - |
-| User, Log In |  | - |
+| Products, By Name| :heavy_check_mark: | - |
+| Products, By Price| :heavy_check_mark: | - |
+| Products, By Rating| :heavy_check_mark: | - |
+| Vegetables | :heavy_check_mark: | - |
+| Flowers | :heavy_check_mark: | - |
+| Herbs | :heavy_check_mark: | - |
+| Indoor Growing | :heavy_check_mark: | - |
+| Bargains | :heavy_check_mark: | - |
+| Favorites| :heavy_check_mark: | - |
+| User, Sign Up | :heavy_check_mark: | - |
+| User, Log In | :heavy_check_mark: | - |
 | |  |  |
 | **Navbar, not logged in, small screen** |  |  |
-| Collapse, Products, By Name |  | - |
-| Collapse, Products, By Price |  | - |
-| Collapse, Products, By Rating |  | - |
-| Collapse, Vegetables, All |  | - |
-| Collapse, Vegetables, Cucurbits |  | - |
-| Collapse, Vegetables, Leafy Greens |  | - |
-| Collapse, Vegetables, Legumes |  | - |
-| Collapse, Vegetables, Onions |  | - |
-| Collapse, Vegetables, Peppers |  | - |
-| Collapse, Vegetables, Root Veg |  | - |
-| Collapse, Vegetables, Tomatoes |  | - |
-| Collapse, Vegetables, Various Veg |  | - |
-| Collapse, Flowers, All |  | - |
-| Collapse, Flowers, Annuals |  | - |
-| Collapse, Flowers, Biennials |  | - |
-| Collapse, Flowers, Perennials |  | - |
-| Collapse, Herbs |  | - |
-| Collapse, Indoor Growing |  | - |
-| Collapse, Bargains |  | - |
-| Collapse, User, Sign Up |  | - |
-| Collapse, User, Log In |  | - |
-| Basket |  | - |
+| Collapse, Products, By Name | :heavy_check_mark: | - |
+| Collapse, Products, By Price | :heavy_check_mark: | - |
+| Collapse, Products, By Rating | :heavy_check_mark: | - |
+| Collapse, Vegetables, All | :heavy_check_mark: | - |
+| Collapse, Vegetables, Cucurbits | :heavy_check_mark: | - |
+| Collapse, Vegetables, Leafy Greens | :heavy_check_mark: | - |
+| Collapse, Vegetables, Legumes | :heavy_check_mark: | - |
+| Collapse, Vegetables, Onions | :heavy_check_mark: | - |
+| Collapse, Vegetables, Peppers | :heavy_check_mark: | - |
+| Collapse, Vegetables, Root Veg | :heavy_check_mark: | - |
+| Collapse, Vegetables, Tomatoes | :heavy_check_mark: | - |
+| Collapse, Vegetables, Various Veg | :heavy_check_mark: | - |
+| Collapse, Flowers, All | :heavy_check_mark: | - |
+| Collapse, Flowers, Annuals | :heavy_check_mark: | - |
+| Collapse, Flowers, Biennials | :heavy_check_mark: | - |
+| Collapse, Flowers, Perennials | :heavy_check_mark: | - |
+| Collapse, Herbs | :heavy_check_mark: | - |
+| Collapse, Indoor Growing | :heavy_check_mark: | - |
+| Collapse, Bargains | :heavy_check_mark: | - |
+| Collapse, User, Sign Up | :heavy_check_mark: | - |
+| Collapse, User, Log In | :heavy_check_mark: | - |
+| Basket | :heavy_check_mark: | - |
+| |  |  |
 | **Navbar, reg user, wide screen** |  |  |
-| User, My Profile |  | - |
-| User, Log Out |  | - |
+| User, My Profile | :heavy_check_mark: | - |
+| User, Log Out | :heavy_check_mark: | - |
+| |  |  |
 | **Navbar, reg user, small screen** |  |  |
-
+| User, My Profile | :heavy_check_mark: | - |
+| User, Log Out | :heavy_check_mark: | - |
+| |  |  |
 | **Navbar, admin user, wide screen** |  |  |
+| User, Product Management | :heavy_check_mark: | - |
+| |  |  |
 | **Navbar, admin user, small screen** |  |  |
-| **Header** |  |  |
+| User, Product Management | :heavy_check_mark: | - |
+| |  |  |
+| **Sign Out page** |  |  |
+| Sign Out | :heavy_check_mark: | :heavy_check_mark: |
+| |  |  |
+| **Sign Up page** |  |  |
+| Sign Up | :heavy_check_mark: | :heavy_check_mark: |
+| |  |  |
+| **Sign In page** |  |  |
+| Forgot Password | :heavy_check_mark: | - |
+| Sign In | :heavy_check_mark: | :heavy_check_mark: |
+| |  |  |
+| **Password Reset page** |  |  |
+| Reset My Password | :heavy_check_mark: | - |
+| |  |  |
+| **Product Card** |  |  |
+| Buy Now | :heavy_check_mark: | :heavy_check_mark: |
+| Product detail link | :heavy_check_mark: | - |
+| |  |  |
+| **Product detail page, not logged in** |  |  |
+| Buy Now | :heavy_check_mark: | :heavy_check_mark: |
+| Increase quantity | :heavy_check_mark: | - |
+| Decrease quantity | :heavy_check_mark: | - |
+| |  |  |
+| **Product detail page, reg user** |  |  |
+| Rate product, not rated | :heavy_check_mark: | :heavy_check_mark: |
+| Rate product, already rated | - | :heavy_check_mark: |
+| |  |  |
+| **Product detail page, admin user** |  |  |
+| Edit product | :heavy_check_mark: | :heavy_check_mark: |
+| Delete product |  |  |
+| |  |  |
+| **Edit product page, admin user** |  |  |
+| Update product | :heavy_check_mark: | :heavy_check_mark: |
+| Cancel | :heavy_check_mark: | - |
+| |  |  |
+| **Delete product confirm, admin user** |  |  |
+| Delete | :heavy_check_mark: | :heavy_check_mark: |
+| Cancel | :heavy_check_mark: | - |
+| |  |  |
+| **Product Management page, not logged in** |  |  |
+| URL entry | - | :heavy_check_mark: |
+| |  |  |
+| **Product Management page, reg user** |  |  |
+| URL entry | - | :heavy_check_mark: |
+| |  |  |
+| **Product Management page, admin user** |  |  |
+| Add product | :heavy_check_mark: | :heavy_check_mark: |
+| Cancel | :heavy_check_mark: | - |
+| |  |  |
+| **Pagination, All products** |  |  |
+| first | :heavy_check_mark: | - |
+| previous | :heavy_check_mark: | - |
+| next | :heavy_check_mark: | - |
+| last | :heavy_check_mark: | - |
+| |  |  |
+| **Pagination, filtered products** |  |  |
+| first | - | - |
+| previous | - | - |
+| next | :*:\cross:: | - |
+| last | :*:\cross:: | - |
+| |  |  |
+| **Newsletter Sign Up** |  |  |
+| Send, not already signed up | :heavy_check_mark: | :heavy_check_mark: |
+| Send, already signed up | - | :heavy_check_mark: |
+| |  |  |
+| **Basket Page** |  |  |
+| Increase quantity | :heavy_check_mark: | - |
+| Decrease quantity | :heavy_check_mark: | - |
+| Refresh quantity | :heavy_check_mark: | :heavy_check_mark: |
+| Delete Item | :heavy_check_mark: | :heavy_check_mark: |
+| Safe Checkout | :heavy_check_mark: | - |
+| |  |  |
+| **Checkout Page** |  |  |
+| Adjust Content | :heavy_check_mark: | - |
+| Complete Order | :heavy_check_mark: | :heavy_check_mark: |
 
 
 ### Page Tests
@@ -83,6 +168,7 @@ The responsive testing has been done down to a screen width of 280 pixels.
 | Log In |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
 | Log Out |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
 | Sign Up |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:| Duplicate ID on email field |
+| Password Reset |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:| Duplicate ID on email field |
 | Profile | Performance |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|Cluttered order history|:heavy_check_mark:|
 | Past Order Confirmation |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
 | Add product |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:| See image below |
@@ -112,12 +198,6 @@ One error from the HTML testing was repeated in the Lighthouse Validation, but a
 
 #### Non responsive areas
 The order history on the profile page gets cluttered on small screens. I should have used bootstrap grids instead of a table, but realized the problem when it was too late to rework.  
-
-| |  |  |
-| **Header, wide screen** |  |  |
-| Logo | :heavy_check_mark: | - |
-| Basket | :heavy_check_mark: | - |
-
 
 ### Code Tests
 The code has been checked and all errors in the code have been taken care of.  
@@ -181,5 +261,4 @@ The code has been checked and all errors in the code have been taken care of.
 |  |  |  |  |
 | custom_storages.py | - | :heavy_check_mark: | - |
 | base.css | :heavy_check_mark: | - | - |
-
 
