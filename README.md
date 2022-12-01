@@ -123,7 +123,7 @@ A product detail page consists of a larger image of the product, the product's n
 The rating is displayed together with the number of ratings. On this page a logged in user can rate the product. There is also a favorite icon which shows if the user added the product to their favorites.   
 The products sku, packet's size and and prize is also displayed.
 If the product is on sale the original price as well as the on sale price is shown.  
-On this page a user can adjust the amount before adding the product to the shopping basket.  
+On this page a user can adjust the quantity before adding the product to the shopping basket.  
 
 ![Product Detail](documentation/images/features/product_detail.png)
 
@@ -198,6 +198,13 @@ An information message appears, for example, when the user tries to rate a produ
 ![Confirmation message, info](documentation/images/features/confirmation_3.png)  
 An error message appears, for example, if a non authorized user tries to reach a page that requires authorization by entering the URL:  
 ![Confirmation message, fail](documentation/images/features/confirmation_2.png)  
+
+#### Error Pages
+A 404 error, page not found, redirects to this page:  
+![404 Error](documentation/images/features/404.png)  
+
+A 500 error, server error, redirects to this page:  
+![500 Error](documentation/images/features/500.png)
   
 </details>
 
