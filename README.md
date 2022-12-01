@@ -226,9 +226,12 @@ There are a lot of situations on this site that would work, or improve, if the U
 * The pagination only works for non sorted All Products pages. All other filtered or sorted pages return to an All Products page when the paginate page is changed.
 * If a user is on the favorite page and removes one of their favorites, they are redirected back to the product page instead of remaining on the favorite page.  
 And quite a few more… 
- 
+  
 Another bug left to fix is a rating issue. Trying to rate a product with five stars results in a 500 error page even though the rating is successfully saved.  
-The investigation to solve that issue would take more time that I have right now, so it will also have to wait.
+The investigation to solve that issue would take more time that I have right now, so it will also have to wait.  
+  
+One more issue that happened a bit earlier in the testing phase was that one checkout resulted in two orders. I figured this was caused by the site's slow rendering time since 
+an order is created by stripe webhooks if the order isn't there fast enough. I doubled the waiting time and it worked, up until right in the end  
 
 
 #### Features Left to Implement
@@ -285,6 +288,7 @@ The icons are collected from [**Font Awsome**](https://fontawesome.com/).
 All through the development process the site has been undergoing manual testing to confirm the intended functionality. Unfortunately I missed a major functionality flaw in pagination, which would have taken too much time to correct by the time I noticed it, and therefore resulted in a [bug left](#remaining-bugs).  
 
 The **mail function** was tested by entering temporary email addresses and the **payment function** was tested with a 4242 4242 4242 4242 credit card and confirmed on Stripe, both with successful results.  
+Unfortunately I had an incident with a double payment in the and which would need further investigations.
 
 ### Testing User Stories from User Experience (UX) Section
 All user stories in the [user story document](documentation/user_stories.md) has been tested and confirmed after implementation, apart from the ones marked with a "-", which will be implemented at a later stage.
