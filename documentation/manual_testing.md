@@ -262,3 +262,56 @@ The code has been checked and all errors in the code have been taken care of.
 | custom_storages.py | - | :heavy_check_mark: | - |
 | base.css | :heavy_check_mark: | - | - |
 
+
+### Form Tests
+All forms on the site has been tested both valid and invalid.  
+  
+| Form | Action | Confirmation Message |
+|:-----|:------:|:--------------------:|
+|  |  |  |
+| **Sign Up** |  |  |
+| Valid | :heavy_check_mark: | :heavy_check_mark:|
+| Invalid | :heavy_check_mark: | - |
+|  |  |  |
+| **Log In** |  |  |
+| Valid | :heavy_check_mark: | :heavy_check_mark:|
+| Invalid | :heavy_check_mark: | - |
+|  |  |  |
+| **Newsletter Sign Up** |  |  |
+| Valid | :heavy_check_mark: | :heavy_check_mark:|
+| Invalid | :heavy_check_mark: | - |
+|  |  |  |
+| **Rate Product** |  |  |
+| Valid | :heavy_check_mark: | :heavy_check_mark: |
+|  |  |  |
+| **Add Product** |  |  |
+| Valid | :heavy_check_mark: | :heavy_check_mark: |
+| Invalid | :heavy_check_mark: | - |
+|  |  |  |
+| **Edit Product** |  |  |
+| Valid | :heavy_check_mark: | :heavy_check_mark: |
+| Invalid | :heavy_check_mark: | - |
+|  |  |  |
+| **Increase quantity in basket** |  |  |
+| Valid | :heavy_check_mark: | :heavy_check_mark: |
+| Invalid | :heavy_check_mark: | - |
+|  |  |  |
+| **Decrease quantity in basket** |  |  |
+| Valid | :heavy_check_mark: | :heavy_check_mark: |
+| Invalid | :heavy_check_mark: | - |
+|  |  |  |
+| **Checkout** |  |  |
+| Valid | :heavy_check_mark: | :heavy_check_mark: |
+| Invalid | :heavy_check_mark: | - |
+|  |  |  |
+| **Payment** |  |  |
+| Valid | :heavy_check_mark: | - |
+| Invalid | :heavy_check_mark: | - |
+|  |  |  |
+| **Search** |  |  |
+| Valid | :heavy_check_mark: | - |
+|  |  |  |
+| **Profile** |  |  |
+| Valid | :heavy_check_mark: | :heavy_check_mark: |
+
+The search form works as intended, but when testing it I realized it should probably not accept an empty form.
