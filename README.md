@@ -217,7 +217,7 @@ There is some code left that would appreciate some refactoring. The product view
 I also ended up doing som quick fixes during the testing which resulted in some unnecessary divs.
   
 #### Remaining Bugs
-One major bug left on the site is one that I am quite eager to fix. With some more experience, I probably would have foreseen the problem and could have done something about it in time. Since I didn’t add a lot of products to the database until late in the project it wasn’t until then I noticed the problem.
+One major bug left on the site is one that I am quite eager to fix. With some more experience, I could probably have foreseen the problem and would have been able to do something about it in time. Since I didn’t add a lot of products to the database until late in the project it wasn’t until then I noticed the problem.
 The problem is that when a page is rerendered for some reason, the filter on the original page is lost.
 There are a lot of situations on this site that would work, or improve, if the URL of the current page was used as input to the next. Here are a couple of them:  
 * The pagination only works for non sorted All Products pages. All other filtered or sorted pages return to an All Products page when the paginate page is changed.
@@ -280,32 +280,33 @@ The icons are collected from [**Font Awsome**](https://fontawesome.com/).
 
 
 ## Testing
-¨¨All through the development process the site has been undergoing manual testing to confirm the intended functionality.
-
-Up to a certain point in the project (a commit made on April 28th), the code was also tested with automated testing by unit testing. At that point the tests passed, with one exception, and the coverage was 100%. Since then the project grew without me maintaining the testing files, therefore tests now fail and the coverage, especially for views, are really low.
-But even if the automated testing was not completed, the work I put into it was not wasted. I learned a lot about testing but also about how some of the code works which I before that had some trouble understanding.¨¨
+All through the development process the site has been undergoing manual testing to confirm the intended functionality. Unfortunately I missed a major functionality which resulted in a [bug left](#remaining-bugs).  
 
 ### Testing User Stories from User Experience (UX) Section
-¨¨All user stories in the list [above](#user-stories) has been tested and confirmed after implementation, apart from the ones marked with an asterisk, which will be implemented at a later stage.¨¨
+All user stories in the [user story document](documentation/user_stories.md) has been tested and confirmed after implementation, apart from the ones marked with a "-", which will be implemented at a later stage.
 
-### Validation and Responsivity
-¨¨The validations of the code were made on these sites:
+### Link Tests
+All links on the site has been tested and was documented [here](documentation/manual_testing.md). 
+The link tests include testing the CRUD functionality. 
+
+### Page Tests
+All pages were tested in **Lighthouse** validation. Here the result of the really slow rendering of the site shows up. Some of the desktop performance tests turned out red as well as a few more mobile tests. Under [Room for Improvements](#room-for-improvements) you can find more thoughts about that issue. 
+The Lighthouse tests are also documented in the [Test Document](documentation/manual_testing.md), as well as **responivity** tests and **HTML tests** done on [WS HTML Validator](https://validator.w3.org/).  
+
+### Code Tests
+The validations of the code were made on these sites:  
 - Python : [pep8online](http://pep8online.com/checkresult)
 - CSS : [jigsaw W3C](https://jigsaw.w3.org/css-validator/validator)
-- HTML : [WS HTML Validator](https://validator.w3.org/)
-- JavaScript : [JSHint](https://jshint.com/)
+- JavaScript : [JSHint](https://jshint.com/)  
 
-The tests were all without errors with two exceptions described in this [Test Document](documentation/Testing_ITrain.xlsx).  
- 
-All pages were tested in **Lighthouse** validation. Apart from some performance results on a phone, all results were very close to 100%. These tests are also documented in the [Test Document](documentation/testing_itrain.xlsx).
+These tests were all without errors and are also documented in the [Test Document](documentation/manual_testing.md).  
 
-All the links on the site have been tested, as well as the function of the forms.
-These tests include testing of the CRUD functionality and the use of confirmation messages.
-These tests are documented in the [Test Document](documentation/testing_itrain.xlsx) as well.¨¨
+### Form Tests
+All forms were tested, both valid and invalid.
 
 ### Color Contrast Check
-¨¨The color contrast was checked on [Contrast Grid](https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%23FFFFFF%2C%20White%0D%0A%23000%2C%20black%0D%0A%2312110D%0D%0A%23A87556%0D%0A%23C7C7BC%0D%0A%236F310A%0D%0A&es-color-form__tile-size=compact&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18&es-color-form__show-contrast=dnp).  ¨¨
-![Color Contrast Check](documentation/contrast_check.png)
+The color contrast was checked on [Contrast Grid](https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%23FFFFFF%2C%20White%0D%0A%23000%2C%20black%0D%0A%2310230F%0D%0A%23304b08%0D%0A%23acc185%0D%0A%23D1DDBB%0D%0A%0D%0A%0D%0A%0D%0A%0D%0A&es-color-form__tile-size=compact&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18&es-color-form__show-contrast=dnp).  
+![Color Contrast Check](documentation/images/tests/color_contrast.png)  
 
 ## Deployment
 <details>
